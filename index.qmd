@@ -2,6 +2,24 @@
 title: "Welcome!"
 ---
 
-## Under Construction
+Welcome to the Malone Disturbance Ecology Lab (MDEL)! Here you'll find various resources designed to help you in setting up your projects and integrating with the lab. There is a lot of content, but you will probably want to check out this landing page, **Setup**, and **Best Practices** at the very least. 
 
-Check back later!
+Please don't hesitate to reach out if you have any questions or feedback on this website. 
+
+## Directory 🗂️
+
+Main lab website: [https://www.malonelab.org/](https://www.malonelab.org/)
+
+MDEL GitHub organization: [https://github.com/Malone-Disturbance-Ecology-Lab](https://github.com/Malone-Disturbance-Ecology-Lab)
+
+MDEL DataONE portal: [https://search.dataone.org/portals/3107251/About](https://search.dataone.org/portals/3107251/About)
+
+For help in setting up your new project properly, visit the **Setup** tab. 
+
+For ideas on how to best format your workflow for maximum reproducibility, visit the tabs under **Best Practices**.
+
+Lastly, check out the tabs under **Resources** for a list of technical resources, such as tutorials on coding, data publication, synthesis science, website creation, HPC clusters, and more!
+
+## Lab Policies 📄
+
+Please take a moment to read, review, and sign the lab policies [here](https://docs.google.com/forms/d/e/1FAIpQLSd01roP78dKHoqqmjMVa_FR4_n0-AZvGgn5JmA_U2ZVrpJnZg/viewform?usp=header). Thank you!
