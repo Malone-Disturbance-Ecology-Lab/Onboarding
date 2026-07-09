@@ -1,0 +1,33 @@
+project:
+  type: website
+  execute-dir: project
+  output-dir: docs
+  render:
+    - "*.qmd"
+
+execute: 
+  freeze: auto
+
+website:
+  title: "Malone Disturbance Ecology Lab: Onboarding"
+  repo-url: https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding
+  repo-actions: [issue]
+  navbar:
+    background: primary
+    left:
+      - text: "Home"
+        href: index.qmd
+    right: 
+      - icon: github
+        href: https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding
+  page-footer: 
+    center: "Copyright &copy; 2026, Sparkle Malone"
+    background: secondary
+
+format:
+  html:
+    theme: sandstone
+    mainfont: "Gill Sans"
+    toc: true
+    link-external-newwindow: true
+    link-external-icon: false
