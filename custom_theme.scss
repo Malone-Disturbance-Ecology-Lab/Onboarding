@@ -1,0 +1,20 @@
+/*-- scss:defaults --*/
+
+// Colors
+/* generally useful other colors */
+$cream: #F4F3EE;
+$gray-0: #EBEBEB;
+$gray-1: #BCB8B1;
+$gray-2: #8A817C;
+$gray-3: #222823;
+$gray-4: #191919;
+$black: #08090A;
+
+// Code text
+$code-bg: $gray-0; // inline code background color
+$code-block-bg: $gray-0; // code block background color
+
+/*-- scss:rules --*/
+
+// Code chunk ouput
+pre code:not(.sourceCode) { background-color: $gray-0; }
