@@ -17,6 +17,13 @@ website:
     left:
       - text: "Home"
         href: index.qmd
+      - text: "Setup"
+        menu: 
+          - href: installation.qmd
+            text: "Installation"
+          - href: workflow.qmd
+            text: "Git Workflow"
+            
     right: 
       - icon: github
         href: https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding
@@ -26,7 +33,9 @@ website:
 
 format:
   html:
-    theme: sandstone
+    theme: 
+       - sandstone
+       - custom_theme.scss
     mainfont: "Gill Sans"
     toc: true
     link-external-newwindow: true
