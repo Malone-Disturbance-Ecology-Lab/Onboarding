@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome! – Malone Disturbance Ecology Lab: Onboarding</title>
+<title>Git Workflow – Malone Disturbance Ecology Lab: Onboarding</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -133,8 +133,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#directory" id="toc-directory" class="nav-link active" data-scroll-target="#directory">Directory 🗂️</a></li>
-  <li><a href="#lab-policies" id="toc-lab-policies" class="nav-link" data-scroll-target="#lab-policies">Lab Policies 📄</a></li>
+  <li><a href="#introduction-to-version-control" id="toc-introduction-to-version-control" class="nav-link active" data-scroll-target="#introduction-to-version-control">Introduction to Version Control</a></li>
+  <li><a href="#git-vs.-github" id="toc-git-vs.-github" class="nav-link" data-scroll-target="#git-vs.-github">Git vs.&nbsp;GitHub</a></li>
+  <li><a href="#workflow-overview" id="toc-workflow-overview" class="nav-link" data-scroll-target="#workflow-overview">Workflow Overview</a></li>
+  <li><a href="#git-vocabulary-summary" id="toc-git-vocabulary-summary" class="nav-link" data-scroll-target="#git-vocabulary-summary">Git Vocabulary Summary</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -143,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome!</h1>
+<h1 class="title">Git Workflow</h1>
 </div>
 
 
@@ -160,20 +162,141 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to the Malone Disturbance Ecology Lab (MDEL)! Here you’ll find various resources designed to help you in setting up your projects and integrating with the lab. There is a lot of content, but you will probably want to check out this landing page, <strong>Setup</strong>, and <strong>Best Practices</strong> at the very least.</p>
-<p>Please don’t hesitate to reach out if you have any questions or feedback on this website.</p>
-<section id="directory" class="level2">
-<h2 class="anchored" data-anchor-id="directory">Directory 🗂️</h2>
-<p>Main lab website: <a href="https://www.malonelab.org/">https://www.malonelab.org/</a></p>
-<p>MDEL GitHub organization: <a href="https://github.com/Malone-Disturbance-Ecology-Lab">https://github.com/Malone-Disturbance-Ecology-Lab</a></p>
-<p>MDEL DataONE portal: <a href="https://search.dataone.org/portals/3107251/About">https://search.dataone.org/portals/3107251/About</a></p>
-<p>For help in setting up your new project properly, visit the <strong>Setup</strong> tab.</p>
-<p>For ideas on how to best format your workflow for maximum reproducibility, visit the tabs under <strong>Best Practices</strong>.</p>
-<p>Lastly, check out the tabs under <strong>Resources</strong> for a list of technical resources, such as tutorials on coding, data publication, synthesis science, website creation, HPC clusters, and more!</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ensure you have completed the steps in Installation before attempting to do the tutorial on this page!</p>
+</div>
+</div>
+<section id="introduction-to-version-control" class="level2">
+<h2 class="anchored" data-anchor-id="introduction-to-version-control">Introduction to Version Control</h2>
+<p>Now that you’ve finished installing all the necessary software, it’s time to integrate Git into your workflow! As stated before, Git is a version control software designed to track changes in files. This feature will be extremely helpful as your research project evolves over time.</p>
+<p><img src="images/phd_comics_final.png" class="img-fluid" style="width:80.0%"></p>
+<p>You can imagine that there may be certain points in your project where you are investigating several different directions and it becomes hard to keep track of what has already happened. You may even want to undo or redo some steps as you get feedback, like the comic above illustrates.</p>
+<p>With Git, all your project history is cleanly recorded, allowing you easy access to any point in your history without cluttering your computer with all of the file iterations that precede the final version. Additionally, Git allows collaborators to jump in and safely contribute to your project in an organized manner, making it a highly versatile and valuable software to use.</p>
 </section>
-<section id="lab-policies" class="level2">
-<h2 class="anchored" data-anchor-id="lab-policies">Lab Policies 📄</h2>
-<p>Please take a moment to read, review, and sign the lab policies <a href="https://docs.google.com/forms/d/e/1FAIpQLSd01roP78dKHoqqmjMVa_FR4_n0-AZvGgn5JmA_U2ZVrpJnZg/viewform?usp=header">here</a>. Thank you!</p>
+<section id="git-vs.-github" class="level2">
+<h2 class="anchored" data-anchor-id="git-vs.-github">Git vs.&nbsp;GitHub</h2>
+<p>Git and GitHub have similar names, but it’s important to note the differences in their function!</p>
+<p>Git:</p>
+<ul>
+<li>is an open-source distributed version control software, designed to manage the versioning of files</li>
+<li>operates locally on your computer, and can be enabled on a specific folder/directory to version the files inside
+<ul>
+<li>this tracked folder is called a repository</li>
+</ul></li>
+<li>includes features such as creating repositories, committing changes, branching and merging code</li>
+<li>primarily used via command line code, but there are also many GUIs like the RStudio Git feature</li>
+</ul>
+<p>GitHub:</p>
+<ul>
+<li>is an online platform/website built around Git</li>
+<li>provides a centralized location to host and share Git repos in the cloud</li>
+<li>offers additional features on top of Git, such as a web-based interface, issue tracking, project management tools, pull requests, and code review</li>
+</ul>
+</section>
+<section id="workflow-overview" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-overview">Workflow Overview</h2>
+<p>The typical Git workflow can be daunting for a beginner to figure out how all these moving parts work together, so here is a brief overview, simplified as much as possible.</p>
+<p>Suppose we have a project folder on our local computer, <code>my_project</code> that contains our scripts, <code>data_download.R</code>, <code>data_prep.R</code> and <code>data_analysis.R</code> like so:</p>
+<pre><code>my_project/            # our working directory
+├── data_download.R    # first working file 
+│    
+├── data_prep.R        # second working file 
+│
+└── data_analysis.R    # third working file        </code></pre>
+<p>In this example, <code>my_project</code> is our <strong>working directory</strong> and the R scripts are our local <strong>working files</strong>, which are the files that we edit as we work.</p>
+<p>Now suppose we want to start using Git to track the changes in the <code>my_project</code> folder. To do this, the command is called initializing <code>my_project</code> as a Git repository. By <strong>initializing a folder as a Git repo</strong>, we are telling Git to start tracking all the contents inside this folder.</p>
+<p>This initialization step will create a hidden <code>.git</code> folder, which is the actual <strong>Git repository</strong> that will have the history of our files. This Git repo is also referred to as our <strong>local repo</strong> since it is on our local computer.</p>
+<pre><code>my_project/            # our working directory
+├── data_download.R    # first working file 
+│    
+├── data_prep.R        # second working file 
+│
+├── data_analysis.R    # third working file
+│
+└── .git/              # our local repo
+    └── ...</code></pre>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>By the way, the way to tell the difference between a normal folder and a folder tracked by Git is precisely the presence of that hidden <code>.git</code> folder! If you’re unsure whether a folder has been initialized by Git already, you can change your computer’s settings to enable seeing hidden folders and check if the folder has a <code>.git</code> folder inside.</p>
+</div>
+</div>
+<p>Then as we edit our working files, we can use Git commands to save versions of our files locally. Once we’re satisfied, we can finally send our edits to GitHub, a popular destination to host <strong>remote repos</strong> (repositories that live in the cloud).</p>
+<p>The diagram below illustrates the Git commands needed to carry out the basic workflow.</p>
+<p><img src="images/allison-horst-git-workflow.png" class="img-fluid" style="width:90.0%"></p>
+<p>In the diagram, rabbits are moving back and forth between 2 islands: an island with the remote repo (representing the cloud) and an island with the working directory + local repo (representing the local computer).</p>
+<p>Starting in the bottom right-hand corner, the rabbits in the working directory move file boxes to the staging area with the <strong>add</strong> command. Then they move the file boxes from the staging area to the local repo with the <strong>commit</strong> command.</p>
+<p>Finally, the rabbits get in a boat to move the boxes from the local repo to the remote repo with the <strong>push</strong> command. To move boxes from the remote repo back to the local repo, they use the <strong>pull</strong> command. There is also a dotted line in the center to signify that it’s best practice to pull before pushing.</p>
+<p>Although it’s common to initialize a Git repo on your local computer first and then send it to GitHub, you can also go the opposite way! Some people may find it easier to start the remote repo on GitHub first and then <strong>clone</strong> it to their local computer. Either method will work and they’re both valid. This tutorial will focus on the latter method.</p>
+</section>
+<section id="git-vocabulary-summary" class="level2">
+<h2 class="anchored" data-anchor-id="git-vocabulary-summary">Git Vocabulary Summary</h2>
+<p>To summarize, here are all the basic Git vocabulary terms covered thus far and their respective commands:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Git Command</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Initialize</td>
+<td><code>git init</code></td>
+<td>initializes a brand new local Git repo (*)</td>
+</tr>
+<tr class="even">
+<td>Add/Stage</td>
+<td><code>git add [file]</code></td>
+<td>marks the local modified file(s) going into the next commit by putting them in the staging area</td>
+</tr>
+<tr class="odd">
+<td>Commit</td>
+<td><code>git commit -m "[my commit message]"</code></td>
+<td>captures a snapshot of currently staged local changes with a message describing what exactly has been changed; this snapshot goes into our local repo</td>
+</tr>
+<tr class="even">
+<td>Pull</td>
+<td><code>git pull</code></td>
+<td>grabs changes from a remote repo and merges them into your local working file(s)</td>
+</tr>
+<tr class="odd">
+<td>Push</td>
+<td><code>git push</code></td>
+<td>sends local changes to a remote repo</td>
+</tr>
+<tr class="even">
+<td>Clone</td>
+<td><code>git clone [repo]</code></td>
+<td>creates a local copy of a remote repo (*)</td>
+</tr>
+</tbody>
+</table>
+<p>(*) You can start your workflow either by initializing an already existing local folder as a Git repo and then pushing to GitHub, OR creating a remote repo on GitHub and then cloning it to your local computer!</p>
+<p>Don’t worry about memorizing the exact commands, we can utilize the GUIs available in RStudio, VS Code, or GitHub Desktop to carry out the same operations with simple button clicks.</p>
+<p>If you would like to see the full list of commands, visit the <a href="https://git-scm.com/docs">Git documentation</a>.</p>
 
 
 </section>
