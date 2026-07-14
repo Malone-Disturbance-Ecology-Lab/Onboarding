@@ -150,7 +150,7 @@ gitcreds::gitcreds_set()
 
 Now your computer will remember your token for the next 30, 60, 90, or so odd-days! Once your token expires, you will need to regenerate it and repeat this step. 
 
-There you go! You should now be ready to do your workflow. Head to Git Workflow to get started.
+There you go! You should now be ready to do your workflow. Head to [Git Workflow](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html) for the next step.
 
 ### VS Code users
 
@@ -172,7 +172,7 @@ Now click on your account menu in the bottom left corner of VS Code. Go to **Bac
 
 A new window should have popped up to allow you to authorize VS Code. Follow the on-screen prompts to finish the authorization process.
 
-Due to the way VS Code works, we will still need to finish the last of the authorization steps later on, so hang tight and follow the next steps in Git Workflow.
+Due to the way VS Code works, we will still need to finish the last of the authorization steps later on, so hang tight and proceed to [Git Workflow](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html) for the next step.
 
 ### GitHub Desktop
 
@@ -180,6 +180,6 @@ GitHub Desktop allows you to do the typical Git workflow, no matter what IDE you
 
 Go [download GitHub Desktop](https://github.com/apps/desktop) and follow [Part 1 of their user guide](https://docs.github.com/en/desktop/overview/getting-started-with-github-desktop#part-1-installing-and-authenticating) to get started.
 
-Then head to Git Workflow to learn about Git.
+Then head to [Git Workflow](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html) for the next step.
 
 :::
