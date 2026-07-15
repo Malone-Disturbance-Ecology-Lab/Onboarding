@@ -18,3 +18,7 @@ $code-block-bg: $gray-0; // code block background color
 
 // Code chunk ouput
 pre code:not(.sourceCode) { background-color: $gray-0; }
+
+p {
+  word-spacing: 1.3px;
+}
