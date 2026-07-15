@@ -103,7 +103,7 @@ If you don't use RStudio or VS Code, try out GitHub Desktop instead!
 :::{.panel-tabset}
 ### RStudio users
 
-For this section, you can run the commands in the "Console" tab in RStudio.
+For this section, you can run the commands in the "**Console**" tab in RStudio.
 
 First, make sure you have the `usethis` and `gitcreds` R packages installed. 
 
