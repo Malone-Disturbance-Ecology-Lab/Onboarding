@@ -187,6 +187,36 @@ Now we have cloned the repo to our local computer! Notice in the top right corne
 
 #### VS Code users
 
+Go to the landing page of your practice repo on GitHub. Click on the "**Code**" then copy the link under HTTPS in the dropdown menu.
+
+![](images/vs_workflow1.png){width=100%}
+
+Switch to VS Code. Either click on the **Source Control** tab on the left-hand side and click "**Clone Repository**" or click "**Clone Git Repository...**" from the landing page. 
+
+![](images/vs_workflow2.png){width=100%}
+
+The bar at the top will pop-up.
+
+![](images/vs_workflow3.png){width=100%}
+
+Paste the link you copied from GitHub and then click "Clone from URL ..."
+
+![](images/vs_workflow4.png){width=100%}
+
+Your file explorer should appear, letting you choose where to clone your repo. If you wish to easily remember what folders are Git repos versus normal folders on your computer, you can create a folder called "GitHub" where all your local Git repos can live.
+
+![](images/vs_workflow5.png){width=100%}
+
+Otherwise, once you're satisfied, click "**Select as Repository Destination**".
+
+Now we have cloned the repo to our local computer! You will get another pop-up asking if you would like to open the repo. Click "**Open**".
+
+![](images/vs_workflow6.png){width=100%}
+
+Notice at the top that we're now working inside the practice repo, and that we have local copies of the gitignore and README.
+
+![](images/vs_workflow7.png){width=100%}
+
 #### GitHub Desktop
 :::
 
@@ -215,7 +245,7 @@ To explain more about what these icons mean, they represent the status of each f
 
 If you think back to the [Git Workflow Overview](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-overview), in order to send this practice script to GitHub, the first step is to add it to the staging area. The Git command for this is `git add`, but thankfully, we can do the equivalent operation by checking the checkbox to the left of the script name. 
 
-Notice how the yellow question mark icon turned into a green A icon, which represents a new file that is now marked for tracking.
+Notice how the yellow question mark icon turned into a green "A" icon, which represents a new file that is now marked for tracking.
 
 You can imagine that in a regular project, you may want to stage several files in a single commit by checking multiple checkboxes, but we will only focus on staging this one file for this exercise.
 
@@ -235,7 +265,7 @@ To send this local commit to GitHub, we will want to pull (`git pull`) first and
 
 This habit will really save you whenever you're working in a repo with other collaborators, who may make edits when you're away from your computer. By pulling frequently, you can avoid merge conflicts. You can always pull at any point in your workflow, so don't hesitate to make it a habit.
 
-With that said, click on the "**Pull**" arrow to fetch and merge the latest changes from GitHub.
+With that said, click on the "**Pull**" down arrow to fetch and merge the latest changes from GitHub.
 
 ![](images/rs_workflow14.png){width=100%}
 
@@ -243,7 +273,7 @@ It will say that we're already up to date because we haven't done anything to ou
 
 ![](images/rs_workflow15.png){width=100%}
 
-Close that window and click "**Push**" arrow to send our local changes to GitHub.
+Close that window and click "**Push**" up arrow to send our local changes to GitHub.
 
 ![](images/rs_workflow16.png){width=100%}
 
@@ -265,7 +295,89 @@ You should be able to see the green lines again showing the new additions to thi
 
 #### VS Code users
 
+Start by creating a new practice script in VS Code. Feel free to write any code in the script as this is just an example. 
+
+![](images/vs_workflow8a.png){width=100%}
+
+You might notice after saving your script that the **Source Control** tab has a "1" alert on it. Click on it.
+
+![](images/vs_workflow8b.png){width=100%}
+
+You will be led to these panels where we can do our Git workflow and keep track of the status of our files. Notice how our script is listed under "Changes", with a "U" icon next to the script name.
+
+![](images/vs_workflow9.png){width=100%}
+
+To explain more about what these icons mean, they represent the status of each file in your repo. The "U" icon signifies a file that is not yet tracked by Git. Here are some other icons you might see working in VS Code:
+
+![](images/vscode_legend.png){width=90%}
+
+If you think back to the [Git Workflow Overview](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-overview), in order to send this practice script to GitHub, the first step is to add it to the staging area. The Git command for this is `git add`, but thankfully, we can do the equivalent operation by clicking the "**+**" to the right of the script name. 
+
+![](images/vs_workflow10.png){width=100%}
+
+Notice how the "U" icon turned into an "A" icon, which represents a new file that is now marked for tracking.
+
+You can imagine that in a regular project, you may want to stage several files in a single commit by clicking multiple "**+**"s, but we will only focus on staging this one file for this exercise.
+
+![](images/vs_workflow11.png){width=100%}
+
+After staging the file, we will need to commit it, which will capture a snapshot of any currently staged local changes. The corresponding Git command for this is `git commit -m "[my commit message]"`, but we can use the VS Code GUI instead. Write a commit message to describe exactly what we've changed at the top, and then click "**Commit**". 
+
+![](images/vs_workflow12.png){width=100%}
+
+You'll now see that the panel is showing a "**Sync Changes**" button. This button will perform a pull and a push into a single operation. You may want to hold off on using this button until you're more familiar with the Git workflow. Instead, let's do a pull and a push separately.
+
+Also, notice that we now have a local commit that the remote repo on GitHub does not have yet. In a regular project, you would probably have several commits before you’re ready to push, but for the purposes of this exercise, we will send this one commit to GitHub.
+
+![](images/vs_workflow13.png){width=100%}
+
+To send this local commit to GitHub, we will want to pull (`git pull`) first and then push (`git push`). Pulling will fetch the latest changes on GitHub and merge them with our local files. It's best practice to pull often and to always pull BEFORE pushing. It makes sense to grab the latest version of the files on GitHub and then make our local edits on top of that. After we make our local edits, then we can push them back to GitHub. This will create a clean history of your repo.
+
+This habit will really save you whenever you're working in a repo with other collaborators, who may make edits when you're away from your computer. By pulling frequently, you can avoid merge conflicts. You can always pull at any point in your workflow, so don’t hesitate to make it a habit.
+
+With that said, click on the **Pull down arrow** to fetch and merge the latest changes from GitHub.
+
+![](images/vs_workflow14.png){width=100%}
+
+Nothing will happen; we’re already up to date because we haven’t done anything to our GitHub repo since we’ve last touched it.
+
+Click **Push up arrow** to send our local changes to GitHub.
+
+![](images/vs_workflow15.png){width=100%}
+
+A pop-up window will appear asking if you want to sign in using GitHub. This is the very last authentication step required to connect VS Code and GitHub. Click "**Allow**".
+
+![](images/vs_workflow16.png){width=100%}
+
+Your browser will redirect you to a new tab, asking you to authorize VS Code. Click "**Continue**".
+
+![](images/vs_workflow17.png){width=100%}
+
+Then click "**Authorize Visual-Studio-Code**".
+
+![](images/vs_workflow18.png){width=70%}
+
+Click "**Open Visual Studio Code**" to get redirected back to VS Code.
+
+![](images/vs_workflow19.png){width=100%}
+
+You've successfully pushed to GitHub!
+
+![](images/vs_workflow20.png){width=100%}
+
+You can confirm by navigating back to your GitHub repo. Check to see that you now have a second commit where you created your practice script. If you click on where it says "2 Commits", you can view the history of all your commits.
+
+![](images/vs_workflow21.png){width=100%}
+
+Click on your latest commit.
+
+![](images/vs_workflow22.png){width=100%}
+
+You should be able to see the green lines showing the new additions to this file.
+
+![](images/vs_workflow23.png){width=100%}
+
 #### GitHub Desktop
 :::
 
-Congrats! You've now completed a Git workflow where you created a repo on GitHub, cloned it to your local computer, created a local file, and pushed it back to GitHub! You can rinse and repeat this workflow during the course of your projects. Remember, after you have your remote and local repos set up, the correct order is to **make your local edits** --> **stage your local changes** --> **commit them with descriptive commit messages** --> **pull** --> **push to your remote repo**. 
+Congrats! You've now completed a Git workflow where you created a repo on GitHub, cloned it to your local computer, created a local file, and pushed it back to GitHub! You can rinse and repeat this workflow during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to **make your local edits** --> **stage your local changes** --> **commit them with descriptive commit messages** --> **pull** --> **push to your remote repo**. 
