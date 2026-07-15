@@ -1,6 +1,7 @@
 ---
 title: "Git Workflow"
 format: html
+lightbox: true
 ---
 
 :::{.callout-warning}
@@ -115,13 +116,13 @@ Now let's practice the Git workflow by first creating a remote repo on GitHub an
 
 ### Creating a repo on GitHub
 
-Log into [GitHub](https://github.com/). Once you're logged in, click on your account icon in the top right corner and go to "Repositories".
+Log into [GitHub](https://github.com/). Once you're logged in, click on your account icon in the top right corner and go to "**Repositories**".
 
-![](images/workflow1.png){width=100%}
+![](images/github_workflow1.png){width=100%}
 
-Click on "New" to create your new repository.
+Click on "**New**" to create your new repository.
 
-![](images/workflow2.png){width=100%}
+![](images/github_workflow2.png){width=100%}
 
 Fill out your practice repo name, write a short description to summarize what this repo contains, set the visibility to "Public", add a README, and add a gitignore template that corresponds to the programming language you will use for this exercise. There are tons of gitignore template options for various languages, like R, Python, Java, C++, etc.
 
@@ -129,19 +130,19 @@ Fill out your practice repo name, write a short description to summarize what th
 A gitignore is a file that does exactly what it says— it tells Git to ignore certain files! While working on your project, there may be certain files or file types you don't wish to track the changes of, in which case, you can list them inside the gitignore. For example, if your code exports a lot of png files that don't need to be tracked by Git, you can type "*.png" in the gitignore to instruct Git to ignore all files with the ".png" extension. 
 :::
 
-![](images/workflow3.png){width=100%}
+![](images/github_workflow3.png){width=100%}
 
 We won't add a license to this practice repo but for actual research projects in MDEL, the most common license type is the MIT License. Check out the [GitHub documentation on licenses](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository) to learn more.
 
-Once the form is filled out, click "Create repository" and wait for the process to finish. Your new practice repo may look like this:
+Once the form is filled out, click "**Create repository**" and wait for the process to finish. Your new practice repo may look like this:
 
-![](images/workflow4.png){width=100%}
+![](images/github_workflow4.png){width=100%}
 
 The landing page shows the top folders/files in your repo as well as some information on when those files were modified. Right now, the repo only has a gitignore and README file that were created just a moment ago. 
 
 If you're curious about the function of a gitignore, click on the file and see what file types are inside for your specified coding language. For example, here are the file types for the R gitignore template:
 
-![](images/workflow5.png){width=100%}
+![](images/github_workflow5.png){width=100%}
 
 Miscellaneous files like .Rhistory and .Rdata are listed inside. If you're a regular R user, you may recognize these file types as the files that get frequently get created by R during your session. These files don't impact your actual work so it makes sense for Git to ignore them.
 
@@ -154,33 +155,35 @@ If you don't use RStudio or VS Code, feel free to try out GitHub Desktop instead
 :::{.panel-tabset}
 #### RStudio users
 
-Go to the landing page of your practice repo on GitHub. Click on the "Code" then copy the link under "HTTPS" in the dropdown menu.
+Go to the landing page of your practice repo on GitHub. Click on the "**Code**" then copy the link under HTTPS in the dropdown menu.
 
-![](images/workflow6.png){width=100%}
+![](images/rs_workflow1.png){width=100%}
 
 Switch to RStudio. Click on the top right corner that has an icon of a box with an R on it. 
 
-![](images/workflow7.png){width=100%}
+![](images/rs_workflow2.png){width=100%}
 
-In the resulting dropdown menu, click "New Project".
+In the resulting dropdown menu, click "**New Project**".
 
-![](images/workflow8.png){width=100%}
-Then select "Version Control".
+![](images/rs_workflow3.png){width=100%}
 
-![](images/workflow9.png){width=100%}
-And then "Git".
+Then select "**Version Control**".
 
-![](images/workflow10.png){width=100%}
+![](images/rs_workflow4.png){width=100%}
+
+And then "**Git**".
+
+![](images/rs_workflow5.png){width=100%}
 
 In the following page, paste the link you copied from GitHub. For the local copy of your repo, you can name it a different name from your remote repo if you wish, but it's generally recommended to keep the name the same. You can also choose where to clone the repo on your computer. If you wish to easily remember what folders are Git repos versus normal folders on your computer, you can create a folder called "GitHub" where all your local Git repos can live. 
 
-![](images/workflow11.png){width=100%}
+![](images/rs_workflow6.png){width=100%}
 
-Otherwise, once you're satisfied, click "Create Project".
+Otherwise, once you're satisfied, click "**Create Project**".
 
 Now we have cloned the repo to our local computer! Notice in the top right corner that we're now working inside the practice repo, and that we have local copies of the gitignore and README. 
 
-![](images/workflow12.png){width=100%}
+![](images/rs_workflow7.png){width=100%}
 
 #### VS Code users
 
@@ -196,15 +199,15 @@ Let's practice a simple Git workflow where we create a new file on our local com
 #### RStudio users
 Start by creating a new practice script in RStudio. Feel free to write any code in the script as this is just an example.
 
-![](images/workflow13.png){width=100%}
+![](images/rs_workflow8.png){width=100%}
 
-Once you're satisfied, click on the "Git" tab and then click on either the "Diff" or "Commit" tabs. These two tabs will lead to the same place, so don't worry about clicking on either one. 
+Once you're satisfied, click on the "**Git**" tab and then click on either the "**Diff**" or "**Commit**" tabs. These two tabs will lead to the same place, so don't worry about clicking on either one. 
 
-![](images/workflow14.png){width=100%}
+![](images/rs_workflow9.png){width=100%}
 
 A new window should pop up. Click on your practice script and notice how there are green lines highlighted in the window. The green lines signify the new additions to this file since our last commit. Since this file has never been tracked by Git before, all the lines are highlighted in green and there is a yellow question mark icon next to the script name.
 
-![](images/workflow15.png){width=100%}
+![](images/rs_workflow10.png){width=100%}
 
 To explain more about what these icons mean, they represent the status of each file in your repo. The yellow question mark signifies a file that is not yet tracked by Git. Here are some other icons you might see working in RStudio:
 
@@ -216,48 +219,48 @@ Notice how the yellow question mark icon turned into a green A icon, which repre
 
 You can imagine that in a regular project, you may want to stage several files in a single commit by checking multiple checkboxes, but we will only focus on staging this one file for this exercise.
 
-After staging the file, we will need to commit it, which will capture a snapshot of any currently staged local changes. The corresponding Git command for this is `git commit -m "[my commit message]"`, but we can use the RStudio GUI instead. Write a commit message to describe exactly what we've changed in the right-hand panel, and then click "Commit". 
+After staging the file, we will need to commit it, which will capture a snapshot of any currently staged local changes. The corresponding Git command for this is `git commit -m "[my commit message]"`, but we can use the RStudio GUI instead. Write a commit message to describe exactly what we've changed in the right-hand panel, and then click "**Commit**". 
 
-![](images/workflow16.png){width=100%}
+![](images/rs_workflow11.png){width=100%}
 
-Once you click "Commit", you might see a new window pop-up like this:
+Once you click "**Commit**", you might see a new window pop-up like this:
 
-![](images/workflow17.png){width=100%}
+![](images/rs_workflow12.png){width=100%}
 
 Close the pop-up window to get back to your main workspace and you will see a message that says, "Your branch is ahead of 'origin/main' by 1 commit." This means that we have a local commit that the remote repo on GitHub does not have yet. In a regular project, you would probably have several commits before you're ready to push, but for the purposes of this exercise, we will send this one commit to GitHub.
 
-![](images/workflow18.png){width=100%}
+![](images/rs_workflow13.png){width=100%}
 
 To send this local commit to GitHub, we will want to pull (`git pull`) first and then push (`git push`). Pulling will fetch the latest changes on GitHub and merge them with our local files. It's best practice to pull often and to always pull BEFORE pushing. It makes sense to grab the latest version of the files on GitHub and then make our local edits on top of that. After we make our local edits, then we can push them back to GitHub. This will create a clean history of your repo. 
 
 This habit will really save you whenever you're working in a repo with other collaborators, who may make edits when you're away from your computer. By pulling frequently, you can avoid merge conflicts. You can always pull at any point in your workflow, so don't hesitate to make it a habit.
 
-With that said, click on the "Pull" arrow to fetch and merge the latest changes from GitHub.
+With that said, click on the "**Pull**" arrow to fetch and merge the latest changes from GitHub.
 
-![](images/workflow19.png){width=100%}
+![](images/rs_workflow14.png){width=100%}
 
 It will say that we're already up to date because we haven't done anything to our GitHub repo since we've last touched it. 
 
-![](images/workflow20.png){width=100%}
+![](images/rs_workflow15.png){width=100%}
 
-Close that window and click "Push" arrow to send our local changes to GitHub.
+Close that window and click "**Push**" arrow to send our local changes to GitHub.
 
-![](images/workflow21.png){width=100%}
+![](images/rs_workflow16.png){width=100%}
 
 If you see a pop-up window that looks kind of like this, you've successfully pushed to GitHub!
 
-![](images/workflow22.png){width=100%}
+![](images/rs_workflow17.png){width=100%}
 
 You can confirm by navigating back to your GitHub repo. Check to see that you now have a second commit where you created your practice script. If you click on where it says "2 Commits", you can view the history of all your commits.
 
-![](images/workflow23.png){width=100%}
+![](images/rs_workflow18.png){width=100%}
 
 Click on your latest commit.
 
-![](images/workflow24.png){width=100%}
+![](images/rs_workflow19.png){width=100%}
 You should be able to see the green lines again showing the new additions to this file.
 
-![](images/workflow25.png){width=100%}
+![](images/rs_workflow20.png){width=100%}
 
 
 #### VS Code users
@@ -265,4 +268,4 @@ You should be able to see the green lines again showing the new additions to thi
 #### GitHub Desktop
 :::
 
-Congrats! You've now completed a Git workflow where you created a repo on GitHub, cloned it to your local computer, created a local file, and pushed it back to GitHub! You can rinse and repeat this workflow during the course of your projects. Remember, after you have your remote and local repos set up, the correct order is to make your local edits --> stage your local changes --> commit them with descriptive commit messages --> pull --> push to your remote repo. 
+Congrats! You've now completed a Git workflow where you created a repo on GitHub, cloned it to your local computer, created a local file, and pushed it back to GitHub! You can rinse and repeat this workflow during the course of your projects. Remember, after you have your remote and local repos set up, the correct order is to **make your local edits** --> **stage your local changes** --> **commit them with descriptive commit messages** --> **pull** --> **push to your remote repo**. 
