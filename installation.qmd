@@ -170,7 +170,7 @@ You can check your Git profile settings by running `git config -list` in the Ter
 
 Now click on your account menu in the bottom left corner of VS Code. Go to **Backup and Sync Settings...** --> **Sign in** --> **Sign in with GitHub**. 
 
-A new window should have popped up to allow you to authorize VS Code. Follow the on-screen prompts to finish the authorization process.
+A new window should have popped up to allow you to authorize VS Code. Follow the on-screen prompts to finish the browser-based OAuth authorization process.
 
 Due to the way VS Code works, we will still need to finish the last of the authorization steps later on, so hang tight and proceed to [Git Workflow](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html) for the next step.
 
