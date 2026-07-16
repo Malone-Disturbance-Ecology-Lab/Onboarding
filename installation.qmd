@@ -101,7 +101,7 @@ Follow one of the RStudio or VS Code or GitHub Desktop tutorials for this step. 
 If you don't use RStudio or VS Code, try out GitHub Desktop instead!
 
 :::{.panel-tabset}
-### RStudio users
+### RStudio
 
 For this section, you can run the commands in the "**Console**" tab in RStudio.
 
@@ -152,7 +152,7 @@ Now your computer will remember your token for the next 30, 60, 90, or so odd-da
 
 There you go! You should now be ready to do your workflow. Head to [Git Workflow](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html) for the next step.
 
-### VS Code users
+### VS Code
 
 There are several ways you can connect your VS Code session and Git/GitHub through VS Code's handy interface! This guide will simply go over one possible method. For more options, feel free to read [VS Code's documentation](https://code.visualstudio.com/docs/sourcecontrol/github).
 
