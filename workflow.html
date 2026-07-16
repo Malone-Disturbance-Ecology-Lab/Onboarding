@@ -144,7 +144,7 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#creating-a-repo-on-github" id="toc-creating-a-repo-on-github" class="nav-link" data-scroll-target="#creating-a-repo-on-github">Creating a repo on GitHub</a></li>
   <li><a href="#cloning-to-your-local-computer" id="toc-cloning-to-your-local-computer" class="nav-link" data-scroll-target="#cloning-to-your-local-computer">Cloning to your local computer</a></li>
-  <li><a href="#pushing-a-local-file-to-github" id="toc-pushing-a-local-file-to-github" class="nav-link" data-scroll-target="#pushing-a-local-file-to-github">Pushing a local file to GitHub</a></li>
+  <li><a href="#pushing-a-local-edit-to-github" id="toc-pushing-a-local-edit-to-github" class="nav-link" data-scroll-target="#pushing-a-local-edit-to-github">Pushing a local edit to GitHub</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -346,7 +346,7 @@ Note
 <p>To get a copy of this remote repo to our local computer, we will need to clone it. The Git command to do so is <code>git clone</code>, but IDEs like RStudio and VS Code provide easy-to-use interfaces that allow you to do the same operation with button clicks.</p>
 <p>If you don’t use RStudio or VS Code, feel free to try out GitHub Desktop instead.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">RStudio users</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">VS Code users</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">GitHub Desktop</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">VS Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false" href="">GitHub Desktop</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
 <p>Go to the landing page of your practice repo on GitHub. Click on the “<strong>Code</strong>” then copy the link under HTTPS in the dropdown menu.</p>
@@ -383,96 +383,142 @@ Note
 <p><a href="images/vs_workflow7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="images/vs_workflow7.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-
+<p>Open GitHub Desktop. Make sure you’re logged in if you haven’t done so already. The landing page should show a list of your repos.</p>
+<p><a href="images/gd_workflow1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="images/gd_workflow1.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Select your practice repo from the list and click “<strong>[Clone your_username]/[your_practice_repo]</strong>”.</p>
+<p><a href="images/gd_workflow2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="images/gd_workflow2.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>A new menu should appear letting you choose where to clone your repo with the “<strong>Choose…</strong>” button. If you wish to easily remember what folders are Git repos versus normal folders on your computer, you can create a folder called “GitHub” where all your local Git repos can live.</p>
+<p>Otherwise, once you’re satisfied, click “<strong>Clone</strong>”.</p>
+<p><a href="images/gd_workflow3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="images/gd_workflow3.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Now we have cloned the repo to our local computer!</p>
+<p><a href="images/gd_workflow4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="images/gd_workflow4.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>If you click on “<strong>History</strong>”, you can inspect the first commit in this repo, where we added our gitignore and README files.</p>
+<p><a href="images/gd_workflow5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="images/gd_workflow5.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>You can also manually check that your computer has a complete clone of this repo by going to your file explorer.</p>
+<p><a href="images/gd_workflow6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="images/gd_workflow6.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
 </div>
 </div>
 </section>
-<section id="pushing-a-local-file-to-github" class="level3">
-<h3 class="anchored" data-anchor-id="pushing-a-local-file-to-github">Pushing a local file to GitHub</h3>
+<section id="pushing-a-local-edit-to-github" class="level3">
+<h3 class="anchored" data-anchor-id="pushing-a-local-edit-to-github">Pushing a local edit to GitHub</h3>
 <p>Let’s practice a simple Git workflow where we create a new file on our local computer and send it to GitHub.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">RStudio users</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">VS Code users</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">GitHub Desktop</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">VS Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">GitHub Desktop</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
 <p>Start by creating a new practice script in RStudio. Feel free to write any code in the script as this is just an example.</p>
-<p><a href="images/rs_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24"><img src="images/rs_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="images/rs_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Once you’re satisfied, click on the “<strong>Git</strong>” tab and then click on either the “<strong>Diff</strong>” or “<strong>Commit</strong>” tabs. These two tabs will lead to the same place, so don’t worry about clicking on either one.</p>
-<p><a href="images/rs_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-25"><img src="images/rs_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="images/rs_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>A new window should pop up. Click on your practice script and notice how there are green lines highlighted in the window. The green lines signify the new additions to this file since our last commit. Since this file has never been tracked by Git before, all the lines are highlighted in green and there is a yellow question mark icon next to the script name.</p>
-<p><a href="images/rs_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26"><img src="images/rs_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="images/rs_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>To explain more about what these icons mean, they represent the status of each file in your repo. The yellow question mark signifies a file that is not yet tracked by Git. Here are some other icons you might see working in RStudio:</p>
-<p><a href="images/rstudio_legend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-27"><img src="images/rstudio_legend.png" class="img-fluid" style="width:90.0%"></a></p>
+<p><a href="images/rstudio_legend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="images/rstudio_legend.png" class="img-fluid" style="width:90.0%"></a></p>
 <p>If you think back to the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-overview">Git Workflow Overview</a>, in order to send this practice script to GitHub, the first step is to add it to the staging area. The Git command for this is <code>git add</code>, but thankfully, we can do the equivalent operation by checking the checkbox to the left of the script name.</p>
 <p>Notice how the yellow question mark icon turned into a green “A” icon, which represents a new file that is now marked for tracking.</p>
 <p>You can imagine that in a regular project, you may want to stage several files in a single commit by checking multiple checkboxes, but we will only focus on staging this one file for this exercise.</p>
 <p>After staging the file, we will need to commit it, which will capture a snapshot of any currently staged local changes. The corresponding Git command for this is <code>git commit -m "[my commit message]"</code>, but we can use the RStudio GUI instead. Write a commit message to describe exactly what we’ve changed in the right-hand panel, and then click “<strong>Commit</strong>”.</p>
-<p><a href="images/rs_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-28"><img src="images/rs_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="images/rs_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Once you click “<strong>Commit</strong>”, you might see a new window pop-up like this:</p>
-<p><a href="images/rs_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-29"><img src="images/rs_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="images/rs_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Close the pop-up window to get back to your main workspace and you will see a message that says, “Your branch is ahead of ‘origin/main’ by 1 commit.” This means that we have a local commit that the remote repo on GitHub does not have yet. In a regular project, you would probably have several commits before you’re ready to push, but for the purposes of this exercise, we will send this one commit to GitHub.</p>
-<p><a href="images/rs_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-30"><img src="images/rs_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="images/rs_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>To send this local commit to GitHub, we will want to pull (<code>git pull</code>) first and then push (<code>git push</code>). Pulling will fetch the latest changes on GitHub and merge them with our local files. It’s best practice to pull often and to always pull BEFORE pushing. It makes sense to grab the latest version of the files on GitHub and then make our local edits on top of that. After we make our local edits, then we can push them back to GitHub. This will create a clean history of your repo.</p>
 <p>This habit will really save you whenever you’re working in a repo with other collaborators, who may make edits when you’re away from your computer. By pulling frequently, you can avoid merge conflicts. You can always pull at any point in your workflow, so don’t hesitate to make it a habit.</p>
 <p>With that said, click on the “<strong>Pull</strong>” down arrow to fetch and merge the latest changes from GitHub.</p>
-<p><a href="images/rs_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-31"><img src="images/rs_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="images/rs_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>It will say that we’re already up to date because we haven’t done anything to our GitHub repo since we’ve last touched it.</p>
-<p><a href="images/rs_workflow15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-32"><img src="images/rs_workflow15.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="images/rs_workflow15.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Close that window and click “<strong>Push</strong>” up arrow to send our local changes to GitHub.</p>
-<p><a href="images/rs_workflow16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-33"><img src="images/rs_workflow16.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="images/rs_workflow16.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>If you see a pop-up window that looks kind of like this, you’ve successfully pushed to GitHub!</p>
-<p><a href="images/rs_workflow17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-34"><img src="images/rs_workflow17.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="images/rs_workflow17.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You can confirm by navigating back to your GitHub repo. Check to see that you now have a second commit where you created your practice script. If you click on where it says “2 Commits”, you can view the history of all your commits.</p>
-<p><a href="images/rs_workflow18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="images/rs_workflow18.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="images/rs_workflow18.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Click on your latest commit.</p>
 <p><img src="images/rs_workflow19.png" class="img-fluid" style="width:100.0%"> You should be able to see the green lines again showing the new additions to this file.</p>
-<p><a href="images/rs_workflow20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="images/rs_workflow20.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_workflow20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="images/rs_workflow20.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <p>Start by creating a new practice script in VS Code. Feel free to write any code in the script as this is just an example.</p>
-<p><a href="images/vs_workflow8a.png" class="lightbox" data-gallery="quarto-lightbox-gallery-37"><img src="images/vs_workflow8a.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow8a.png" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="images/vs_workflow8a.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You might notice after saving your script that the <strong>Source Control</strong> tab has a “1” alert on it. Click on it.</p>
-<p><a href="images/vs_workflow8b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-38"><img src="images/vs_workflow8b.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow8b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img src="images/vs_workflow8b.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You will be led to these panels where we can do our Git workflow and keep track of the status of our files. Notice how our script is listed under “Changes”, with a “U” icon next to the script name.</p>
-<p><a href="images/vs_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-39"><img src="images/vs_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img src="images/vs_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>To explain more about what these icons mean, they represent the status of each file in your repo. The “U” icon signifies a file that is not yet tracked by Git. Here are some other icons you might see working in VS Code:</p>
-<p><a href="images/vscode_legend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-40"><img src="images/vscode_legend.png" class="img-fluid" style="width:90.0%"></a></p>
+<p><a href="images/vscode_legend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img src="images/vscode_legend.png" class="img-fluid" style="width:90.0%"></a></p>
 <p>If you think back to the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-overview">Git Workflow Overview</a>, in order to send this practice script to GitHub, the first step is to add it to the staging area. The Git command for this is <code>git add</code>, but thankfully, we can do the equivalent operation by clicking the “<strong>+</strong>” to the right of the script name.</p>
-<p><a href="images/vs_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-41"><img src="images/vs_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img src="images/vs_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Notice how the “U” icon turned into an “A” icon, which represents a new file that is now marked for tracking.</p>
 <p>You can imagine that in a regular project, you may want to stage several files in a single commit by clicking multiple “<strong>+</strong>”s, but we will only focus on staging this one file for this exercise.</p>
-<p><a href="images/vs_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-42"><img src="images/vs_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img src="images/vs_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>After staging the file, we will need to commit it, which will capture a snapshot of any currently staged local changes. The corresponding Git command for this is <code>git commit -m "[my commit message]"</code>, but we can use the VS Code GUI instead. Write a commit message to describe exactly what we’ve changed at the top, and then click “<strong>Commit</strong>”.</p>
-<p><a href="images/vs_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-43"><img src="images/vs_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img src="images/vs_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You’ll now see that the panel is showing a “<strong>Sync Changes</strong>” button. This button will perform a pull and a push into a single operation. You may want to hold off on using this button until you’re more familiar with the Git workflow. Instead, let’s do a pull and a push separately.</p>
 <p>Also, notice that we now have a local commit that the remote repo on GitHub does not have yet. In a regular project, you would probably have several commits before you’re ready to push, but for the purposes of this exercise, we will send this one commit to GitHub.</p>
-<p><a href="images/vs_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-44"><img src="images/vs_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img src="images/vs_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>To send this local commit to GitHub, we will want to pull (<code>git pull</code>) first and then push (<code>git push</code>). Pulling will fetch the latest changes on GitHub and merge them with our local files. It’s best practice to pull often and to always pull BEFORE pushing. It makes sense to grab the latest version of the files on GitHub and then make our local edits on top of that. After we make our local edits, then we can push them back to GitHub. This will create a clean history of your repo.</p>
 <p>This habit will really save you whenever you’re working in a repo with other collaborators, who may make edits when you’re away from your computer. By pulling frequently, you can avoid merge conflicts. You can always pull at any point in your workflow, so don’t hesitate to make it a habit.</p>
 <p>With that said, click on the <strong>Pull down arrow</strong> to fetch and merge the latest changes from GitHub.</p>
-<p><a href="images/vs_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-45"><img src="images/vs_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img src="images/vs_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Nothing will happen; we’re already up to date because we haven’t done anything to our GitHub repo since we’ve last touched it.</p>
 <p>Click <strong>Push up arrow</strong> to send our local changes to GitHub.</p>
-<p><a href="images/vs_workflow15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-46"><img src="images/vs_workflow15.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img src="images/vs_workflow15.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>A pop-up window will appear asking if you want to sign in using GitHub. This is the very last authentication step required to connect VS Code and GitHub. Click “<strong>Allow</strong>”.</p>
-<p><a href="images/vs_workflow16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-47"><img src="images/vs_workflow16.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img src="images/vs_workflow16.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Your browser will redirect you to a new tab, asking you to authorize VS Code. Click “<strong>Continue</strong>”.</p>
-<p><a href="images/vs_workflow17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-48"><img src="images/vs_workflow17.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img src="images/vs_workflow17.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Then click “<strong>Authorize Visual-Studio-Code</strong>”.</p>
-<p><a href="images/vs_workflow18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-49"><img src="images/vs_workflow18.png" class="img-fluid" style="width:70.0%"></a></p>
+<p><a href="images/vs_workflow18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-55"><img src="images/vs_workflow18.png" class="img-fluid" style="width:70.0%"></a></p>
 <p>Click “<strong>Open Visual Studio Code</strong>” to get redirected back to VS Code.</p>
-<p><a href="images/vs_workflow19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-50"><img src="images/vs_workflow19.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow19.png" class="lightbox" data-gallery="quarto-lightbox-gallery-56"><img src="images/vs_workflow19.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You’ve successfully pushed to GitHub!</p>
-<p><a href="images/vs_workflow20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-51"><img src="images/vs_workflow20.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow20.png" class="lightbox" data-gallery="quarto-lightbox-gallery-57"><img src="images/vs_workflow20.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You can confirm by navigating back to your GitHub repo. Check to see that you now have a second commit where you created your practice script. If you click on where it says “2 Commits”, you can view the history of all your commits.</p>
-<p><a href="images/vs_workflow21.png" class="lightbox" data-gallery="quarto-lightbox-gallery-52"><img src="images/vs_workflow21.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow21.png" class="lightbox" data-gallery="quarto-lightbox-gallery-58"><img src="images/vs_workflow21.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Click on your latest commit.</p>
-<p><a href="images/vs_workflow22.png" class="lightbox" data-gallery="quarto-lightbox-gallery-53"><img src="images/vs_workflow22.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow22.png" class="lightbox" data-gallery="quarto-lightbox-gallery-59"><img src="images/vs_workflow22.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You should be able to see the green lines showing the new additions to this file.</p>
-<p><a href="images/vs_workflow23.png" class="lightbox" data-gallery="quarto-lightbox-gallery-54"><img src="images/vs_workflow23.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_workflow23.png" class="lightbox" data-gallery="quarto-lightbox-gallery-60"><img src="images/vs_workflow23.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
 <div id="tabset-2-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-3-tab">
-
+<p>Start by creating a new practice script in your preferred IDE. Feel free to write any code in the script as this is just an example. For instance, Spyder is a popular IDE for Python and can be used to write new Python scripts.</p>
+<p><a href="images/gd_workflow7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-61"><img src="images/gd_workflow7.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Once you’ve saved your edits in your preferred IDE, your GitHub Desktop screen should now look something like below. Notice how there are green lines highlighted in the window. The green lines signify the new additions to this file since our last commit. Since this file has never been tracked by Git before, all the lines are highlighted in green and there is a green “<strong>+</strong>” icon next to the script name.</p>
+<p><a href="images/gd_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="images/gd_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>To explain more about what these icons mean, they represent the status of each file in your repo. The green “<strong>+</strong>” icon signifies a file that is not yet tracked by Git. Here are some other icons you might see in GitHub Desktop:</p>
+<p><a href="images/githubdesktop_legend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="images/githubdesktop_legend.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>If you think back to the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-overview">Git Workflow Overview</a>, in order to send this practice script to GitHub, the first step is to add it to the staging area. The Git command for this is <code>git add</code>, but thankfully, we can do the equivalent operation by checking the checkbox to the left of the script name.</p>
+<p>You can imagine that in a regular project, you may want to stage several files in a single commit by checking multiple checkboxes, but we will only focus on staging this one file for this exercise.</p>
+<p>After staging the file, we will need to commit it, which will capture a snapshot of any currently staged local changes. The corresponding Git command for this is <code>git commit -m "[my commit message]"</code>, but we can use the GitHub Desktop GUI instead. Write a commit message to describe exactly what we’ve changed in the left-hand panel, and then click “<strong>Commit 1 file to main</strong>”.</p>
+<p><a href="images/gd_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-64"><img src="images/gd_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Once you click “<strong>Commit 1 file to main</strong>”, you will see an alert that says, “Committed just now”, followed by your commit message. This means that we have a local commit that the remote repo on GitHub does not have yet. In a regular project, you would probably have several commits before you’re ready to push, but for the purposes of this exercise, we will send this one commit to GitHub.</p>
+<p><a href="images/gd_workflow10a.png" class="lightbox" data-gallery="quarto-lightbox-gallery-65"><img src="images/gd_workflow10a.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>To send this local commit to GitHub, we will want to pull (<code>git pull</code>) first and then push (<code>git push</code>). Pulling will fetch the latest changes on GitHub and merge them with our local files. It’s best practice to pull often and to always pull BEFORE pushing. It makes sense to grab the latest version of the files on GitHub and then make our local edits on top of that. After we make our local edits, then we can push them back to GitHub. This will create a clean history of your repo.</p>
+<p>This habit will really save you whenever you’re working in a repo with other collaborators, who may make edits when you’re away from your computer. By pulling frequently, you can avoid merge conflicts. You can always pull at any point in your workflow, so don’t hesitate to make it a habit.</p>
+<p>With that said, click on the <strong>Downward Triangle</strong> at the top right corner.</p>
+<p><a href="images/gd_workflow10b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-66"><img src="images/gd_workflow10b.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Then click “<strong>Fetch origin</strong>” to fetch the latest changes from GitHub.</p>
+<p><a href="images/gd_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-67"><img src="images/gd_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Nothing will happen; we’re already up to date because we haven’t done anything to our GitHub repo since we’ve last touched it.</p>
+<p>If there were any changes on GitHub that our local repo doesn’t have yet, the “<strong>Pull origin</strong>” would automatically appear after fetching, but that is not the case right here.</p>
+<p><a href="images/gd_workflow12a.png" class="lightbox" data-gallery="quarto-lightbox-gallery-68"><img src="images/gd_workflow12a.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Click either of the “<strong>Push origin</strong>” buttons to send our local changes to GitHub.</p>
+<p><a href="images/gd_workflow12b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-69"><img src="images/gd_workflow12b.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Now wait for GitHub Desktop to complete the process.</p>
+<p><a href="images/gd_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-70"><img src="images/gd_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>You’ve successfully pushed to GitHub! Click on “<strong>History</strong>” to confirm that we’ve made our second commit.</p>
+<p><a href="images/gd_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-71"><img src="images/gd_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>You should have a second commit where you created your practice script.</p>
+<p><a href="images/gd_workflow15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-72"><img src="images/gd_workflow15.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>You can confirm by navigating back to your GitHub repo. Check to see that you now have a second commit where you created your practice script. If you click on where it says “2 Commits”, you can view the history of all your commits.</p>
+<p><a href="images/gd_workflow16.png" class="lightbox" data-gallery="quarto-lightbox-gallery-73"><img src="images/gd_workflow16.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Click on your latest commit.</p>
+<p><a href="images/gd_workflow17.png" class="lightbox" data-gallery="quarto-lightbox-gallery-74"><img src="images/gd_workflow17.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>You should be able to see the green lines again showing the new additions to this file.</p>
+<p><a href="images/gd_workflow18.png" class="lightbox" data-gallery="quarto-lightbox-gallery-75"><img src="images/gd_workflow18.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
 </div>
 </div>
