@@ -416,7 +416,7 @@ Once you've saved your edits in your preferred IDE, your GitHub Desktop screen s
 
 To explain more about what these icons mean, they represent the status of each file in your repo. The green "**+**" icon signifies a file that is not yet tracked by Git. Here are some other icons you might see in GitHub Desktop:
 
-![](images/githubdesktop_legend.png){width=100%}
+![](images/githubdesktop_legend.png){width=90%}
 
 If you think back to the [Git Workflow Overview](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-overview), in order to send this practice script to GitHub, the first step is to add it to the staging area. The Git command for this is `git add`, but thankfully, we can do the equivalent operation by checking the checkbox to the left of the script name. 
 
