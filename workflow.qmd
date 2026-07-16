@@ -153,7 +153,7 @@ To get a copy of this remote repo to our local computer, we will need to clone i
 If you don't use RStudio or VS Code, feel free to try out GitHub Desktop instead.
 
 :::{.panel-tabset}
-#### RStudio users
+#### RStudio
 
 Go to the landing page of your practice repo on GitHub. Click on the "**Code**" then copy the link under HTTPS in the dropdown menu.
 
@@ -185,7 +185,7 @@ Now we have cloned the repo to our local computer! Notice in the top right corne
 
 ![](images/rs_workflow7.png){width=100%}
 
-#### VS Code users
+#### VS Code
 
 Go to the landing page of your practice repo on GitHub. Click on the "**Code**" then copy the link under HTTPS in the dropdown menu.
 
@@ -218,15 +218,42 @@ Notice at the top that we're now working inside the practice repo, and that we h
 ![](images/vs_workflow7.png){width=100%}
 
 #### GitHub Desktop
+
+Open GitHub Desktop. Make sure you're logged in if you haven't done so already. The landing page should show a list of your repos.
+
+![](images/gd_workflow1.png){width=100%}
+
+Select your practice repo from the list and click "**[Clone your_username]/[your_practice_repo]**".
+
+![](images/gd_workflow2.png){width=100%}
+
+A new menu should appear letting you choose where to clone your repo with the "**Choose...**" button. If you wish to easily remember what folders are Git repos versus normal folders on your computer, you can create a folder called "GitHub" where all your local Git repos can live.
+
+Otherwise, once you're satisfied, click "**Clone**".
+
+![](images/gd_workflow3.png){width=100%}
+
+Now we have cloned the repo to our local computer!
+
+![](images/gd_workflow4.png){width=100%}
+
+If you click on "**History**", you can inspect the first commit in this repo, where we added our gitignore and README files. 
+
+![](images/gd_workflow5.png){width=100%}
+
+You can also manually check that your computer has a complete clone of this repo by going to your file explorer. 
+
+![](images/gd_workflow6.png){width=100%}
+
 :::
 
-### Pushing a local file to GitHub
+### Pushing a local edit to GitHub
 
 Let's practice a simple Git workflow where we create a new file on our local computer and send it to GitHub.
 
 :::{.panel-tabset}
 
-#### RStudio users
+#### RStudio
 Start by creating a new practice script in RStudio. Feel free to write any code in the script as this is just an example.
 
 ![](images/rs_workflow8.png){width=100%}
@@ -293,7 +320,7 @@ You should be able to see the green lines again showing the new additions to thi
 ![](images/rs_workflow20.png){width=100%}
 
 
-#### VS Code users
+#### VS Code
 
 Start by creating a new practice script in VS Code. Feel free to write any code in the script as this is just an example. 
 
@@ -378,6 +405,76 @@ You should be able to see the green lines showing the new additions to this file
 ![](images/vs_workflow23.png){width=100%}
 
 #### GitHub Desktop
+
+Start by creating a new practice script in your preferred IDE. Feel free to write any code in the script as this is just an example. For instance, Spyder is a popular IDE for Python and can be used to write new Python scripts.
+
+![](images/gd_workflow7.png){width=100%}
+
+Once you've saved your edits in your preferred IDE, your GitHub Desktop screen should now look something like below. Notice how there are green lines highlighted in the window. The green lines signify the new additions to this file since our last commit. Since this file has never been tracked by Git before, all the lines are highlighted in green and there is a green "**+**" icon next to the script name.
+
+![](images/gd_workflow8.png){width=100%}
+
+To explain more about what these icons mean, they represent the status of each file in your repo. The green "**+**" icon signifies a file that is not yet tracked by Git. Here are some other icons you might see in GitHub Desktop:
+
+![](images/githubdesktop_legend.png){width=100%}
+
+If you think back to the [Git Workflow Overview](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-overview), in order to send this practice script to GitHub, the first step is to add it to the staging area. The Git command for this is `git add`, but thankfully, we can do the equivalent operation by checking the checkbox to the left of the script name. 
+
+You can imagine that in a regular project, you may want to stage several files in a single commit by checking multiple checkboxes, but we will only focus on staging this one file for this exercise.
+
+After staging the file, we will need to commit it, which will capture a snapshot of any currently staged local changes. The corresponding Git command for this is `git commit -m "[my commit message]"`, but we can use the GitHub Desktop GUI instead. Write a commit message to describe exactly what we've changed in the left-hand panel, and then click "**Commit 1 file to main**". 
+
+![](images/gd_workflow9.png){width=100%}
+
+Once you click "**Commit 1 file to main**", you will see an alert that says, "Committed just now", followed by your commit message. This means that we have a local commit that the remote repo on GitHub does not have yet. In a regular project, you would probably have several commits before you’re ready to push, but for the purposes of this exercise, we will send this one commit to GitHub.
+
+![](images/gd_workflow10a.png){width=100%}
+
+To send this local commit to GitHub, we will want to pull (`git pull`) first and then push (`git push`). Pulling will fetch the latest changes on GitHub and merge them with our local files. It's best practice to pull often and to always pull BEFORE pushing. It makes sense to grab the latest version of the files on GitHub and then make our local edits on top of that. After we make our local edits, then we can push them back to GitHub. This will create a clean history of your repo. 
+
+This habit will really save you whenever you're working in a repo with other collaborators, who may make edits when you're away from your computer. By pulling frequently, you can avoid merge conflicts. You can always pull at any point in your workflow, so don't hesitate to make it a habit.
+
+With that said, click on the **Downward Triangle** at the top right corner.
+
+![](images/gd_workflow10b.png){width=100%}
+
+Then click "**Fetch origin**" to fetch the latest changes from GitHub.
+
+![](images/gd_workflow11.png){width=100%}
+
+Nothing will happen; we're already up to date because we haven't done anything to our GitHub repo since we've last touched it.
+
+If there were any changes on GitHub that our local repo doesn't have yet, the "**Pull origin**" would automatically appear after fetching, but that is not the case right here.
+
+![](images/gd_workflow12a.png){width=100%}
+
+Click either of the "**Push origin**" buttons to send our local changes to GitHub.
+
+![](images/gd_workflow12b.png){width=100%}
+
+Now wait for GitHub Desktop to complete the process.
+
+![](images/gd_workflow13.png){width=100%}
+
+You've successfully pushed to GitHub! Click on "**History**" to confirm that we've made our second commit.
+
+![](images/gd_workflow14.png){width=100%}
+
+You should have a second commit where you created your practice script.
+
+![](images/gd_workflow15.png){width=100%}
+
+You can confirm by navigating back to your GitHub repo. Check to see that you now have a second commit where you created your practice script. If you click on where it says "2 Commits", you can view the history of all your commits.
+
+![](images/gd_workflow16.png){width=100%}
+
+Click on your latest commit.
+
+![](images/gd_workflow17.png){width=100%}
+
+You should be able to see the green lines again showing the new additions to this file.
+
+![](images/gd_workflow18.png){width=100%}
 :::
 
 Congrats! You've now completed a Git workflow where you created a repo on GitHub, cloned it to your local computer, created a local file, and pushed it back to GitHub! You can rinse and repeat this workflow during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to **make your local edits** --> **stage your local changes** --> **commit them with descriptive commit messages** --> **pull** --> **push to your remote repo**. 
