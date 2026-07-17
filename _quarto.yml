@@ -23,6 +23,8 @@ website:
             text: "Installation"
           - href: workflow.qmd
             text: "Git Workflow"
+          - href: server.qmd
+            text: "MaloneLab Server"
             
     right: 
       - icon: github
