@@ -63,15 +63,69 @@ Or with Python:
 
 ```
 from pathlib import Path
-server_folder = Path("/", "Volumes", "Malonelab", "MaloneLab", "my_project")
+server_folder = Path("/", "Volumes", "MaloneLab", "Research", "my_project")
 ```
-
-It's best to avoid typing file paths with "/" or "\\" because this can differ between operating systems, but this is unavoidable with MaloneLab Server paths. 
-
-For the rationale behind these recommendations, please check out ...
 
 ### Windows
 
+#### 1️⃣ Contact the YSE IT team for access
+
+Email the YSE IT team at ysehelpdesk\@yale.edu to ask for access to **corellia.environment.yale.edu/malonelab** if Sparkle has not already asked for access. 
+
+#### 2️⃣ Make sure you're connected to Yale network or use the VPN
+
+Connection to the server requires that your computer use the Yale on-campus networks (such as ethernet or one of the Yale Wifi networks). If you're not on-campus, you may use the Yale VPN to route your traffic through Yale.
+
+To use the Yale VPN, you will need the Cisco Secure Client VPN software. All Yale-managed computers should automatically have this software installed, but if you need Cisco Secure Client on a personal computer, visit this [Yale IT Services walkthrough](https://yale.service-now.com/kb?id=kb_article_view&sysparm_article=KB0000326) to see where to download the Cisco Secure Client.
+
+Once you have Cisco Secure Client, simply open it up, and type "access.yale.edu" as the address. Click "**Connect**"
+
+![](images/windows_server1.png){width=80%}
+
+You might need to log in with your Yale email, NetID password, and do your two-factor authentication. After logging in, you will see this message:
+
+![](images/windows_server2.png){width=100%}
+
+#### 3️⃣ Connect to server
+
+Once you're connected to the VPN, search for "**Run**" at Windows search bar and click to open the program.
+
+![](images/windows_server3.png){width=80%}
 
 
+Type in "\\\\corellia.environment.yale.edu\\malonelab" in the address bar and click "**Connect**".
+
+![](images/windows_server4.png){width=80%}
+
+And you should now be connected to the server! Research projects typically live under the "Research" folder.
+
+![](images/windows_server5.png){width=100%}
+
+#### 4️⃣ Use the right file paths
+
+Absolute file paths in the server will begin like: 
+
+```
+\\corellia.environment.yale.edu\MaloneLab\Research\...
+```
+
+If you have a `my_project` folder under `Research`, you can access it with R like so:
+
+```
+server_folder <- file.path("/", "corellia.environment.yale.edu", "MaloneLab", "Research", "my_project")
+```
+
+Or with Python:
+
+```
+from pathlib import Path
+server_folder = Path("/", "corellia.environment.yale.edu", "MaloneLab", "Research", "my_project")
+```
+
+:::
+
+:::callout-note
+It's best to avoid typing file paths with "/" or "\\" because this can differ between operating systems, but this is unavoidable with MaloneLab Server paths. If you must use slashes in your code, use the forward slash "/", as this will work on both Mac and Windows.
+
+For more tips on file paths, please check out ...
 :::
