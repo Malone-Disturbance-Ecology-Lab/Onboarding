@@ -194,14 +194,57 @@ ul.task-list li input[type="checkbox"] {
 <pre><code>server_folder &lt;- file.path("/", "Volumes", "MaloneLab", "Research", "my_project")</code></pre>
 <p>Or with Python:</p>
 <pre><code>from pathlib import Path
-server_folder = Path("/", "Volumes", "Malonelab", "MaloneLab", "my_project")</code></pre>
-<p>It’s best to avoid typing file paths with “/” or “\” because this can differ between operating systems, but this is unavoidable with MaloneLab Server paths.</p>
-<p>For the rationale behind these recommendations, please check out …</p>
+server_folder = Path("/", "Volumes", "MaloneLab", "Research", "my_project")</code></pre>
 </section>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-
+<section id="contact-the-yse-it-team-for-access-1" class="level4">
+<h4 class="anchored" data-anchor-id="contact-the-yse-it-team-for-access-1">1️⃣ Contact the YSE IT team for access</h4>
+<p>Email the YSE IT team at ysehelpdesk@yale.edu to ask for access to <strong>corellia.environment.yale.edu/malonelab</strong> if Sparkle has not already asked for access.</p>
+</section>
+<section id="make-sure-youre-connected-to-yale-network-or-use-the-vpn-1" class="level4">
+<h4 class="anchored" data-anchor-id="make-sure-youre-connected-to-yale-network-or-use-the-vpn-1">2️⃣ Make sure you’re connected to Yale network or use the VPN</h4>
+<p>Connection to the server requires that your computer use the Yale on-campus networks (such as ethernet or one of the Yale Wifi networks). If you’re not on-campus, you may use the Yale VPN to route your traffic through Yale.</p>
+<p>To use the Yale VPN, you will need the Cisco Secure Client VPN software. All Yale-managed computers should automatically have this software installed, but if you need Cisco Secure Client on a personal computer, visit this <a href="https://yale.service-now.com/kb?id=kb_article_view&amp;sysparm_article=KB0000326">Yale IT Services walkthrough</a> to see where to download the Cisco Secure Client.</p>
+<p>Once you have Cisco Secure Client, simply open it up, and type “access.yale.edu” as the address. Click “<strong>Connect</strong>”</p>
+<p><img src="images/windows_server1.png" class="img-fluid" style="width:80.0%"></p>
+<p>You might need to log in with your Yale email, NetID password, and do your two-factor authentication. After logging in, you will see this message:</p>
+<p><img src="images/windows_server2.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="connect-to-server-1" class="level4">
+<h4 class="anchored" data-anchor-id="connect-to-server-1">3️⃣ Connect to server</h4>
+<p>Once you’re connected to the VPN, search for “<strong>Run</strong>” at Windows search bar and click to open the program.</p>
+<p><img src="images/windows_server3.png" class="img-fluid" style="width:80.0%"></p>
+<p>Type in “\\corellia.environment.yale.edu\malonelab” in the address bar and click “<strong>Connect</strong>”.</p>
+<p><img src="images/windows_server4.png" class="img-fluid" style="width:80.0%"></p>
+<p>And you should now be connected to the server! Research projects typically live under the “Research” folder.</p>
+<p><img src="images/windows_server5.png" class="img-fluid" style="width:100.0%"></p>
+</section>
+<section id="use-the-right-file-paths-1" class="level4">
+<h4 class="anchored" data-anchor-id="use-the-right-file-paths-1">4️⃣ Use the right file paths</h4>
+<p>Absolute file paths in the server will begin like:</p>
+<pre><code>\\corellia.environment.yale.edu\MaloneLab\Research\...</code></pre>
+<p>If you have a <code>my_project</code> folder under <code>Research</code>, you can access it with R like so:</p>
+<pre><code>server_folder &lt;- file.path("/", "corellia.environment.yale.edu", "MaloneLab", "Research", "my_project")</code></pre>
+<p>Or with Python:</p>
+<pre><code>from pathlib import Path
+server_folder = Path("/", "corellia.environment.yale.edu", "MaloneLab", "Research", "my_project")</code></pre>
+</section>
 </div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It’s best to avoid typing file paths with “/” or “\” because this can differ between operating systems, but this is unavoidable with MaloneLab Server paths. If you must use slashes in your code, use the forward slash “/”, as this will work on both Mac and Windows.</p>
+<p>For more tips on file paths, please check out …</p>
 </div>
 </div>
 
