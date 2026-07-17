@@ -111,6 +111,10 @@ ul.task-list li input[type="checkbox"] {
     <a class="dropdown-item" href="./workflow.html">
  <span class="dropdown-text">Git Workflow</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./server.html">
+ <span class="dropdown-text">MaloneLab Server</span></a>
+  </li>  
     </ul>
   </li>
 </ul>
@@ -489,7 +493,7 @@ Note
 <p>Once you’ve saved your edits in your preferred IDE, your GitHub Desktop screen should now look something like below. Notice how there are green lines highlighted in the window. The green lines signify the new additions to this file since our last commit. Since this file has never been tracked by Git before, all the lines are highlighted in green and there is a green “<strong>+</strong>” icon next to the script name.</p>
 <p><a href="images/gd_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-62"><img src="images/gd_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>To explain more about what these icons mean, they represent the status of each file in your repo. The green “<strong>+</strong>” icon signifies a file that is not yet tracked by Git. Here are some other icons you might see in GitHub Desktop:</p>
-<p><a href="images/githubdesktop_legend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="images/githubdesktop_legend.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/githubdesktop_legend.png" class="lightbox" data-gallery="quarto-lightbox-gallery-63"><img src="images/githubdesktop_legend.png" class="img-fluid" style="width:90.0%"></a></p>
 <p>If you think back to the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-overview">Git Workflow Overview</a>, in order to send this practice script to GitHub, the first step is to add it to the staging area. The Git command for this is <code>git add</code>, but thankfully, we can do the equivalent operation by checking the checkbox to the left of the script name.</p>
 <p>You can imagine that in a regular project, you may want to stage several files in a single commit by checking multiple checkboxes, but we will only focus on staging this one file for this exercise.</p>
 <p>After staging the file, we will need to commit it, which will capture a snapshot of any currently staged local changes. The corresponding Git command for this is <code>git commit -m "[my commit message]"</code>, but we can use the GitHub Desktop GUI instead. Write a commit message to describe exactly what we’ve changed in the left-hand panel, and then click “<strong>Commit 1 file to main</strong>”.</p>
