@@ -50,18 +50,26 @@ This icon will appear on your desktop as long as you're connected to the server.
 Absolute file paths in the server will begin like: 
 
 ```
-//Volumes/MaloneLab/Research/...
+/Volumes/MaloneLab/Research/...
 ```
 
-If you have a `my_project` folder under `Research`, you can access it with R like so:
+If you have a `my_project` folder under `Research`, you can point to it in R like so:
 
 ```
+# Option 1
+server_folder <- "/Volumes/MaloneLab/Research/my_project"
+
+# Option 2
 server_folder <- file.path("/", "Volumes", "MaloneLab", "Research", "my_project")
 ```
 
-Or with Python:
+Or in Python:
 
 ```
+# Option 1
+server_folder = "/Volumes/MaloneLab/Research/my_project"
+
+# Option 2
 from pathlib import Path
 server_folder = Path("/", "Volumes", "MaloneLab", "Research", "my_project")
 ```
@@ -109,15 +117,23 @@ Absolute file paths in the server will begin like:
 \\corellia.environment.yale.edu\MaloneLab\Research\...
 ```
 
-If you have a `my_project` folder under `Research`, you can access it with R like so:
+If you have a `my_project` folder under `Research`, you can point to it in R like so:
 
 ```
+# Option 1
+server_folder <- "//corellia.environment.yale.edu/MaloneLab/Research/my_project"
+
+# Option 2
 server_folder <- file.path("/", "corellia.environment.yale.edu", "MaloneLab", "Research", "my_project")
 ```
 
-Or with Python:
+Or in Python:
 
 ```
+# Option 1
+server_folder = "//corellia.environment.yale.edu/MaloneLab/Research/my_project"
+
+# Option 2
 from pathlib import Path
 server_folder = Path("/", "corellia.environment.yale.edu", "MaloneLab", "Research", "my_project")
 ```
@@ -125,7 +141,7 @@ server_folder = Path("/", "corellia.environment.yale.edu", "MaloneLab", "Researc
 :::
 
 :::callout-note
-It's best to avoid typing file paths with "/" or "\\" because this can differ between operating systems, but this is unavoidable with MaloneLab Server paths. If you must use slashes in your code, use the forward slash "/", as this will work on both Mac and Windows.
+It's best to avoid typing file paths with "/" or "\\" because this can differ between operating systems, but this is unavoidable with MaloneLab Server paths (unless you set your working directory to a folder inside the server). If you must use slashes in your code, use the forward slash "/", as this will work on both Mac and Windows.
 
 For more tips on file paths, please check out ...
 :::
