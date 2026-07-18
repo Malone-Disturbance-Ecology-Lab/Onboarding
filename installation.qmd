@@ -1,6 +1,5 @@
 ---
 title: "Installation"
-format: html
 ---
 
 Before you can begin on your new project, please complete the preparation steps relevant to your situation below. This will ensure that you will have all the tools/software needed for success! 

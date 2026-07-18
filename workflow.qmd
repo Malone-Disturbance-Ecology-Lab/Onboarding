@@ -1,6 +1,5 @@
 ---
 title: "Git Workflow"
-format: html
 lightbox: true
 ---
 

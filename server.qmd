@@ -1,6 +1,5 @@
 ---
 title: "MaloneLab Server"
-format: html
 ---
 
 The MaloneLab Server is a cloud storage location owned by YSE. All members of the lab should have access to this location to store large data files. The steps to access the server are as follows:
