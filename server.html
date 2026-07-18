@@ -189,11 +189,19 @@ ul.task-list li input[type="checkbox"] {
 <section id="use-the-right-file-paths" class="level4">
 <h4 class="anchored" data-anchor-id="use-the-right-file-paths">4️⃣ Use the right file paths</h4>
 <p>Absolute file paths in the server will begin like:</p>
-<pre><code>//Volumes/MaloneLab/Research/...</code></pre>
-<p>If you have a <code>my_project</code> folder under <code>Research</code>, you can access it with R like so:</p>
-<pre><code>server_folder &lt;- file.path("/", "Volumes", "MaloneLab", "Research", "my_project")</code></pre>
-<p>Or with Python:</p>
-<pre><code>from pathlib import Path
+<pre><code>/Volumes/MaloneLab/Research/...</code></pre>
+<p>If you have a <code>my_project</code> folder under <code>Research</code>, you can point to it in R like so:</p>
+<pre><code># Option 1
+server_folder &lt;- "/Volumes/MaloneLab/Research/my_project"
+
+# Option 2
+server_folder &lt;- file.path("/", "Volumes", "MaloneLab", "Research", "my_project")</code></pre>
+<p>Or in Python:</p>
+<pre><code># Option 1
+server_folder = "/Volumes/MaloneLab/Research/my_project"
+
+# Option 2
+from pathlib import Path
 server_folder = Path("/", "Volumes", "MaloneLab", "Research", "my_project")</code></pre>
 </section>
 </div>
@@ -224,10 +232,18 @@ server_folder = Path("/", "Volumes", "MaloneLab", "Research", "my_project")</cod
 <h4 class="anchored" data-anchor-id="use-the-right-file-paths-1">4️⃣ Use the right file paths</h4>
 <p>Absolute file paths in the server will begin like:</p>
 <pre><code>\\corellia.environment.yale.edu\MaloneLab\Research\...</code></pre>
-<p>If you have a <code>my_project</code> folder under <code>Research</code>, you can access it with R like so:</p>
-<pre><code>server_folder &lt;- file.path("/", "corellia.environment.yale.edu", "MaloneLab", "Research", "my_project")</code></pre>
-<p>Or with Python:</p>
-<pre><code>from pathlib import Path
+<p>If you have a <code>my_project</code> folder under <code>Research</code>, you can point to it in R like so:</p>
+<pre><code># Option 1
+server_folder &lt;- "//corellia.environment.yale.edu/MaloneLab/Research/my_project"
+
+# Option 2
+server_folder &lt;- file.path("/", "corellia.environment.yale.edu", "MaloneLab", "Research", "my_project")</code></pre>
+<p>Or in Python:</p>
+<pre><code># Option 1
+server_folder = "//corellia.environment.yale.edu/MaloneLab/Research/my_project"
+
+# Option 2
+from pathlib import Path
 server_folder = Path("/", "corellia.environment.yale.edu", "MaloneLab", "Research", "my_project")</code></pre>
 </section>
 </div>
@@ -243,7 +259,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>It’s best to avoid typing file paths with “/” or “\” because this can differ between operating systems, but this is unavoidable with MaloneLab Server paths. If you must use slashes in your code, use the forward slash “/”, as this will work on both Mac and Windows.</p>
+<p>It’s best to avoid typing file paths with “/” or “\” because this can differ between operating systems, but this is unavoidable with MaloneLab Server paths (unless you set your working directory to a folder inside the server). If you must use slashes in your code, use the forward slash “/”, as this will work on both Mac and Windows.</p>
 <p>For more tips on file paths, please check out …</p>
 </div>
 </div>
