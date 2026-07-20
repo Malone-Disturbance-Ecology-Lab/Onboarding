@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome! – Malone Disturbance Ecology Lab: Onboarding</title>
+<title>Where to Put Data – Malone Disturbance Ecology Lab: Onboarding</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -92,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -143,22 +143,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#lab-policies" id="toc-lab-policies" class="nav-link active" data-scroll-target="#lab-policies">Lab Policies 📄</a></li>
-  <li><a href="#directory" id="toc-directory" class="nav-link" data-scroll-target="#directory">Directory 🗂️</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome!</h1>
+<h1 class="title">Where to Put Data</h1>
 </div>
 
 
@@ -175,23 +168,23 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to the Malone Disturbance Ecology Lab (MDEL)! Here you’ll find various resources designed to help you in setting up your projects and integrating with the lab. There is a lot of content, but you will probably want to check out this landing page, <strong>Setup</strong>, and <strong>Best Practices</strong> at the very least.</p>
-<p>Please don’t hesitate to reach out if you have any questions or feedback on this website.</p>
-<section id="lab-policies" class="level2">
-<h2 class="anchored" data-anchor-id="lab-policies">Lab Policies 📄</h2>
-<p>Please take a moment to read, review, and sign the lab policies <a href="https://docs.google.com/forms/d/e/1FAIpQLSd01roP78dKHoqqmjMVa_FR4_n0-AZvGgn5JmA_U2ZVrpJnZg/viewform?usp=header">here</a>. Thank you!</p>
-</section>
-<section id="directory" class="level2">
-<h2 class="anchored" data-anchor-id="directory">Directory 🗂️</h2>
-<p>Main lab website: <a href="https://www.malonelab.org/">https://www.malonelab.org/</a></p>
-<p>MDEL GitHub organization: <a href="https://github.com/Malone-Disturbance-Ecology-Lab">https://github.com/Malone-Disturbance-Ecology-Lab</a></p>
-<p>MDEL DataONE portal: <a href="https://search.dataone.org/portals/3107251/About">https://search.dataone.org/portals/3107251/About</a></p>
-<p>For help in setting up your new project properly, visit the tabs under <strong>Setup</strong>.</p>
-<p>For ideas on how to best format your workflow for maximum reproducibility, visit the tabs under <strong>Best Practices</strong>.</p>
-<p>Lastly, check out the tabs under <strong>Resources</strong> for a list of technical resources, such as tutorials on coding, data publication, synthesis science, website creation, HPC clusters, and more!</p>
+<p>Planning out where to store your data is a task worth doing, especially since your data could end up in multiple locations throughout the duration of your project. Below are some guidelines designed to help you start thinking about where to store your data for maximum reproducibility.</p>
+<ul>
+<li>Large datasets (hundreds of GBs) belong to MaloneLab Server</li>
+<li>Small or medium datasets (MBs or tens of GBs) can be kept locally or on the server</li>
+<li><strong>Generally best to not store data files on GitHub!! GitHub has a hard file size limit and will prevent you from uploading anything over 100MB</strong>
+<ul>
+<li>If you must store on GitHub, make sure the file is small</li>
+</ul></li>
+<li>Where to put data depends not only on file size, but also your expectation for the person looking to reproduce your results
+<ul>
+<li>If your research hasn’t been published yet, it may make sense to point file paths to server so Sparkle and the other lab members can run your workflow. There’s a high possibility that your workflow will include a data download step that may take a long time, so it would be helpful if the data is already in the server for the lab members to use in subsequent workflow steps (if they don’t want to wait for data to download).</li>
+<li>If your research is in the final stages of publication, it may make sense to point file paths to the local directory so when the general public clones your repo, they can run scripts to download/import/export data on their local computer.</li>
+<li>If you think you will switch paths a lot between your local computer and the server, it may suit you to have identical folder structure for your project on your local computer and on the server. Then in your scripts you can specify a base folder (either a local folder or a server folder), and keep the rest of the relative file paths the same (more on that in File Paths).</li>
+</ul></li>
+</ul>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -607,7 +600,7 @@ ul.task-list li input[type="checkbox"] {
     </div>   
     <div class="nav-footer-center">
 <p>Copyright © 2026, Sparkle Malone</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+<div class="toc-actions"><ul><li><a href="https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
