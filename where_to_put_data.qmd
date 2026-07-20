@@ -1,0 +1,15 @@
+---
+title: "Where to Put Data"
+---
+
+Planning out where to store your data is a task worth doing, especially since your data could end up in multiple locations throughout the duration of your project. Below are some guidelines designed to help you start thinking about where to store your data for maximum reproducibility.
+
+- Large datasets (hundreds of GBs) belong to MaloneLab Server
+- Small or medium datasets (MBs or tens of GBs) can be kept locally or on the server
+- **Generally best to not store data files on GitHub!! GitHub has a hard file size limit and will prevent you from uploading anything over 100MB**
+   - If you must store on GitHub, make sure the file is small
+- Where to put data depends not only on file size, but also your expectation for the person looking to reproduce your results
+   - If your research hasn't been published yet, it may make sense to point file paths to server so Sparkle and the other lab members can run your workflow. There's a high possibility that your workflow will include a data download step that may take a long time, so it would be helpful if the data is already in the server for the lab members to use in subsequent workflow steps (if they don’t want to wait for data to download).
+   - If your research is in the final stages of publication, it may make sense to point file paths to the local directory so when the general public clones your repo, they can run scripts to download/import/export data on their local computer. 
+   - If you think you will switch paths a lot between your local computer and the server, it may suit you to have identical folder structure for your project on your local computer and on the server. Then in your scripts you can specify a base folder (either a local folder or a server folder), and keep the rest of the relative file paths the same (more on that in File Paths). 
+

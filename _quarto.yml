@@ -25,6 +25,10 @@ website:
             text: "Git Workflow"
           - href: server.qmd
             text: "MaloneLab Server"
+      - text: "Best Practices"
+        menu:
+          - href: where_to_put_data.qmd
+            text: "Where to Put Data"
             
     right: 
       - icon: github
