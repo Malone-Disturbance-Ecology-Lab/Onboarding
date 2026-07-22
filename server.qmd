@@ -142,5 +142,5 @@ server_folder = Path("/", "corellia.environment.yale.edu", "MaloneLab", "Researc
 :::callout-note
 It's best to avoid typing file paths with "/" or "\\" because this can differ between operating systems, but this is unavoidable with MaloneLab Server paths (unless you set your working directory to a folder inside the server). If you must use slashes in your code, use the forward slash "/", as this will work on both Mac and Windows.
 
-For more tips on file paths, please check out ...
+For more tips on file paths, please check out [File Paths](https://malone-disturbance-ecology-lab.github.io/Onboarding/file_paths.html).
 :::

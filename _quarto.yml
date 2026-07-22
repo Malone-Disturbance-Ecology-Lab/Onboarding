@@ -29,6 +29,8 @@ website:
         menu:
           - href: where_to_put_data.qmd
             text: "Where to Put Data"
+          - href: file_paths.qmd
+            text: "File Paths"
             
     right: 
       - icon: github
