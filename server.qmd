@@ -54,7 +54,8 @@ Absolute file paths in the server will begin like:
 
 If you have a `my_project` folder under `Research`, you can point to it in R like so:
 
-```
+```{r}
+#| eval: false
 # Option 1
 server_folder <- "/Volumes/MaloneLab/Research/my_project"
 
@@ -64,7 +65,7 @@ server_folder <- file.path("/", "Volumes", "MaloneLab", "Research", "my_project"
 
 Or in Python:
 
-```
+```python
 # Option 1
 server_folder = "/Volumes/MaloneLab/Research/my_project"
 
@@ -118,7 +119,8 @@ Absolute file paths in the server will begin like:
 
 If you have a `my_project` folder under `Research`, you can point to it in R like so:
 
-```
+```{r}
+#| eval: false
 # Option 1
 server_folder <- "//corellia.environment.yale.edu/MaloneLab/Research/my_project"
 
@@ -128,7 +130,7 @@ server_folder <- file.path("/", "corellia.environment.yale.edu", "MaloneLab", "R
 
 Or in Python:
 
-```
+```python
 # Option 1
 server_folder = "//corellia.environment.yale.edu/MaloneLab/Research/my_project"
 

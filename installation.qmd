@@ -34,13 +34,13 @@ If you're using a Mac computer, there's a good chance that it already has Git.
 
 Run this command line code to check if your computer already has Git. You can run this in the Terminal on Mac or Linux. If you're using a Windows computer, and you don't know if you have an equivalent shell, you can open up RStudio or VS Code and run this command in the "Terminal" tab/window. 
 
-```
+```bash
 which git
 ```
 
 If this command returns a file path, then you already have Git and can skip the Git installation. Otherwise, proceed to install Git. 
 
-## 5️⃣ Install Git
+## 5️⃣ Install Git if you don't have it already
 
 Git is an open-source version control software designed to track changes in files and allow other people to collaborate on your work. The way to install Git will be different depending on your operating system, so look through and pick the right option for your machine.
 
@@ -51,7 +51,7 @@ Be sure to close any IDEs you have open before installing Git, as this can cause
 
 Run the following command line code.
 
-```
+```bash
 xcode-select --install
 ```
 
@@ -69,13 +69,13 @@ Install Git via your distro's package manager (in the Terminal).
 
 If you use Ubuntu or Debian Linux that code is as follows:
 
-```
+```bash
 sudo apt-get install git
 ```
 
 If instead you use Fedora or RedHat Linux the code is instead:
 
-```
+```bash
 sudo yum install git
 ```
 
@@ -87,7 +87,7 @@ For more detailed instructions, see [here](https://happygitwithr.com/install-git
 
 Run this command line code to check that your computer has Git. You can run this in the Terminal on Mac or Linux, or the Git Bash shell if you've installed Git for Windows from the previous step.
 
-```
+```bash
 which git
 ```
 
@@ -155,14 +155,14 @@ There you go! You should now be ready to do your workflow. Head to [Git Workflow
 
 There are several ways you can connect your VS Code session and Git/GitHub through VS Code's handy interface! This guide will simply go over one possible method. For more options, feel free to read [VS Code's documentation](https://code.visualstudio.com/docs/sourcecontrol/github).
 
-First, update your Git profile on your computer. You can do this by selecting **Terminal** --> **New Terminal**. Then, in the Terminal, run this command, but replace `"Your GitHub Username"` with your actual GitHub username. 
+First, update your Git profile on your computer. You can do this by selecting **Terminal** --> **New Terminal**. Then, in the Terminal, run this command, but replace "`Your GitHub Username`" with your actual GitHub username. 
 
-```
+```bash
 git config --global user.name "Your GitHub Username"
 ```
-Next, run this command, but replace `"Your GitHub Email"` with your actual email you use for GitHub.
+Next, run this command, but replace "`Your GitHub Email`" with your actual email you use for GitHub.
 
-```
+```bash
 git config --global user.email "Your GitHub Email"
 ```
 You can check your Git profile settings by running `git config -list` in the Terminal just to double-check.
