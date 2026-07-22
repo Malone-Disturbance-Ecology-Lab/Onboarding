@@ -1,6 +1,5 @@
 ---
 title: "File Paths"
-mermaid-format: png
 lightbox: true
 ---
 
@@ -18,14 +17,7 @@ Imagine your GitHub repo is named `my_project`. If you've followed the setup ins
 
 For example, let's say that we have a folder in `my_project` that holds our downloaded data called `downloaded_data`. Then inside, there's a `landsat_data` folder that has—you guessed it—our Landsat data. For now, we have Landsat bands 1 and 2 downloaded as .tif files under the `B01` and `B02` folders, and our folder structure looks like this:
 
-```{mermaid}
-graph LR
-  A[My local computer 💻] --> B(my_project) --> C(downloaded_data) --> D(landsat_data)
-  D --> E(B01)
-  D --> F(B02)
-  E --> G(example_raster.tif)
-  F --> H(another_example_raster.tif)
-```
+![](images/file_paths1.png){width=100%}
 
 Since our current working directory is automatically set to the `my_project` folder, we can use relative file paths and read in our local files like so:
 
@@ -50,14 +42,7 @@ Imagine your GitHub repo is named `my_project`. If you've followed the setup ins
 
 For example, let's say that we have a folder in `my_project` that holds our downloaded data called `downloaded_data`. Then inside, there's a `landsat_data` folder that has—you guessed it—our Landsat data. For now, we have Landsat bands 1 and 2 downloaded as .tif files under the `B01` and `B02` folders, and our folder structure looks like this:
 
-```{mermaid}
-graph LR
-  A[My local computer 💻] --> B(my_project) --> C(downloaded_data) --> D(landsat_data)
-  D --> E(B01)
-  D --> F(B02)
-  E --> G(example_raster.tif)
-  F --> H(another_example_raster.tif)
-```
+![](images/file_paths1.png){width=100%}
 
 Since our current working directory is automatically set to the `my_project` folder, we can use relative file paths and read in our local files like so:
 
@@ -90,14 +75,7 @@ If you're working on a Windows computer, be sure to use `corellia.environment.ya
 
 Now what if your research is at the stage where you would like other lab members to run your workflow, but maybe you don't necessarily want them to re-download the entire dataset since it takes a long time? You can create a folder on the MaloneLab Server for your project with the same inner folder structure. Below is an example of how your folders can look like in the server. Then either move or copy your data files here.
 
-```{mermaid}
-graph LR
-  A[MaloneLab Server ☁️] --> B(Research) --> C("my_project (can be renamed to differentiate from repo name)") --> D(downloaded_data) --> E(landsat_data)
-  E --> F(B01)
-  E --> G(B02)
-  F --> H(example_raster.tif)
-  G --> I(another_example_raster.tif)
-```
+![](images/file_paths2.png){width=100%}
 
 Now everyone in the lab has access to these files.
 
