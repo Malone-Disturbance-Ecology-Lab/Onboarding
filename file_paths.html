@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome! – Malone Disturbance Ecology Lab: Onboarding</title>
+<title>File Paths – Malone Disturbance Ecology Lab: Onboarding</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -43,6 +78,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-7dffa6dc565ab22c33bd2b8139345d21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -92,7 +130,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -152,8 +190,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-policies" id="toc-lab-policies" class="nav-link active" data-scroll-target="#lab-policies">Lab Policies 📄</a></li>
-  <li><a href="#directory" id="toc-directory" class="nav-link" data-scroll-target="#directory">Directory 🗂️</a></li>
+  <li><a href="#local-paths" id="toc-local-paths" class="nav-link active" data-scroll-target="#local-paths">Local Paths</a></li>
+  <li><a href="#server-paths" id="toc-server-paths" class="nav-link" data-scroll-target="#server-paths">Server Paths</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -162,7 +200,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome!</h1>
+<h1 class="title">File Paths</h1>
 </div>
 
 
@@ -179,20 +217,172 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to the Malone Disturbance Ecology Lab (MDEL)! Here you’ll find various resources designed to help you in setting up your projects and integrating with the lab. There is a lot of content, but you will probably want to check out this landing page, <strong>Setup</strong>, and <strong>Best Practices</strong> at the very least.</p>
-<p>Please don’t hesitate to reach out if you have any questions or feedback on this website.</p>
-<section id="lab-policies" class="level2">
-<h2 class="anchored" data-anchor-id="lab-policies">Lab Policies 📄</h2>
-<p>Please take a moment to read, review, and sign the lab policies <a href="https://docs.google.com/forms/d/e/1FAIpQLSd01roP78dKHoqqmjMVa_FR4_n0-AZvGgn5JmA_U2ZVrpJnZg/viewform?usp=header">here</a>. Thank you!</p>
+<ul>
+<li>In general, file paths should be saved to its own variables near the top of the script, or marked clearly somewhere so that users can easily change paths if needed</li>
+<li>If you’re consistently reusing the same base folders, you can save them in their own respective variables near the top of the script and just add on the inner folders/files as needed with the <code>file.path()</code> function in R or the <code>pathlib</code> module in Python.
+<ul>
+<li>This will be helpful if you’re constantly switching between your local files and the files on the MaloneLab Server (more on that below)</li>
+</ul></li>
+</ul>
+<section id="local-paths" class="level2">
+<h2 class="anchored" data-anchor-id="local-paths">Local Paths</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>Imagine your GitHub repo is named <code>my_project</code>. If you’ve followed the setup instructions, you should have cloned the repo to your local computer via Rprojects. In RStudio, once you open the .Rproj file associated with your local Git repo, your current working directory will automatically be set to the project directory. Thus, you can immediately start using relative file paths instead of specifying your paths beginning from the root directory.</p>
+<p>For example, let’s say that we have a folder in <code>my_project</code> that holds our downloaded data called <code>downloaded_data</code>. Then inside, there’s a <code>landsat_data</code> folder that has—you guessed it—our Landsat data. For now, we have Landsat bands 1 and 2 downloaded as .tif files under the <code>B01</code> and <code>B02</code> folders, and our folder structure looks like this:</p>
+<p><a href="images/file_paths1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/file_paths1.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Since our current working directory is automatically set to the <code>my_project</code> folder, we can use relative file paths and read in our local files like so:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Point to Landsat folder</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">"downloaded_data"</span>, <span class="st">"landsat_data"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Band 1 raster</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>band1_raster <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">rast</span>(<span class="fu">file.path</span>(landsat_path, <span class="st">"B01"</span>, <span class="st">"example_raster.tif"</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Band 2 raster</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>band2_raster <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">rast</span>(<span class="fu">file.path</span>(landsat_path, <span class="st">"B02"</span>, <span class="st">"another_example_raster.tif"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>Imagine your GitHub repo is named <code>my_project</code>. If you’ve followed the setup instructions, you should have cloned the repo to your local computer via the VS Code GUI or GitHub Desktop. In VS Code or your preferred Python IDE, once you open the folder associated with your local Git repo, your current working directory will automatically be set to the project directory. Thus, you can immediately start using relative file paths instead of specifying your paths beginning from the root directory.</p>
+<p>For example, let’s say that we have a folder in <code>my_project</code> that holds our downloaded data called <code>downloaded_data</code>. Then inside, there’s a <code>landsat_data</code> folder that has—you guessed it—our Landsat data. For now, we have Landsat bands 1 and 2 downloaded as .tif files under the <code>B01</code> and <code>B02</code> folders, and our folder structure looks like this:</p>
+<p><a href="images/file_paths1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/file_paths1.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Since our current working directory is automatically set to the <code>my_project</code> folder, we can use relative file paths and read in our local files like so:</p>
+<pre><code>import rasterio
+from pathlib import Path
+
+# Point to Landsat folder
+landsat_path = Path("downloaded_data", "landsat_data")
+
+# Read in Band 1 raster
+band1_raster = rasterio.open(landsat_path.joinpath("B01", "example_raster.tif"))
+
+# Read in Band 2 raster
+band2_raster = rasterio.open(landsat_path.joinpath("B02", "another_example_raster.tif"))
+
+# Close them when you're done
+band1_raster.close()
+band2_raster.close()</code></pre>
+</div>
+</div>
+</div>
+<p>Notice how we did not need to use any forward or backward slashes at all. If someone cloned your repo and put the data files in the right folders, they would not need to change the file paths in your script at all, regardless of what operating system they use.</p>
 </section>
-<section id="directory" class="level2">
-<h2 class="anchored" data-anchor-id="directory">Directory 🗂️</h2>
-<p>Main lab website: <a href="https://www.malonelab.org/">https://www.malonelab.org/</a></p>
-<p>MDEL GitHub organization: <a href="https://github.com/Malone-Disturbance-Ecology-Lab">https://github.com/Malone-Disturbance-Ecology-Lab</a></p>
-<p>MDEL DataONE portal: <a href="https://search.dataone.org/portals/3107251/About">https://search.dataone.org/portals/3107251/About</a></p>
-<p>For help in setting up your new project properly, visit the tabs under <strong>Setup</strong>.</p>
-<p>For ideas on how to best format your workflow for maximum reproducibility, visit the tabs under <strong>Best Practices</strong>.</p>
-<p>Lastly, check out the tabs under <strong>Resources</strong> for a list of technical resources, such as tutorials on coding, data publication, synthesis science, website creation, HPC clusters, and more!</p>
+<section id="server-paths" class="level2">
+<h2 class="anchored" data-anchor-id="server-paths">Server Paths</h2>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>If you’re working on a Windows computer, be sure to use <code>corellia.environment.yale.edu</code> instead of <code>Volumes</code> in your file paths!</p>
+</div>
+</div>
+<p>Now what if your research is at the stage where you would like other lab members to run your workflow, but maybe you don’t necessarily want them to re-download the entire dataset since it takes a long time? You can create a folder on the MaloneLab Server for your project with the same inner folder structure. Below is an example of how your folders can look like in the server. Then either move or copy your data files here.</p>
+<p><a href="images/file_paths2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/file_paths2.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Now everyone in the lab has access to these files.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Your working directory is most likely still set to your local computer.</p>
+<p>So one way to point to server paths in R is to use the absolute file paths, which can look like this:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On Mac:</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="ot">&lt;-</span> <span class="st">"/Volumes/MaloneLab/Research/my_project/downloaded_data/landsat_data"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or on Windows:</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="ot">&lt;-</span> <span class="st">"//corellia.environment.yale.edu/MaloneLab/Research/my_project/downloaded_data/landsat_data"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>but alternatively, we can also use <code>file.path()</code> as good practice and to easily add on our inner folders/files.</p>
+<p>In that case, we can adjust our scripts to read in server files like so:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(terra)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Point to Landsat folder</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># If you're using a Windows computer, use "corellia.environment.yale.edu" instead of "Volumes"</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">"/"</span>, <span class="st">"Volumes"</span>, <span class="st">"MaloneLab"</span>, <span class="st">"Research"</span>, <span class="st">"my_project"</span>, <span class="st">"downloaded_data"</span>, <span class="st">"landsat_data"</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Band 1 raster</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>band1_raster <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">rast</span>(<span class="fu">file.path</span>(landsat_path, <span class="st">"B01"</span>, <span class="st">"example_raster.tif"</span>))</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Band 2 raster</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>band2_raster <span class="ot">&lt;-</span> terra<span class="sc">::</span><span class="fu">rast</span>(<span class="fu">file.path</span>(landsat_path, <span class="st">"B02"</span>, <span class="st">"another_example_raster.tif"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>If you want to easily switch between your local computer and the MaloneLab Server, you can even leave in both options and allow yourself or whoever is running your script to decide by commenting out whichever path they’re not using.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Leave in both the local and server paths and let the user decide</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Comment this out if using the server files</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">"downloaded_data"</span>, <span class="st">"landsat_data"</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Comment this out if using the local files</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># If you're using a Windows computer, use "corellia.environment.yale.edu" instead of "Volumes"</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">"/"</span>, <span class="st">"Volumes"</span>, <span class="st">"MaloneLab"</span>, <span class="st">"Research"</span>, <span class="st">"my_project"</span>, <span class="st">"downloaded_data"</span>, <span class="st">"landsat_data"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>Your working directory is most likely still set to your local computer.</p>
+<p>So one way to point to server paths in R is to use the absolute file paths, which can look like this:</p>
+<pre><code># On Mac:
+landsat_path = "/Volumes/MaloneLab/Research/my_project/downloaded_data/landsat_data"
+
+# Or on Windows:
+landsat_path = "//corellia.environment.yale.edu/MaloneLab/Research/my_project/downloaded_data/landsat_data"</code></pre>
+<p>but alternatively, we can also use the <code>pathlib</code> module as good practice and to easily add on our inner folders/files.</p>
+<p>In that case, we can adjust our scripts to read in server files like so:</p>
+<pre><code>import rasterio
+from pathlib import Path
+
+# Point to Landsat folder
+# If you're using a Windows computer, use "corellia.environment.yale.edu" instead of "Volumes"
+landsat_path = Path("/", "Volumes", "MaloneLab", "Research", "my_project", "downloaded_data", "landsat_data")
+
+# Read in Band 1 raster
+band1_raster = rasterio.open(landsat_path.joinpath("B01", "example_raster.tif"))
+
+# Read in Band 2 raster
+band2_raster = rasterio.open(landsat_path.joinpath("B02", "another_example_raster.tif"))
+
+# Close them when you're done
+band1_raster.close()
+band2_raster.close()</code></pre>
+<p>If you want to easily switch between your local computer and the MaloneLab Server, you can even leave in both options and allow yourself or whoever is running your script to decide by commenting out whichever path they’re not using.</p>
+<pre><code># Leave in both the local and server paths and let the user decide
+
+# Comment this out if using the server files
+landsat_path = Path("downloaded_data", "landsat_data")
+
+# Comment this out if using the local files
+# If you're using a Windows computer, use "corellia.environment.yale.edu" instead of "Volumes"
+landsat_path = Path("/", "Volumes", "MaloneLab", "Research", "my_project", "downloaded_data", "landsat_data")</code></pre>
+</div>
+</div>
+</div>
+<p>Since the inner folder structure is the same between your local computer and the server, there’s no need to go into your scripts and manually change the paths that build off of the base folders.</p>
+<p>There may be other scenarios where you may use a mix of local and server file paths in the same script. It’s worth the time to plan ahead and organize your folders accordingly!</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>These tips are not rules you must absolutely follow, but rather guidelines meant to help increase the reproducibility of your scripts by lessening the burden for whoever wants to rerun your work in the future (yes, that can even include future-you rerunning your own research on a different machine!)</p>
+</div>
+</div>
 
 
 </section>
@@ -617,6 +807,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
