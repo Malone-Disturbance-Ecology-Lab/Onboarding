@@ -217,13 +217,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<ul>
-<li>In general, file paths should be saved to its own variables near the top of the script, or marked clearly somewhere so that users can easily change paths if needed</li>
-<li>If you’re consistently reusing the same base folders, you can save them in their own respective variables near the top of the script and just add on the inner folders/files as needed with the <code>file.path()</code> function in R or the <code>pathlib</code> module in Python.
-<ul>
-<li>This will be helpful if you’re constantly switching between your local files and the files on the MaloneLab Server (more on that below)</li>
-</ul></li>
-</ul>
+<p>In general, file paths should be saved to its own variables near the top of the script, or marked clearly somewhere so that users can easily change paths if needed.</p>
+<p>If you’re consistently reusing the same base folders, you can save them in their own respective variables near the top of the script and just add on the inner folders/files as needed with the <code>file.path()</code> function in R or the <code>pathlib</code> module in Python. This will be helpful if you’re constantly switching between your local files and the files on the MaloneLab Server (more on that below).</p>
 <section id="local-paths" class="level2">
 <h2 class="anchored" data-anchor-id="local-paths">Local Paths</h2>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
@@ -252,21 +247,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>For example, let’s say that we have a folder in <code>my_project</code> that holds our downloaded data called <code>downloaded_data</code>. Then inside, there’s a <code>landsat_data</code> folder that has—you guessed it—our Landsat data. For now, we have Landsat bands 1 and 2 downloaded as .tif files under the <code>B01</code> and <code>B02</code> folders, and our folder structure looks like this:</p>
 <p><a href="images/file_paths1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/file_paths1.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Since our current working directory is automatically set to the <code>my_project</code> folder, we can use relative file paths and read in our local files like so:</p>
-<pre><code>import rasterio
-from pathlib import Path
-
-# Point to Landsat folder
-landsat_path = Path("downloaded_data", "landsat_data")
-
-# Read in Band 1 raster
-band1_raster = rasterio.open(landsat_path.joinpath("B01", "example_raster.tif"))
-
-# Read in Band 2 raster
-band2_raster = rasterio.open(landsat_path.joinpath("B02", "another_example_raster.tif"))
-
-# Close them when you're done
-band1_raster.close()
-band2_raster.close()</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rasterio</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Point to Landsat folder</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="op">=</span> Path(<span class="st">"downloaded_data"</span>, <span class="st">"landsat_data"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Band 1 raster</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>band1_raster <span class="op">=</span> rasterio.<span class="bu">open</span>(landsat_path.joinpath(<span class="st">"B01"</span>, <span class="st">"example_raster.tif"</span>))</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Band 2 raster</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>band2_raster <span class="op">=</span> rasterio.<span class="bu">open</span>(landsat_path.joinpath(<span class="st">"B02"</span>, <span class="st">"another_example_raster.tif"</span>))</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Close them when you're done</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>band1_raster.close()</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>band2_raster.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
@@ -301,7 +296,9 @@ Warning
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="ot">&lt;-</span> <span class="st">"/Volumes/MaloneLab/Research/my_project/downloaded_data/landsat_data"</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or on Windows:</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="ot">&lt;-</span> <span class="st">"//corellia.environment.yale.edu/MaloneLab/Research/my_project/downloaded_data/landsat_data"</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="ot">&lt;-</span> <span class="st">"//corellia.environment.yale.edu/MaloneLab/Research/my_project/downloaded_data/landsat_data"</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The forward slash "/" in file paths for R &amp; Python scripts will work on both Mac and Windows</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>but alternatively, we can also use <code>file.path()</code> as good practice and to easily add on our inner folders/files.</p>
 <p>In that case, we can adjust our scripts to read in server files like so:</p>
@@ -333,38 +330,40 @@ Warning
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <p>Your working directory is most likely still set to your local computer.</p>
 <p>So one way to point to server paths in R is to use the absolute file paths, which can look like this:</p>
-<pre><code># On Mac:
-landsat_path = "/Volumes/MaloneLab/Research/my_project/downloaded_data/landsat_data"
-
-# Or on Windows:
-landsat_path = "//corellia.environment.yale.edu/MaloneLab/Research/my_project/downloaded_data/landsat_data"</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># On Mac:</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="op">=</span> <span class="st">"/Volumes/MaloneLab/Research/my_project/downloaded_data/landsat_data"</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Or on Windows:</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="op">=</span> <span class="st">"//corellia.environment.yale.edu/MaloneLab/Research/my_project/downloaded_data/landsat_data"</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co"># The forward slash "/" in file paths for R &amp; Python scripts will work on both Mac and Windows</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>but alternatively, we can also use the <code>pathlib</code> module as good practice and to easily add on our inner folders/files.</p>
 <p>In that case, we can adjust our scripts to read in server files like so:</p>
-<pre><code>import rasterio
-from pathlib import Path
-
-# Point to Landsat folder
-# If you're using a Windows computer, use "corellia.environment.yale.edu" instead of "Volumes"
-landsat_path = Path("/", "Volumes", "MaloneLab", "Research", "my_project", "downloaded_data", "landsat_data")
-
-# Read in Band 1 raster
-band1_raster = rasterio.open(landsat_path.joinpath("B01", "example_raster.tif"))
-
-# Read in Band 2 raster
-band2_raster = rasterio.open(landsat_path.joinpath("B02", "another_example_raster.tif"))
-
-# Close them when you're done
-band1_raster.close()
-band2_raster.close()</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> rasterio</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Point to Landsat folder</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># If you're using a Windows computer, use "corellia.environment.yale.edu" instead of "Volumes"</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="op">=</span> Path(<span class="st">"/"</span>, <span class="st">"Volumes"</span>, <span class="st">"MaloneLab"</span>, <span class="st">"Research"</span>, <span class="st">"my_project"</span>, <span class="st">"downloaded_data"</span>, <span class="st">"landsat_data"</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Band 1 raster</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>band1_raster <span class="op">=</span> rasterio.<span class="bu">open</span>(landsat_path.joinpath(<span class="st">"B01"</span>, <span class="st">"example_raster.tif"</span>))</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in Band 2 raster</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>band2_raster <span class="op">=</span> rasterio.<span class="bu">open</span>(landsat_path.joinpath(<span class="st">"B02"</span>, <span class="st">"another_example_raster.tif"</span>))</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Close them when you're done</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>band1_raster.close()</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>band2_raster.close()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>If you want to easily switch between your local computer and the MaloneLab Server, you can even leave in both options and allow yourself or whoever is running your script to decide by commenting out whichever path they’re not using.</p>
-<pre><code># Leave in both the local and server paths and let the user decide
-
-# Comment this out if using the server files
-landsat_path = Path("downloaded_data", "landsat_data")
-
-# Comment this out if using the local files
-# If you're using a Windows computer, use "corellia.environment.yale.edu" instead of "Volumes"
-landsat_path = Path("/", "Volumes", "MaloneLab", "Research", "my_project", "downloaded_data", "landsat_data")</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Leave in both the local and server paths and let the user decide</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Comment this out if using the server files</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="op">=</span> Path(<span class="st">"downloaded_data"</span>, <span class="st">"landsat_data"</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Comment this out if using the local files</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># If you're using a Windows computer, use "corellia.environment.yale.edu" instead of "Volumes"</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>landsat_path <span class="op">=</span> Path(<span class="st">"/"</span>, <span class="st">"Volumes"</span>, <span class="st">"MaloneLab"</span>, <span class="st">"Research"</span>, <span class="st">"my_project"</span>, <span class="st">"downloaded_data"</span>, <span class="st">"landsat_data"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </div>
