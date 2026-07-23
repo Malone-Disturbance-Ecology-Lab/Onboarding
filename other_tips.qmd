@@ -1,0 +1,25 @@
+---
+title: "Other Tips"
+---
+
+There is no shortage of tips you can follow for a more organized, clean, and reproducible workflow. This page consolidates some other tips that may be helpful to your project!
+
+## Naming Conventions
+
+- You can choose any naming convention you want— the best thing is to just be consistent about it!
+- Make sure your folder/file names are informative, but not overly long
+   - The names should give just enough information about the folder/file contents and purpose
+- Avoid special characters and spaces to increase machine readability
+   - Can replace spaces with `_` or `-`
+   - Windows computers in particular can run into trouble if there's any whitespace in file names while reading file paths
+- You can add step numbers to your workflow scripts if they're meant to be run in a certain order like: `01_data_download.R`, `02_data_prep.R`, `03_data_analysis.R`, etc. 
+- You can also append letters to the step numbers to signal the scripts belong to the same stage of the workflow
+   - For example, `01a_precip_data_download.R`, `01b_airtemp_data_download.R`, etc.
+
+## Folder Organization
+- This may be obvious, but it's ideal to have sub-folders to clearly represent different parts of your project
+   - For instance, you may have folders such as `workflows`, `functions`, `miscellaneous`, `data`, and `deprecated` across your repos 
+- See [https://github.com/lter/lterwg-flux-gradient](https://github.com/lter/lterwg-flux-gradient) for inspiration
+- Be careful not to put the wrong files in each folder; you should keep only relevant files in the right folder throughout your project lifecycle
+   - If there's no right folder to put your new files in, create a new folder! Avoid putting stray files at the top-most level of your project directory whenever you can't find a good place for them.
+- You can explain the structure of your folders in the repo's [README](https://malone-disturbance-ecology-lab.github.io/Onboarding/readme.html) so that anyone coming across your repo will know where to find what files.

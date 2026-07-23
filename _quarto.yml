@@ -33,6 +33,8 @@ website:
             text: "File Paths"
           - href: readme.qmd
             text: "README help"
+          - href: other_tips.qmd
+            text: "Other Tips"
             
     right: 
       - icon: github
