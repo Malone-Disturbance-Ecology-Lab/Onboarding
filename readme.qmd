@@ -12,6 +12,8 @@ READMEs will look different depending on the type of project. Check out the diff
 - synthesis working group: [https://github.com/lter/lterwg-flux-gradient](https://github.com/lter/lterwg-flux-gradient)
 - R package: [https://github.com/Malone-Disturbance-Ecology-Lab/ERA5Flux](https://github.com/Malone-Disturbance-Ecology-Lab/ERA5Flux)
 
+---
+
 In general, consider adding these to your README if applicable:
 
 - Repo purpose
