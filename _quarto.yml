@@ -31,6 +31,8 @@ website:
             text: "Where to Put Data"
           - href: file_paths.qmd
             text: "File Paths"
+          - href: readme.qmd
+            text: "README help"
             
     right: 
       - icon: github
