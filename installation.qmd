@@ -182,3 +182,13 @@ Go [download GitHub Desktop](https://github.com/apps/desktop) and follow [Part 1
 Then head to [Git Workflow](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html) for the next step.
 
 :::
+
+## References
+
+Material on this page has been adapted from:
+
+Lyon, N.J., Chen, A., and Brun, J. (2025). Collaborative Coding with GitHub (v2.0). [https://doi.org/10.5281/zenodo.16966956](https://doi.org/10.5281/zenodo.16966956).
+
+Clark, J., Garcia, A., Jones, M.B., Kadi, J., Klope, M., Vargas Poulsen, C. (2024). Reproducible Approaches to Arctic Research Using R. Arctic Data Center & NCEAS Learning Hub. [https://doi.org/10.18739/A2QF8JM4T](https://doi.org/10.18739/A2QF8JM4T).
+
+Check out these resources for more information on Git, GitHub, and reproducible science!

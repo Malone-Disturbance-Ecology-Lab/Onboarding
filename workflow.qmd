@@ -485,3 +485,13 @@ You should be able to see the green lines again showing the new additions to thi
 :::
 
 Congrats! You've now completed a Git workflow where you created a repo on GitHub, cloned it to your local computer, created a local file, and pushed it back to GitHub! You can rinse and repeat this workflow during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to **make your local edits** --> **stage your local changes** --> **commit them with descriptive commit messages** --> **pull** --> **push to your remote repo**. 
+
+## References
+
+Material on this page has been adapted from:
+
+Lyon, N.J., Chen, A., and Brun, J. (2025). Collaborative Coding with GitHub (v2.0). [https://doi.org/10.5281/zenodo.16966956](https://doi.org/10.5281/zenodo.16966956).
+
+Clark, J., Garcia, A., Jones, M.B., Kadi, J., Klope, M., Vargas Poulsen, C. (2024). Reproducible Approaches to Arctic Research Using R. Arctic Data Center & NCEAS Learning Hub. [https://doi.org/10.18739/A2QF8JM4T](https://doi.org/10.18739/A2QF8JM4T).
+
+Check out these resources for more information on Git, GitHub, and reproducible science!
