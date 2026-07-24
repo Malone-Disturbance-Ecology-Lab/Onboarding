@@ -35,6 +35,12 @@ website:
             text: "README help"
           - href: other_tips.qmd
             text: "Other Tips"
+      - text: "Resources"
+        menu: 
+          - href: masterlist.qmd
+            text: "Masterlist"
+          - href: fluxnet_policies.qmd
+            text: "FLUXNET Policies"
             
     right: 
       - icon: github

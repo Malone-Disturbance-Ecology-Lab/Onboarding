@@ -1,0 +1,32 @@
+---
+title: "Resource Masterlist"
+---
+
+On this page, you'll find a masterlist of various technical resources! Some of these links will lead to other links so take your time to browse. 
+
+## Coding 
+
+For links to help on Git/GitHub, the Tidyverse, spatial data, Quarto basics, and modeling, please visit the curated [coding resources list from ENV 730](https://yse-environmental-data-science.github.io/EDS_course/resources.html).
+
+## Data Repositories
+
+For links to various environmental data repositories, check out the [data repository list from ENV 730](https://yse-environmental-data-science.github.io/EDS_course/data_repos.html).
+
+For help on publishing data on EDI/KNB, see the [data publication help page from ENV 730](https://yse-environmental-data-science.github.io/EDS_course/data_pub.html).
+
+## Synthesis Science
+
+For help on getting started with synthesis working groups, see the [Synthesis Skills for Early Career Researchers (SSECR) course](https://lter.github.io/ssecr/) by the Long Term Ecological Research (LTER) Network.
+
+You can also check out [Ecological Data Synthesis: A Primer on Essential Methods short course](https://lter.github.io/eco-data-synth-primer/), which has been hosted at ESA 2024 and 2025.
+
+## HPC
+
+For help on using Yale's clusters, go to the [Center for Research Computing's documentation](https://docs.ycrc.yale.edu/). If you need an account, scroll down to ["Request an Account" on this page](https://docs.ycrc.yale.edu/clusters-at-yale/).
+
+It's highly recommended to follow their [Introduction to High Performance Computing tutorial](https://www.youtube.com/watch?v=Wvao_o1ACBQ) on YouTube. The GitHub repo that hosts their practice materials is located [here](https://github.com/ycrc/Intro-to-HPC).
+
+## Other
+
+To learn how to create your own website, visit [Creating Websites with Quarto workshop](https://lter.github.io/workshop-quarto/) by the Long Term Ecological Research (LTER) Network.
+

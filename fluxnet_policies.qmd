@@ -1,0 +1,7 @@
+---
+title: "FLUXNET Policies"
+---
+
+When working with [FLUXNET](https://fluxnet.org/) data, please remember to follow their data use policies. Below is a copy of their policies for your convenience.
+
+<iframe src="Synthesis_licenses_FLUXNET_v2.pdf" width="100%" height="500px"></iframe>
