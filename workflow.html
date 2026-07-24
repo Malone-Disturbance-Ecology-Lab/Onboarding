@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.38">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,13 @@
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
 */
-code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -39,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-7dffa6dc565ab22c33bd2b8139345d21.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-aa76fd1bd72580d766211acfb5c6297f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
@@ -381,6 +384,7 @@ Note
 <p>Switch to RStudio. Click on the top right corner that has an icon of a box with an R on it.</p>
 <p><a href="images/rs_workflow2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/rs_workflow2.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>In the resulting dropdown menu, click “<strong>New Project</strong>”.</p>
+<p>We are going to create a new RStudio Project. RStudio Projects make it easy to separate your work into their own respective, self-contained folders. You can turn any folder into a RStudio Project, even if you don’t intend to make it into a local Git repo. The main advantage of using RStudio Projects is that it automatically sets your working directory to the project folder, which means that you can immediately start using relative file paths. To learn more about RStudio Projects, check out <a href="https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects">Posit’s Using RStudio Projects documentation</a>.</p>
 <p><a href="images/rs_workflow3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/rs_workflow3.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Then select “<strong>Version Control</strong>”.</p>
 <p><a href="images/rs_workflow4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/rs_workflow4.png" class="img-fluid" style="width:100.0%"></a></p>
@@ -391,6 +395,8 @@ Note
 <p>Otherwise, once you’re satisfied, click “<strong>Create Project</strong>”.</p>
 <p>Now we have cloned the repo to our local computer! Notice in the top right corner that we’re now working inside the practice repo, and that we have local copies of the gitignore and README.</p>
 <p><a href="images/rs_workflow7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/rs_workflow7.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>You might also notice a new <code>.Rproj</code> file. This is a file specifying that this folder is indeed, a RStudio Project. It also has all your various project options and settings saved into it.</p>
+<p>Whenever you want to stop working in your project, you can click on the top right corner where the project name is displayed and select “Close Project”. When you want to resume your project, click on the <code>.Rproj</code> file to open your project back up again!</p>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <p>Go to the landing page of your practice repo on GitHub. Click on the “<strong>Code</strong>” then copy the link under HTTPS in the dropdown menu.</p>
@@ -408,6 +414,7 @@ Note
 <p><a href="images/vs_workflow6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22"><img src="images/vs_workflow6.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Notice at the top that we’re now working inside the practice repo, and that we have local copies of the gitignore and README.</p>
 <p><a href="images/vs_workflow7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23"><img src="images/vs_workflow7.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Whenever you want to stop working in your project, you can click on the “File” button in the top right corner and select “Close Folder”. When you want to resume your project, click “File” then “Open Folder…” to open your project back up again! The main advantage of using VS Code’s Folders is that it automatically sets your working directory to the project folder, which means that you can immediately start using relative file paths.</p>
 </div>
 <div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
 <p>Open GitHub Desktop. Make sure you’re logged in if you haven’t done so already. The landing page should show a list of your repos.</p>
