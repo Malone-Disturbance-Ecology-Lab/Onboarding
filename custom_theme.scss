@@ -16,9 +16,20 @@ $code-block-bg: $gray-0; // code block background color
 
 /*-- scss:rules --*/
 
-// Code chunk ouput
+// Code chunk output
 pre code:not(.sourceCode) { background-color: $gray-0; }
 
+// Word spacing
 p {
   word-spacing: 1.3px;
+}
+
+// Navbar text size
+.navbar-nav .nav-link {
+  font-size: 1.05rem;
+}
+
+// Navbar dropdown menu text size
+.dropdown-menu .dropdown-item {
+  font-size: 1.05rem;
 }
