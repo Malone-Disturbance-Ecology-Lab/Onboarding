@@ -13,7 +13,7 @@ If you're consistently reusing the same base folders, you can save them in their
 
 ### R
 
-Imagine your GitHub repo is named `my_project`. If you've followed the setup instructions, you should have cloned the repo to your local computer via Rprojects. In RStudio, once you open the .Rproj file associated with your local Git repo, your current working directory will automatically be set to the project directory. Thus, you can immediately start using relative file paths instead of specifying your paths beginning from the root directory.
+Imagine your GitHub repo is named `my_project`. If you've followed the setup instructions, you should have cloned the repo to your local computer via RStudio Projects. In RStudio, once you open the `.Rproj` file associated with your local Git repo, your current working directory will automatically be set to the project directory. Thus, you can immediately start using relative file paths instead of specifying your paths beginning from the root directory.
 
 For example, let's say that we have a folder in `my_project` that holds our downloaded data called `downloaded_data`. Then inside, there's a `landsat_data` folder that has—you guessed it—our Landsat data. For now, we have Landsat bands 1 and 2 downloaded as .tif files under the `B01` and `B02` folders, and our folder structure looks like this:
 

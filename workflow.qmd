@@ -162,7 +162,9 @@ Switch to RStudio. Click on the top right corner that has an icon of a box with 
 
 ![](images/rs_workflow2.png){width=100%}
 
-In the resulting dropdown menu, click "**New Project**".
+In the resulting dropdown menu, click "**New Project**". 
+
+We are going to create a new RStudio Project. RStudio Projects make it easy to separate your work into their own respective, self-contained folders. You can turn any folder into a RStudio Project, even if you don't intend to make it into a local Git repo. The main advantage of using RStudio Projects is that it automatically sets your working directory to the project folder, which means that you can immediately start using relative file paths. To learn more about RStudio Projects, check out [Posit's Using RStudio Projects documentation](https://support.posit.co/hc/en-us/articles/200526207-Using-RStudio-Projects).
 
 ![](images/rs_workflow3.png){width=100%}
 
@@ -183,6 +185,10 @@ Otherwise, once you're satisfied, click "**Create Project**".
 Now we have cloned the repo to our local computer! Notice in the top right corner that we're now working inside the practice repo, and that we have local copies of the gitignore and README. 
 
 ![](images/rs_workflow7.png){width=100%}
+
+You might also notice a new `.Rproj` file. This is a file specifying that this folder is indeed, a RStudio Project. It also has all your various project options and settings saved into it. 
+
+Whenever you want to stop working in your project, you can click on the top right corner where the project name is displayed and select "Close Project". When you want to resume your project, click on the `.Rproj` file to open your project back up again!
 
 #### VS Code
 
@@ -215,6 +221,8 @@ Now we have cloned the repo to our local computer! You will get another pop-up a
 Notice at the top that we're now working inside the practice repo, and that we have local copies of the gitignore and README.
 
 ![](images/vs_workflow7.png){width=100%}
+
+Whenever you want to stop working in your project, you can click on the "File" button in the top right corner and select "Close Folder". When you want to resume your project, click "File" then "Open Folder..." to open your project back up again! The main advantage of using VS Code's Folders is that it automatically sets your working directory to the project folder, which means that you can immediately start using relative file paths. 
 
 #### GitHub Desktop
 
