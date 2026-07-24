@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Other Tips – Malone Disturbance Ecology Lab: Onboarding</title>
+<title>Resource Masterlist – Malone Disturbance Ecology Lab: Onboarding</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -178,8 +178,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#naming-conventions" id="toc-naming-conventions" class="nav-link active" data-scroll-target="#naming-conventions">Naming Conventions</a></li>
-  <li><a href="#folder-organization" id="toc-folder-organization" class="nav-link" data-scroll-target="#folder-organization">Folder Organization</a></li>
+  <li><a href="#coding" id="toc-coding" class="nav-link active" data-scroll-target="#coding">Coding</a></li>
+  <li><a href="#data-repositories" id="toc-data-repositories" class="nav-link" data-scroll-target="#data-repositories">Data Repositories</a></li>
+  <li><a href="#synthesis-science" id="toc-synthesis-science" class="nav-link" data-scroll-target="#synthesis-science">Synthesis Science</a></li>
+  <li><a href="#hpc" id="toc-hpc" class="nav-link" data-scroll-target="#hpc">HPC</a></li>
+  <li><a href="#other" id="toc-other" class="nav-link" data-scroll-target="#other">Other</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -188,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Other Tips</h1>
+<h1 class="title">Resource Masterlist</h1>
 </div>
 
 
@@ -205,41 +208,29 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>There is no shortage of tips you can follow for a more organized, clean, and reproducible workflow. This page consolidates some other tips that may be helpful to your project!</p>
-<section id="naming-conventions" class="level2">
-<h2 class="anchored" data-anchor-id="naming-conventions">Naming Conventions</h2>
-<ul>
-<li>You can choose any naming convention you want— the best thing is to just be consistent about it!</li>
-<li>Make sure your folder/file names are informative, but not overly long
-<ul>
-<li>The names should give just enough information about the folder/file contents and purpose</li>
-</ul></li>
-<li>Avoid special characters and spaces to increase machine readability
-<ul>
-<li>Can replace spaces with <code>_</code> or <code>-</code></li>
-<li>Windows computers in particular can run into trouble if there’s any whitespace in file names while reading file paths</li>
-</ul></li>
-<li>You can add step numbers to your workflow scripts if they’re meant to be run in a certain order like: <code>01_data_download.R</code>, <code>02_data_prep.R</code>, <code>03_data_analysis.R</code>, etc.</li>
-<li>You can also append letters to the step numbers to signal the scripts belong to the same stage of the workflow
-<ul>
-<li>For example, <code>01a_precip_data_download.R</code>, <code>01b_airtemp_data_download.R</code>, etc.</li>
-</ul></li>
-</ul>
+<p>On this page, you’ll find a masterlist of various technical resources! Some of these links will lead to other links so take your time to browse.</p>
+<section id="coding" class="level2">
+<h2 class="anchored" data-anchor-id="coding">Coding</h2>
+<p>For links to help on Git/GitHub, the Tidyverse, spatial data, Quarto basics, and modeling, please visit the curated <a href="https://yse-environmental-data-science.github.io/EDS_course/resources.html">coding resources list from ENV 730</a>.</p>
 </section>
-<section id="folder-organization" class="level2">
-<h2 class="anchored" data-anchor-id="folder-organization">Folder Organization</h2>
-<ul>
-<li>This may be obvious, but it’s ideal to have sub-folders to clearly represent different parts of your project
-<ul>
-<li>For instance, you may have folders such as <code>workflows</code>, <code>functions</code>, <code>miscellaneous</code>, <code>data</code>, and <code>deprecated</code> across your repos</li>
-</ul></li>
-<li>See <a href="https://github.com/lter/lterwg-flux-gradient">https://github.com/lter/lterwg-flux-gradient</a> for inspiration</li>
-<li>Be careful not to put the wrong files in each folder; you should keep only relevant files in the right folder throughout your project lifecycle
-<ul>
-<li>If there’s no right folder to put your new files in, create a new folder! Avoid putting stray files at the top-most level of your project directory whenever you can’t find a good place for them.</li>
-</ul></li>
-<li>You can explain the structure of your folders in the repo’s <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/readme.html">README</a> so that anyone coming across your repo will know where to find what files.</li>
-</ul>
+<section id="data-repositories" class="level2">
+<h2 class="anchored" data-anchor-id="data-repositories">Data Repositories</h2>
+<p>For links to various environmental data repositories, check out the <a href="https://yse-environmental-data-science.github.io/EDS_course/data_repos.html">data repository list from ENV 730</a>.</p>
+<p>For help on publishing data on EDI/KNB, see the <a href="https://yse-environmental-data-science.github.io/EDS_course/data_pub.html">data publication help page from ENV 730</a>.</p>
+</section>
+<section id="synthesis-science" class="level2">
+<h2 class="anchored" data-anchor-id="synthesis-science">Synthesis Science</h2>
+<p>For help on getting started with synthesis working groups, see the <a href="https://lter.github.io/ssecr/">Synthesis Skills for Early Career Researchers (SSECR) course</a> by the Long Term Ecological Research (LTER) Network.</p>
+<p>You can also check out <a href="https://lter.github.io/eco-data-synth-primer/">Ecological Data Synthesis: A Primer on Essential Methods short course</a>, which has been hosted at ESA 2024 and 2025.</p>
+</section>
+<section id="hpc" class="level2">
+<h2 class="anchored" data-anchor-id="hpc">HPC</h2>
+<p>For help on using Yale’s clusters, go to the <a href="https://docs.ycrc.yale.edu/">Center for Research Computing’s documentation</a>. If you need an account, scroll down to <a href="https://docs.ycrc.yale.edu/clusters-at-yale/">“Request an Account” on this page</a>.</p>
+<p>It’s highly recommended to follow their <a href="https://www.youtube.com/watch?v=Wvao_o1ACBQ">Introduction to High Performance Computing tutorial</a> on YouTube. The GitHub repo that hosts their practice materials is located <a href="https://github.com/ycrc/Intro-to-HPC">here</a>.</p>
+</section>
+<section id="other" class="level2">
+<h2 class="anchored" data-anchor-id="other">Other</h2>
+<p>To learn how to create your own website, visit <a href="https://lter.github.io/workshop-quarto/">Creating Websites with Quarto workshop</a> by the Long Term Ecological Research (LTER) Network.</p>
 
 
 </section>
