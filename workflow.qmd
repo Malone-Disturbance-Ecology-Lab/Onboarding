@@ -11,7 +11,7 @@ Ensure you have completed the steps in [Installation](https://malone-disturbance
 
 Now that you've finished installing all the necessary software, it's time to integrate Git into your workflow! As stated before, Git is a version control software designed to track changes in files. This feature will be extremely helpful as your research project evolves over time. 
 
-![](images/phd_comics_final.png){width=80%}
+![Comic by Jorge Cham](images/phd_comics_final.png){width=80%}
 
 You can imagine that there may be certain points in your project where you are investigating several different directions and it becomes hard to keep track of what has already happened. You may even want to undo or redo some steps as you get feedback, like the comic above illustrates. 
 
@@ -80,7 +80,7 @@ Then as we edit our working files, we can use Git commands to save versions of o
 
 The diagram below illustrates the Git commands needed to carry out the basic workflow.
 
-![](images/allison-horst-git-workflow.png){width=90%}
+![Artwork by Allison Horst](images/allison-horst-git-workflow.png){width=90%}
 
 In the diagram, rabbits are moving back and forth between 2 islands: an island with the remote repo (representing the cloud) and an island with the working directory + local repo (representing the local computer).
 
