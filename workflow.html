@@ -185,13 +185,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#git-vs.-github" id="toc-git-vs.-github" class="nav-link" data-scroll-target="#git-vs.-github">Git vs.&nbsp;GitHub</a></li>
   <li><a href="#workflow-overview" id="toc-workflow-overview" class="nav-link" data-scroll-target="#workflow-overview">Workflow Overview</a></li>
   <li><a href="#git-vocabulary-summary" id="toc-git-vocabulary-summary" class="nav-link" data-scroll-target="#git-vocabulary-summary">Git Vocabulary Summary</a></li>
-  <li><a href="#practice" id="toc-practice" class="nav-link" data-scroll-target="#practice">Practice</a>
+  <li><a href="#workflow-1-from-github-to-local-computer" id="toc-workflow-1-from-github-to-local-computer" class="nav-link" data-scroll-target="#workflow-1-from-github-to-local-computer">Workflow #1 — From GitHub to Local Computer</a>
   <ul class="collapse">
   <li><a href="#creating-a-repo-on-github" id="toc-creating-a-repo-on-github" class="nav-link" data-scroll-target="#creating-a-repo-on-github">Creating a repo on GitHub</a></li>
   <li><a href="#cloning-to-your-local-computer" id="toc-cloning-to-your-local-computer" class="nav-link" data-scroll-target="#cloning-to-your-local-computer">Cloning to your local computer</a></li>
   <li><a href="#pushing-a-local-edit-to-github" id="toc-pushing-a-local-edit-to-github" class="nav-link" data-scroll-target="#pushing-a-local-edit-to-github">Pushing a local edit to GitHub</a></li>
   </ul></li>
-  <li><a href="#initializing-a-local-repo-first" id="toc-initializing-a-local-repo-first" class="nav-link" data-scroll-target="#initializing-a-local-repo-first">Initializing a local repo first</a></li>
+  <li><a href="#workflow-2-from-local-computer-to-github" id="toc-workflow-2-from-local-computer-to-github" class="nav-link" data-scroll-target="#workflow-2-from-local-computer-to-github">Workflow #2 — From Local Computer to GitHub</a>
+  <ul class="collapse">
+  <li><a href="#initializing-a-local-repo" id="toc-initializing-a-local-repo" class="nav-link" data-scroll-target="#initializing-a-local-repo">Initializing a local repo</a></li>
+  <li><a href="#creating-a-repo-on-github-1" id="toc-creating-a-repo-on-github-1" class="nav-link" data-scroll-target="#creating-a-repo-on-github-1">Creating a repo on GitHub</a></li>
+  <li><a href="#pushing-a-local-edit-to-github-1" id="toc-pushing-a-local-edit-to-github-1" class="nav-link" data-scroll-target="#pushing-a-local-edit-to-github-1">Pushing a local edit to GitHub</a></li>
+  </ul></li>
   <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -366,8 +371,8 @@ Note
 <p>If you would like to see the full list of commands, visit the <a href="https://git-scm.com/docs">Git documentation</a>.</p>
 <p>Don’t worry about memorizing the exact commands, we can utilize the GUIs available in RStudio, VS Code, or GitHub Desktop to carry out the same operations with simple button clicks.</p>
 </section>
-<section id="practice" class="level2">
-<h2 class="anchored" data-anchor-id="practice">Practice</h2>
+<section id="workflow-1-from-github-to-local-computer" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-1-from-github-to-local-computer">Workflow #1 — From GitHub to Local Computer</h2>
 <p>Now let’s practice the Git workflow by first creating a remote repo on GitHub and then cloning it to our local computer!</p>
 <section id="creating-a-repo-on-github" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-repo-on-github">Creating a repo on GitHub</h3>
@@ -463,7 +468,7 @@ Note
 </section>
 <section id="pushing-a-local-edit-to-github" class="level3">
 <h3 class="anchored" data-anchor-id="pushing-a-local-edit-to-github">Pushing a local edit to GitHub</h3>
-<p>Let’s practice a simple Git workflow where we create a new file on our local computer and send it to GitHub.</p>
+<p>Let’s practice by creating a new file on our local computer and sending it to GitHub.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false" href="">VS Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-3" role="tab" aria-controls="tabset-2-3" aria-selected="false" href="">GitHub Desktop</a></li></ul>
 <div class="tab-content">
@@ -602,9 +607,8 @@ Note
 <p>Congrats! You’ve now completed a Git workflow where you created a repo on GitHub, cloned it to your local computer, created a local file, and pushed it back to GitHub! You can rinse and repeat these workflow steps during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to <strong>make your local edits</strong> –&gt; <strong>stage your local changes</strong> –&gt; <strong>commit them with descriptive commit messages</strong> –&gt; <strong>pull</strong> –&gt; <strong>push to your remote repo</strong>.</p>
 </section>
 </section>
-<section id="initializing-a-local-repo-first" class="level2">
-<h2 class="anchored" data-anchor-id="initializing-a-local-repo-first">Initializing a local repo first</h2>
-<p>Instead of cloning a GitHub repo to our local computer, what if we want to initialize a local Git repo first? There is a good possibility that you might already have a local project folder that has some content you’ve been working on, and you would like to initialize it as a Git repo and put it up on GitHub. For reference, below are the steps to do so.</p>
+<section id="workflow-2-from-local-computer-to-github" class="level2">
+<h2 class="anchored" data-anchor-id="workflow-2-from-local-computer-to-github">Workflow #2 — From Local Computer to GitHub</h2>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -618,12 +622,15 @@ Warning
 <p>Feel free to skip this alternative workflow unless you already have a project in mind that you would like to send to GitHub.</p>
 </div>
 </div>
+<p>Instead of cloning a GitHub repo to our local computer, what if we want to initialize a local Git repo first? There is a good possibility that you might already have a local project folder that has some content you’ve been working on, and you would like to initialize it as a Git repo and put it up on GitHub. For reference, below are the steps to do so.</p>
+<section id="initializing-a-local-repo" class="level3">
+<h3 class="anchored" data-anchor-id="initializing-a-local-repo">Initializing a local repo</h3>
+<p>Let’s say we already have a folder for our project on our computer called <code>my_practice_repo</code>. For demonstrative purposes, we’re reusing the same “my_practice_repo” name from the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-1-from-github-to-local-computer">Workflow #1</a> section. This folder has “repo” in its name, but it’s not technically a repo just yet.</p>
+<p><a href="images/rs_rev_workflow1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-76"><img src="images/rs_rev_workflow1.png" class="img-fluid" style="width:100.0%"></a></p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">RStudio</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Let’s say we already have a folder for our project on our computer called <code>my_practice_repo</code>. For demonstrative purposes, we’re reusing the same “my_practice_repo” name from the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#practice">Practice</a> section. This folder has “repo” in its name, but it’s not technically a repo just yet.</p>
-<p><a href="images/rs_rev_workflow1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-76"><img src="images/rs_rev_workflow1.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>The first step is to associate this folder with a RStudio Project. Switch to RStudio. Click on the top right corner that has an icon of a box with an R on it.</p>
 <p>In the resulting dropdown menu, click “<strong>New Project</strong>”.</p>
 <p><a href="images/rs_rev_workflow2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-77"><img src="images/rs_rev_workflow2.png" class="img-fluid" style="width:100.0%"></a></p>
@@ -637,10 +644,24 @@ Warning
 <p><a href="images/rs_rev_workflow6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-81"><img src="images/rs_rev_workflow6.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You will see a message saying that a Git repo has been initialized. This means that a <code>.git</code> folder has been created inside <code>my_practice_repo</code>!</p>
 <p><a href="images/rs_rev_workflow7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-82"><img src="images/rs_rev_workflow7.png" class="img-fluid" style="width:100.0%"></a></p>
+</div>
+</div>
+</div>
+</section>
+<section id="creating-a-repo-on-github-1" class="level3">
+<h3 class="anchored" data-anchor-id="creating-a-repo-on-github-1">Creating a repo on GitHub</h3>
 <p>Our local repo has been set up, but we still need to create the remote repo. Go to GitHub and create a new repo there, but <strong>do not initialize the GitHub repo with a README, license, or gitignore files</strong>. This is to avoid any merge conflicts or errors. Click “<strong>Create repository</strong>” when you’re satisfied.</p>
 <p><a href="images/rs_rev_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-83"><img src="images/rs_rev_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Copy the link near the HTTPS option.</p>
 <p><a href="images/rs_rev_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-84"><img src="images/rs_rev_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
+</section>
+<section id="pushing-a-local-edit-to-github-1" class="level3">
+<h3 class="anchored" data-anchor-id="pushing-a-local-edit-to-github-1">Pushing a local edit to GitHub</h3>
+<p>Now let’s link our two repos and start sending our local files to GitHub.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">RStudio</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
 <p>Go back to the RStudio “<strong>Terminal</strong>” panel. Type the Git command <code>git remote add origin</code> then paste the URL. Enter the command once you’re done typing. This command connects your local Git repo with a remote repo hosted on platforms like GitHub.</p>
 <p><a href="images/rs_rev_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-85"><img src="images/rs_rev_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You can check to see that the connection looks okay by entering the command <code>git remote -v</code>.</p>
@@ -671,12 +692,13 @@ Note
 <p><a href="images/rs_rev_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-88"><img src="images/rs_rev_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You can check by navigating back to your GitHub repo.</p>
 <p><a href="images/rs_rev_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-89"><img src="images/rs_rev_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
-<p>If you would like to work with RStudio’s “<strong>Pull</strong>” and “<strong>Push</strong>” arrows instead of typing out Git commands, you may exit and reopen RStudio. RStudio will detect that this is a Git repo and bring back the “<strong>Git</strong>” tab.</p>
+<p>If you would like to work with RStudio’s “<strong>Pull</strong>” and “<strong>Push</strong>” arrows instead of typing out Git commands, you may exit and reopen RStudio. RStudio will detect that this is a Git repo and bring back the “<strong>Git</strong>” tab. Then you can click on RStudio’s buttons to do your Git workflow. See the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#pushing-a-local-edit-to-github">relevant section from Workflow #1</a> for a reminder on how to use RStudio’s GUI to implement the Git workflow.</p>
 <p><a href="images/rs_rev_workflow15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-90"><img src="images/rs_rev_workflow15.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
 </div>
 </div>
 <p>Congrats! You’ve now completed a Git workflow where you initialized a local Git repo, created a remote repo on GitHub, connected them, and pushed your local files to GitHub. You can rinse and repeat these workflow steps during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to <strong>make your local edits</strong> –&gt; <strong>stage your local changes</strong> –&gt; <strong>commit them with descriptive commit messages</strong> –&gt; <strong>pull</strong> –&gt; <strong>push to your remote repo</strong>.</p>
+</section>
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">References</h2>
