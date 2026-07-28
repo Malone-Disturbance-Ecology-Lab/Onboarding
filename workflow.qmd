@@ -196,7 +196,7 @@ Go to the landing page of your practice repo on GitHub. Click on the "**Code**" 
 
 ![](images/vs_workflow1.png){width=100%}
 
-Switch to VS Code. Either click on the **Source Control** tab on the left-hand side and click "**Clone Repository**" or click "**Clone Git Repository...**" from the landing page. 
+Switch to VS Code. Either click on the "**Source Control**" tab on the left-hand side and click "**Clone Repository**" or click "**Clone Git Repository...**" from the landing page. 
 
 ![](images/vs_workflow2.png){width=100%}
 
@@ -204,7 +204,7 @@ The bar at the top will pop-up.
 
 ![](images/vs_workflow3.png){width=100%}
 
-Paste the link you copied from GitHub and then click "Clone from URL ..."
+Paste the link you copied from GitHub and then click "**Clone from URL** ..."
 
 ![](images/vs_workflow4.png){width=100%}
 
@@ -343,7 +343,7 @@ Start by creating a new practice script in VS Code. Feel free to write any code 
 
 ![](images/vs_workflow8a.png){width=100%}
 
-You might notice after saving your script that the **Source Control** tab has a "1" alert on it. Click on it.
+You might notice after saving your script that the "**Source Control**" tab has a "1" alert on it. Click on it.
 
 ![](images/vs_workflow8b.png){width=100%}
 
@@ -540,6 +540,40 @@ Navigate to the "**Terminal**" panel, and type and enter the Git command `git in
 You will see a message saying that a Git repo has been initialized. This means that a `.git` folder has been created inside `my_practice_repo`!
 
 ![](images/rs_rev_workflow7.png){width=100%}
+
+#### VS Code
+The first step is to open VS Code and go to "**File**" then "**Open Folder...**".
+
+![](images/vs_rev_workflow1.png){width=100%}
+
+Browse for your project folder and select it. 
+
+![](images/vs_rev_workflow2.png){width=100%}
+
+Our project will open for us and set our current working directory to the project directory.
+
+![](images/vs_rev_workflow3.png){width=100%}
+
+Then click "**View**" and then "**Terminal**" to open a new "**Terminal**" panel.
+
+![](images/vs_rev_workflow4.png){width=100%}
+
+A new "**Terminal**" panel should pop up at the bottom.
+
+![](images/vs_rev_workflow5.png){width=100%}
+
+Inside the "**Terminal**", and type and enter the Git command `git init -b main`. This command initializes a Git repo inside your current directory. The `-b main` part names the default branch as "main".
+
+![](images/vs_rev_workflow6.png){width=100%}
+
+You will see a message saying that a Git repo has been initialized. This means that a .git folder has been created inside my_practice_repo! You will also see that the "**Source Control**" tab has a "1" alert on it. Click on it.
+
+![](images/vs_rev_workflow7.png){width=100%}
+
+You will be led to these panels where we can do our Git workflow and keep track of the status of our files. For this exercise, though, we will be utilizing the "**Terminal**" to enter our Git commands instead.
+
+![](images/vs_rev_workflow8.png){width=100%}
+
 :::
 
 ### Creating a repo on GitHub
@@ -586,7 +620,7 @@ Type and enter the Git command `git commit -m "Initial commit"` to make your com
 
 ![](images/rs_rev_workflow12.png){width=100%}
 
-Then type and enter the Git command `git push -u origin main` to push our local commits to our remote repo on GitHub. The `-u` part creates a permanent connection between our local branch and the remote branch.
+Then type and enter the Git command `git push -u origin main` to push our local commits to our remote repo on GitHub. The `-u` part creates a permanent connection between our local branch and the remote branch. This permanent connection will allow us to type and enter the `git pull` and `git push` commands in the future without specifying the destination.
 
 Note that since this is our first commit, there aren't any other edits we need to pull from GitHub, so we do not need to pull before pushing this time. Otherwise, it is best practice to always pull before pushing!
 
@@ -598,9 +632,45 @@ You can check by navigating back to your GitHub repo.
 
 ![](images/rs_rev_workflow14.png){width=100%}
 
-If you would like to work with RStudio's "**Pull**" and "**Push**" arrows instead of typing out Git commands, you may exit and reopen RStudio. RStudio will detect that this is a Git repo and bring back the "**Git**" tab. Then you can click on RStudio's buttons to do your Git workflow. See the [relevant section from Workflow #1](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#pushing-a-local-edit-to-github) for a reminder on how to use RStudio's GUI to implement the Git workflow.
+If you would like to work with RStudio's GUI instead of typing out Git commands, you may exit and reopen RStudio. RStudio will detect that this is a Git repo and bring back the "**Git**" tab. Then you can click on RStudio's buttons to do your Git workflow. See the [relevant section from Workflow #1](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#pushing-a-local-edit-to-github) for a reminder on how to use RStudio's GUI to implement the Git workflow.
 
 ![](images/rs_rev_workflow15.png){width=100%}
+
+#### VS Code
+
+Go back to the VS Code "**Terminal**" panel. Type the Git command `git remote add origin` then paste the URL. Enter the command once you're done typing. This command connects your local Git repo with a remote repo hosted on platforms like GitHub.
+
+![](images/vs_rev_workflow9.png){width=100%}
+
+You can check to see that the connection looks okay by entering the command `git remote -v`.
+
+![](images/vs_rev_workflow10.png){width=100%}
+
+At this point, we can focus on staging and making our commits.
+
+Type and enter the Git command `git add .` if you would like to stage every file in your repo thus far. Otherwise you can name specific files to stage by typing and entering `git add [your_file_name]` by replacing `[your_file_name]` with your actual file name. For instance, we can type and enter `git add practice_script.R` to stage that script.
+
+You'll notice that an "A" icon will appear next to `practice_script.py` in the "**Source Control**" panel.
+
+![](images/vs_rev_workflow11.png){width=100%}
+
+Type and enter the Git command `git commit -m "Initial commit"` to make your commit. The commit message `"Initial commit"` is just to specify that this is the first commit in the repo, but you can customize it however you like.
+
+![](images/vs_rev_workflow12.png){width=100%}
+
+Then type and enter the Git command `git push -u origin main` to push our local commits to our remote repo on GitHub. The `-u` part creates a permanent connection between our local branch and the remote branch. This permanent connection will allow us to type and enter the `git pull` and `git push` commands in the future without specifying the destination.
+
+Note that since this is our first commit, there aren’t any other edits we need to pull from GitHub, so we do not need to pull before pushing this time. Otherwise, it is best practice to always pull before pushing!
+
+Our commit(s) should now be up on GitHub!
+
+![](images/vs_rev_workflow13.png){width=100%}
+
+You can check by navigating back to your GitHub repo.
+
+![](images/vs_rev_workflow14.png){width=100%}
+
+If you would like to work with VS Code's GUI instead of typing out Git commands, you may use the "**Source Control**" tab. Then you can click on VS Code's buttons to do your Git workflow. See the [relevant section from Workflow #1](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#pushing-a-local-edit-to-github) for a reminder on how to use VS Code's GUI to implement the Git workflow.
 :::
 
 Congrats! You've now completed a Git workflow where you initialized a local Git repo, created a remote repo on GitHub, connected them, and pushed your local files to GitHub. You can rinse and repeat these workflow steps during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to **make your local edits** --> **stage your local changes** --> **commit them with descriptive commit messages** --> **pull** --> **push to your remote repo**. 
