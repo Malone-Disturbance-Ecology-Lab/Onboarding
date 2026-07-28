@@ -293,6 +293,7 @@ Once you click "**Commit**", you might see a new window pop-up like this:
 
 Close the pop-up window to get back to your main workspace and you will see a message that says, "Your branch is ahead of 'origin/main' by 1 commit." This means that we have a local commit that the remote repo on GitHub does not have yet. In a regular project, you would probably have several commits before you're ready to push, but for the purposes of this exercise, we will send this one commit to GitHub.
 
+:::{.callout-note}
 You might also notice that our `.Rproj` file still has a yellow question mark icon next to it because we haven't told Git to track it yet. If you do not wish to send your `.Rproj` file to GitHub, you can open the gitignore, write `*.Rproj` inside it, and save the file. 
 
 One major reason to tell Git to ignore the `.Rproj` file is that if you commit your `.Rproj` file and your collaborator later deletes it, your own `.Rproj` file will get deleted and cause RStudio to quit. This means that your uncommitted edits will be lost! 
@@ -300,6 +301,7 @@ One major reason to tell Git to ignore the `.Rproj` file is that if you commit y
 Ultimately, it is up to you, but it's generally a prudent move to put `*.Rproj` inside gitignore to avoid any potential collaboration conflicts.
 
 For demonstrative purposes, this example will leave the `.Rproj` file alone, but you might do something different when it comes to your own real project. 
+:::
 
 ![](images/rs_workflow13.png){width=100%}
 
@@ -497,7 +499,11 @@ Congrats! You've now completed a Git workflow where you created a repo on GitHub
 
 ## Initializing a local repo first
 
-Instead of cloning a GitHub repo to our local computer, what if we want to initialize a local Git repo first? There is a high possibility that you might already have a local project folder that has some content you've been working on, and you would like to initialize it as a Git repo and put it up on GitHub. Below are the steps to do so.  
+Instead of cloning a GitHub repo to our local computer, what if we want to initialize a local Git repo first? There is a good possibility that you might already have a local project folder that has some content you've been working on, and you would like to initialize it as a Git repo and put it up on GitHub. For reference, below are the steps to do so. 
+
+:::{.callout-warning}
+Feel free to skip this alternative workflow unless you already have a project in mind that you would like to send to GitHub.  
+:::
 
 :::{.panel-tabset}
 
@@ -549,6 +555,7 @@ You can check to see that the connection looks okay by entering the command `git
 
 ![](images/rs_rev_workflow11.png){width=100%}
 
+:::{.callout-note}
 If you restarted your RStudio session ("**Session**" --> "**Restart R**") at this stage, RStudio should have automatically created a gitignore for you. If you do not wish to send your `.Rproj` file to GitHub, you can open the gitignore, write `*.Rproj` inside it, and save the file. 
 
 One major reason to tell Git to ignore the `.Rproj` file is that if you commit your `.Rproj` file and your collaborator later deletes it, your own `.Rproj` file will get deleted and cause RStudio to quit. This means that your uncommitted edits will be lost! 
@@ -556,6 +563,9 @@ One major reason to tell Git to ignore the `.Rproj` file is that if you commit y
 Ultimately, it is up to you, but it's generally a prudent move to put `*.Rproj` inside gitignore to avoid any potential collaboration conflicts.
 
 For demonstrative purposes, this example will leave the `.Rproj` file alone, but you might do something different when it comes to your own real project. 
+:::
+
+At this point, we can focus on staging and making our commits.
 
 Type and enter the Git command `git add .` if you would like to stage every file in your repo thus far. Otherwise you can name specific files to stage by typing and entering `git add [your_file_name]` by replacing `[your_file_name]` with your actual file name. For instance, we can type and enter `git add practice_script.R` to stage that script.
 
