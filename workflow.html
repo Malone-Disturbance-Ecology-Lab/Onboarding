@@ -484,10 +484,22 @@ Note
 <p>Once you click “<strong>Commit</strong>”, you might see a new window pop-up like this:</p>
 <p><a href="images/rs_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-35"><img src="images/rs_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Close the pop-up window to get back to your main workspace and you will see a message that says, “Your branch is ahead of ‘origin/main’ by 1 commit.” This means that we have a local commit that the remote repo on GitHub does not have yet. In a regular project, you would probably have several commits before you’re ready to push, but for the purposes of this exercise, we will send this one commit to GitHub.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>You might also notice that our <code>.Rproj</code> file still has a yellow question mark icon next to it because we haven’t told Git to track it yet. If you do not wish to send your <code>.Rproj</code> file to GitHub, you can open the gitignore, write <code>*.Rproj</code> inside it, and save the file.</p>
 <p>One major reason to tell Git to ignore the <code>.Rproj</code> file is that if you commit your <code>.Rproj</code> file and your collaborator later deletes it, your own <code>.Rproj</code> file will get deleted and cause RStudio to quit. This means that your uncommitted edits will be lost!</p>
 <p>Ultimately, it is up to you, but it’s generally a prudent move to put <code>*.Rproj</code> inside gitignore to avoid any potential collaboration conflicts.</p>
 <p>For demonstrative purposes, this example will leave the <code>.Rproj</code> file alone, but you might do something different when it comes to your own real project.</p>
+</div>
+</div>
 <p><a href="images/rs_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-36"><img src="images/rs_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Back to our commit; to send this local commit to GitHub, we will want to pull (<code>git pull</code>) first and then push (<code>git push</code>). Pulling will fetch the latest changes on GitHub and merge them with our local files. It’s best practice to pull often and to always pull BEFORE pushing. It makes sense to grab the latest version of the files on GitHub and then make our local edits on top of that. After we make our local edits, then we can push them back to GitHub. This will create a clean history of your repo.</p>
 <p>This habit will really save you whenever you’re working in a repo with other collaborators, who may make edits when you’re away from your computer. By pulling frequently, you can avoid merge conflicts. You can always pull at any point in your workflow, so don’t hesitate to make it a habit.</p>
@@ -592,7 +604,20 @@ Note
 </section>
 <section id="initializing-a-local-repo-first" class="level2">
 <h2 class="anchored" data-anchor-id="initializing-a-local-repo-first">Initializing a local repo first</h2>
-<p>Instead of cloning a GitHub repo to our local computer, what if we want to initialize a local Git repo first? There is a high possibility that you might already have a local project folder that has some content you’ve been working on, and you would like to initialize it as a Git repo and put it up on GitHub. Below are the steps to do so.</p>
+<p>Instead of cloning a GitHub repo to our local computer, what if we want to initialize a local Git repo first? There is a good possibility that you might already have a local project folder that has some content you’ve been working on, and you would like to initialize it as a Git repo and put it up on GitHub. For reference, below are the steps to do so.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Feel free to skip this alternative workflow unless you already have a project in mind that you would like to send to GitHub.</p>
+</div>
+</div>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">RStudio</a></li></ul>
 <div class="tab-content">
@@ -620,10 +645,23 @@ Note
 <p><a href="images/rs_rev_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-85"><img src="images/rs_rev_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You can check to see that the connection looks okay by entering the command <code>git remote -v</code>.</p>
 <p><a href="images/rs_rev_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-86"><img src="images/rs_rev_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>If you restarted your RStudio session (“<strong>Session</strong>” –&gt; “<strong>Restart R</strong>”) at this stage, RStudio should have automatically created a gitignore for you. If you do not wish to send your <code>.Rproj</code> file to GitHub, you can open the gitignore, write <code>*.Rproj</code> inside it, and save the file.</p>
 <p>One major reason to tell Git to ignore the <code>.Rproj</code> file is that if you commit your <code>.Rproj</code> file and your collaborator later deletes it, your own <code>.Rproj</code> file will get deleted and cause RStudio to quit. This means that your uncommitted edits will be lost!</p>
 <p>Ultimately, it is up to you, but it’s generally a prudent move to put <code>*.Rproj</code> inside gitignore to avoid any potential collaboration conflicts.</p>
 <p>For demonstrative purposes, this example will leave the <code>.Rproj</code> file alone, but you might do something different when it comes to your own real project.</p>
+</div>
+</div>
+<p>At this point, we can focus on staging and making our commits.</p>
 <p>Type and enter the Git command <code>git add .</code> if you would like to stage every file in your repo thus far. Otherwise you can name specific files to stage by typing and entering <code>git add [your_file_name]</code> by replacing <code>[your_file_name]</code> with your actual file name. For instance, we can type and enter <code>git add practice_script.R</code> to stage that script.</p>
 <p>Type and enter the Git command <code>git commit -m "Initial commit"</code> to make your commit. The commit message <code>"Initial commit"</code> is just to specify that this is the first commit in the repo, but you can customize it however you like.</p>
 <p><a href="images/rs_rev_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-87"><img src="images/rs_rev_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
