@@ -507,13 +507,15 @@ Instead of cloning a GitHub repo to our local computer, what if we want to initi
 
 ### Initializing a local repo 
 
-Let's say we already have a folder for our project on our computer called `my_practice_repo`. For demonstrative purposes, we're reusing the same "my_practice_repo" name from the [Workflow #1](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-1-from-github-to-local-computer) section. This folder has "repo" in its name, but it's not technically a repo just yet.
-
-![](images/rs_rev_workflow1.png){width=100%}
+Let's say we already have a folder for our project on our computer called `my_practice_repo`. For demonstrative purposes, we're reusing the same "my_practice_repo" name from the [Workflow #1](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-1-from-github-to-local-computer) section. This folder has "repo" in its name, but it's not technically a repo just yet. 
 
 :::{.panel-tabset}
 
 #### RStudio
+
+This project folder already has a script, `practice_script.R` inside.
+
+![](images/rs_rev_workflow1.png){width=100%}
 
 The first step is to associate this folder with a RStudio Project. Switch to RStudio. Click on the top right corner that has an icon of a box with an R on it.
 
@@ -542,6 +544,11 @@ You will see a message saying that a Git repo has been initialized. This means t
 ![](images/rs_rev_workflow7.png){width=100%}
 
 #### VS Code
+
+This project folder already has a script, `practice_script.py` inside.
+
+![](images/vs_rev_workflow0.png){width=100%}
+
 The first step is to open VS Code and go to "**File**" then "**Open Folder...**".
 
 ![](images/vs_rev_workflow1.png){width=100%}
@@ -566,7 +573,7 @@ Inside the "**Terminal**", and type and enter the Git command `git init -b main`
 
 ![](images/vs_rev_workflow6.png){width=100%}
 
-You will see a message saying that a Git repo has been initialized. This means that a .git folder has been created inside my_practice_repo! You will also see that the "**Source Control**" tab has a "1" alert on it. Click on it.
+You will see a message saying that a Git repo has been initialized. This means that a .git folder has been created inside `my_practice_repo`! You will also see that the "**Source Control**" tab has a "1" alert on it. Click on it.
 
 ![](images/vs_rev_workflow7.png){width=100%}
 
@@ -614,9 +621,13 @@ For demonstrative purposes, this example will leave the `.Rproj` file alone, but
 
 At this point, we can focus on staging and making our commits.
 
-Type and enter the Git command `git add .` if you would like to stage every file in your repo thus far. Otherwise you can name specific files to stage by typing and entering `git add [your_file_name]` by replacing `[your_file_name]` with your actual file name. For instance, we can type and enter `git add practice_script.R` to stage that script.
+You can name specific files to stage by typing and entering `git add [file]`, replacing `[file]` with your actual file name. For instance, we can type and enter `git add practice_script.R` to stage that script. 
 
-Type and enter the Git command `git commit -m "Initial commit"` to make your commit. The commit message `"Initial commit"` is just to specify that this is the first commit in the repo, but you can customize it however you like.
+You may want to stage several files in a single commit by typing and entering the `git add [file]` command multiple times. Otherwise you can also type and enter the Git command `git add .` if you would like to stage every file in your repo thus far.
+
+Then type and enter the Git command `git commit -m "Initial commit"` to make your commit whenever you're ready. The commit message `"Initial commit"` is just to specify that this is the first commit in the repo, but you can customize it however you like.
+
+If you have multiple commits to make before you want to push, you can keep reusing the `git commit -m "[your commit message]"` command, replacing `[your commit message]` with your actual message.
 
 ![](images/rs_rev_workflow12.png){width=100%}
 
@@ -648,13 +659,17 @@ You can check to see that the connection looks okay by entering the command `git
 
 At this point, we can focus on staging and making our commits.
 
-Type and enter the Git command `git add .` if you would like to stage every file in your repo thus far. Otherwise you can name specific files to stage by typing and entering `git add [your_file_name]` by replacing `[your_file_name]` with your actual file name. For instance, we can type and enter `git add practice_script.R` to stage that script.
+You can name specific files to stage by typing and entering `git add [file]`, replacing `[file]` with your actual file name. For instance, we can type and enter `git add practice_script.R` to stage that script. 
+
+You may want to stage several files in a single commit by typing and entering the `git add [file]` command multiple times. Otherwise you can also type and enter the Git command `git add .` if you would like to stage every file in your repo thus far.
 
 You'll notice that an "A" icon will appear next to `practice_script.py` in the "**Source Control**" panel.
 
 ![](images/vs_rev_workflow11.png){width=100%}
 
-Type and enter the Git command `git commit -m "Initial commit"` to make your commit. The commit message `"Initial commit"` is just to specify that this is the first commit in the repo, but you can customize it however you like.
+Then type and enter the Git command `git commit -m "Initial commit"` to make your commit whenever you're ready. The commit message `"Initial commit"` is just to specify that this is the first commit in the repo, but you can customize it however you like.
+
+If you have multiple commits to make before you want to push, you can keep reusing the `git commit -m "[your commit message]"` command, replacing `[your commit message]` with your actual message.
 
 ![](images/vs_rev_workflow12.png){width=100%}
 
