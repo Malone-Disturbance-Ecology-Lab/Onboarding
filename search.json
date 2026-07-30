@@ -32,7 +32,7 @@
     "href": "workflow.html#git-vocabulary-summary",
     "title": "Git Workflow",
     "section": "Git Vocabulary Summary",
-    "text": "Git Vocabulary Summary\nTo summarize, here are all the basic Git vocabulary terms covered thus far and their respective commands:\n\n\n\n\n\n\n\n\nTerm\nGit Command\nDefinition\n\n\n\n\nInitialize\ngit init\ninitializes a brand new local Git repo (*)\n\n\nAdd/Stage\ngit add [file]\nmarks the local modified file(s) going into the next commit by putting them in the staging area\n\n\nCommit\ngit commit -m \"[my commit message]\"\ncaptures a snapshot of currently staged local changes with a message describing what exactly has been changed; this snapshot goes into our local repo\n\n\nPull\ngit pull\ngrabs changes from a remote repo and merges them into your local working file(s)\n\n\nPush\ngit push\nsends local changes to a remote repo\n\n\nClone\ngit clone [repo]\ncreates a local copy of a remote repo (*)\n\n\n\n(*) You can start your workflow either by initializing an already existing local folder as a Git repo and then pushing to GitHub, OR creating a remote repo on GitHub and then cloning it to your local computer!\nIf you would like to see the full list of commands, visit the Git documentation.\nDon’t worry about memorizing the exact commands, we can utilize the GUIs available in RStudio, VS Code, or GitHub Desktop to carry out the same operations with simple button clicks."
+    "text": "Git Vocabulary Summary\nTo summarize, here are all the basic Git vocabulary terms covered thus far and their respective commands:\n\n\n\n\n\n\n\n\nTerm\nGit Command\nDefinition\n\n\n\n\nInitialize\ngit init\ninitializes a brand new local Git repo 🟢\n\n\nAdd/Stage\ngit add [file]\nmarks the local modified file(s) going into the next commit by putting them in the staging area\n\n\nCommit\ngit commit -m \"[my commit message]\"\ncaptures a snapshot of currently staged local changes with a message describing what exactly has been changed; this snapshot goes into our local repo\n\n\nPull\ngit pull\ngrabs changes from a remote repo and merges them into your local working file(s)\n\n\nPush\ngit push\nsends local changes to a remote repo\n\n\nClone\ngit clone [repo]\ncreates a local copy of a remote repo 🟢\n\n\n\n🟢 You can start your workflow either by initializing an already existing local folder as a Git repo and then pushing to GitHub, OR creating a remote repo on GitHub and then cloning it to your local computer!\nIf you would like to see the full list of commands, visit the Git documentation.\nDon’t worry about memorizing the exact commands, we can utilize the GUIs available in RStudio, VS Code, or GitHub Desktop to carry out the same operations with simple button clicks."
   },
   {
     "objectID": "workflow.html#workflow-1-from-github-to-local-computer",
@@ -116,7 +116,7 @@
     "href": "installation.html#check-if-you-already-have-git",
     "title": "Installation",
     "section": "4️⃣ Check if you already have Git",
-    "text": "4️⃣ Check if you already have Git\nIf you’re using a Mac computer, there’s a good chance that it already has Git.\nRun this command line code to check if your computer already has Git. You can run this in the Terminal on Mac or Linux. If you’re using a Windows computer, and you don’t know if you have an equivalent shell, you can open up RStudio or VS Code and run this command in the “Terminal” tab/window.\nwhich git\nIf this command returns a file path, then you already have Git and can skip the Git installation. Otherwise, proceed to install Git."
+    "text": "4️⃣ Check if you already have Git\nIf you’re using a Mac computer, there’s a good chance that it already has Git.\nRun this command line code to check if your computer already has Git.\nwhich git\n\nMac / LinuxWindows\n\n\nYou can run this in the Terminal on Mac or Linux.\n\n\n\n\nIf you’re using a Windows computer, and you don’t know if you have an equivalent shell, you can open up RStudio or VS Code and run this command in the “Terminal” tab/window.\n\n\n\n\nIf this command returns a file path, then you already have Git and can skip the Git installation. Otherwise, proceed to install Git."
   },
   {
     "objectID": "installation.html#install-git-if-you-dont-have-it-already",
@@ -130,7 +130,7 @@
     "href": "installation.html#check-that-git-is-installed",
     "title": "Installation",
     "section": "6️⃣ Check that Git is installed",
-    "text": "6️⃣ Check that Git is installed\nRun this command line code to check that your computer has Git. You can run this in the Terminal on Mac or Linux, or the Git Bash shell if you’ve installed Git for Windows from the previous step.\nwhich git"
+    "text": "6️⃣ Check that Git is installed\nRun this command line code to check that your computer has installed Git successfully.\nwhich git\n\nMac / LinuxWindows\n\n\nYou can run this in the Terminal on Mac or Linux.\n\n\n\n\nYou can use the Git Bash shell if you’ve installed Git for Windows from the previous step.\n\n\n\n\nIf this command returns a file path, then you have installed Git!"
   },
   {
     "objectID": "installation.html#connect-your-ide-and-gitgithub",
