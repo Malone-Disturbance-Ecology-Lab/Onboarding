@@ -553,7 +553,7 @@ The first step is to open VS Code and go to "**File**" then "**Open Folder...**"
 
 ![](images/vs_rev_workflow1.png){width=100%}
 
-Browse for your project folder and select it. 
+Browse for your project folder and select it. Click "**Open**"
 
 ![](images/vs_rev_workflow2.png){width=100%}
 
@@ -581,17 +581,66 @@ You will be led to these panels where we can do our Git workflow and keep track 
 
 ![](images/vs_rev_workflow8.png){width=100%}
 
+#### GitHub Desktop
+
+This project folder already has a script, `practice_script.py` inside.
+
+![](images/gd_rev_workflow1.png){width=100%}
+
+The first step is to open GitHub Desktop and go to "**File**" then "**Add Local Repository...**" Or you can also click the big "**Add an Existing Repository from your Local Drive...**" button on the landing page.
+
+![](images/gd_rev_workflow2.png){width=100%}
+
+Browse for your project folder and select it. Click "**Add Repository**". 
+
+![](images/gd_rev_workflow3.png){width=100%}
+
+You will get an alert asking if you would like to create a repository here instead. Click on the highlighted "**create a repository**" link.
+
+![](images/gd_rev_workflow4.png){width=100%}
+
+A new window will pop up, where you can customize your repo description and settings. You can add a gitignore or a license if needed.
+
+Click "**Create Repository**" whenever you're ready.
+
+![](images/gd_rev_workflow5a.png){width=100%}
+
+Our project folder has been initialized as a Git repo!
+
+![](images/gd_rev_workflow5b.png){width=100%}
 :::
 
 ### Creating a repo on GitHub
 
-Our local repo has been set up, but we still need to create the remote repo. Go to GitHub and create a new repo there, but __do not initialize the GitHub repo with a README, license, or gitignore files__. This is to avoid any merge conflicts or errors. Click "**Create repository**" when you're satisfied.
+Our local repo has been set up, but we still need to create the remote repo. 
+
+:::{.panel-tabset}
+
+#### RStudio
+
+Go to GitHub and create a new repo there, but __do not initialize the GitHub repo with a README, license, or gitignore files__. This is to avoid any merge conflicts or errors. Click "**Create repository**" when you're satisfied.
 
 ![](images/rs_rev_workflow8.png){width=100%}
 
 Copy the link near the HTTPS option.  
 
 ![](images/rs_rev_workflow9.png){width=100%}
+
+#### VS Code
+
+Go to GitHub and create a new repo there, but __do not initialize the GitHub repo with a README, license, or gitignore files__. This is to avoid any merge conflicts or errors. Click "**Create repository**" when you're satisfied.
+
+![](images/rs_rev_workflow8.png){width=100%}
+
+Copy the link near the HTTPS option.  
+
+![](images/rs_rev_workflow9.png){width=100%}
+
+#### GitHub Desktop
+
+GitHub Desktop makes it easy to create the remote repo from the GitHub Desktop app. We do not need to go to the GitHub website for this. Skip this step and proceed to the next step!
+
+:::
 
 ### Pushing a local edit to GitHub
 
@@ -686,9 +735,58 @@ You can check by navigating back to your GitHub repo.
 ![](images/vs_rev_workflow14.png){width=100%}
 
 If you would like to work with VS Code's GUI instead of typing out Git commands, you may use the "**Source Control**" tab. Then you can click on VS Code's buttons to do your Git workflow. See the [relevant section from Workflow #1](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#pushing-a-local-edit-to-github) for a reminder on how to use VS Code's GUI to implement the Git workflow.
+
+#### GitHub Desktop
+
+Go back to GitHub Desktop. At this point, we can focus on staging and making our commits.
+
+You might have noticed an alert on the bottom left corner that says, "Committed just now", followed by "Initial commit". This means that we already have a local commit that the remote repo on GitHub does not have yet. 
+
+Click on "**History**" to inspect our first commit that GitHub Desktop automatically made for us.
+
+![](images/gd_rev_workflow6.png){width=100%}
+
+Our first commit includes two files, one of them being `practice_script.py`.
+
+![](images/gd_rev_workflow7.png){width=100%}
+
+What if we're not quite ready and want to change some files before staging and committing them? You can right-click on the commit and select "**Undo Commit...**".
+
+![](images/gd_rev_workflow8.png){width=100%}
+
+Then you can unstage any files you don't want to include in your commit by unchecking the checkbox. Or you may want to stage several files in a single commit by checking the checkboxes again.
+
+It's entirely up to you! 
+
+Once you're satisfied, write a commit message (the first commit is usually kept as "Initial commit" by default), and click the "**Commit _ files to main**" button. If you have multiple commits to make before you want to push, you can keep reusing that button.
+
+See the [relevant section from Workflow #1](https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#pushing-a-local-edit-to-github) for a reminder on how to use GitHub Desktop's GUI to implement the Git workflow.
+
+![](images/gd_rev_workflow9.png){width=80%}
+
+When you're done, click "**Publish repository**" to create the remote repo on GitHub and push our local commits there. 
+
+Note that since this is our first commit, so we do not need to pull before pushing this time. Otherwise, it is best practice to always pull before pushing!
+
+![](images/gd_rev_workflow10.png){width=100%}
+
+Review your repo settings in the new window and select "**Publish repository**".
+
+![](images/gd_rev_workflow11.png){width=100%}
+
+Our commit(s) should now be up on GitHub! Check it out on GitHub.
+
+![](images/gd_rev_workflow12.png){width=100%}
+
 :::
 
-Congrats! You've now completed a Git workflow where you initialized a local Git repo, created a remote repo on GitHub, connected them, and pushed your local files to GitHub. You can rinse and repeat these workflow steps during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to **make your local edits** --> **stage your local changes** --> **commit them with descriptive commit messages** --> **pull** --> **push to your remote repo**. 
+Congrats! 
+
+RStudio/VS Code users: You've now completed a Git workflow where you initialized a local Git repo, created a remote repo on GitHub, connected them, and pushed your local files to GitHub. 
+
+GitHub Desktop users: You've now completed a Git workflow where you initialized a local Git repo, made your local commits, and created a remote repo on GitHub and pushed to it all in one go. 
+
+You can rinse and repeat these workflow steps during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to **make your local edits** --> **stage your local changes** --> **commit them with descriptive commit messages** --> **pull** --> **push to your remote repo**. 
 
 ## References
 
