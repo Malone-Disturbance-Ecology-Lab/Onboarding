@@ -3,6 +3,7 @@
 // Colors
 /* generally useful other colors */
 $cream: #F4F3EE;
+$light-cream: #f8f5f3;
 $gray-0: #EBEBEB;
 $gray-1: #BCB8B1;
 $gray-2: #8A817C;
@@ -37,7 +38,7 @@ p {
 
 // Tabset main content background
 .panel-tabset .tab-content {
-  background-color: $cream;
+  background-color: $light-cream;
   border: 1px solid #dee2e6;
 }
 
