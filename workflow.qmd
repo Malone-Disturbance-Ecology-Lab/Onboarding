@@ -100,14 +100,14 @@ To summarize, here are all the basic Git vocabulary terms covered thus far and t
 
 | Term | Git Command | Definition |
 | -------- | -------- | -------- |
-| Initialize   | `git init`   | initializes a brand new local Git repo (*) |
+| Initialize   | `git init`   | initializes a brand new local Git repo 🟢 |
 | Add/Stage   | `git add [file]`  | marks the local modified file(s) going into the next commit by putting them in the staging area |
 | Commit | `git commit -m "[my commit message]"` | captures a snapshot of currently staged local changes with a message describing what exactly has been changed; this snapshot goes into our local repo |
 | Pull | ` git pull` | grabs changes from a remote repo and merges them into your local working file(s) |
 | Push | `git push` | sends local changes to a remote repo |
-| Clone | `git clone [repo]` | creates a local copy of a remote repo (*) |
+| Clone | `git clone [repo]` | creates a local copy of a remote repo 🟢 |
 
-(*) You can start your workflow either by initializing an already existing local folder as a Git repo and then pushing to GitHub, OR creating a remote repo on GitHub and then cloning it to your local computer! 
+🟢 You can start your workflow either by initializing an already existing local folder as a Git repo and then pushing to GitHub, OR creating a remote repo on GitHub and then cloning it to your local computer! 
 
 If you would like to see the full list of commands, visit the [Git documentation](https://git-scm.com/docs).
 
