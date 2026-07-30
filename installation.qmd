@@ -1,5 +1,6 @@
 ---
 title: "Installation"
+lightbox: true
 ---
 
 Before you can begin on your new project, please complete the preparation steps relevant to your situation below. This will ensure that you will have all the tools/software needed for success! 
@@ -32,11 +33,29 @@ This guide will have explicit tutorials geared towards RStudio and Visual Studio
 
 If you're using a Mac computer, there's a good chance that it already has Git.
 
-Run this command line code to check if your computer already has Git. You can run this in the Terminal on Mac or Linux. If you're using a Windows computer, and you don't know if you have an equivalent shell, you can open up RStudio or VS Code and run this command in the "Terminal" tab/window. 
+Run this command line code to check if your computer already has Git. 
 
 ```bash
 which git
 ```
+
+:::{.panel-tabset}
+
+### Mac / Linux
+
+You can run this in the Terminal on Mac or Linux. 
+
+![](images/installation1.png){width=80%}
+
+![](images/installation2.png){width=80%}
+
+### Windows
+
+If you're using a Windows computer, and you don't know if you have an equivalent shell, you can open up RStudio or VS Code and run this command in the "Terminal" tab/window. 
+
+![](images/installation3.png){width=80%}
+
+:::
 
 If this command returns a file path, then you already have Git and can skip the Git installation. Otherwise, proceed to install Git. 
 
@@ -85,11 +104,29 @@ For more detailed instructions, see [here](https://happygitwithr.com/install-git
 
 ## 6️⃣ Check that Git is installed
 
-Run this command line code to check that your computer has Git. You can run this in the Terminal on Mac or Linux, or the Git Bash shell if you've installed Git for Windows from the previous step.
+Run this command line code to check that your computer has installed Git successfully. 
 
 ```bash
 which git
 ```
+:::{.panel-tabset}
+
+### Mac / Linux
+
+You can run this in the Terminal on Mac or Linux. 
+
+![](images/installation1.png){width=80%}
+
+![](images/installation2.png){width=80%}
+
+### Windows
+
+You can use the Git Bash shell if you've installed Git for Windows from the previous step.
+
+![](images/installation4.png){width=80%}
+:::
+
+If this command returns a file path, then you have installed Git!
 
 ## 7️⃣ Connect your IDE and Git/GitHub
 
