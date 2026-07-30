@@ -236,6 +236,19 @@ Warning
 <p>Ensure you have completed the steps in <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/installation.html">Installation</a> before attempting to do the tutorial on this page!</p>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-2-from-local-computer-to-github">Workflow #2</a> is completely optional, but is listed on this page for reference.</p>
+</div>
+</div>
 <section id="introduction-to-version-control" class="level2">
 <h2 class="anchored" data-anchor-id="introduction-to-version-control">Introduction to Version Control</h2>
 <p>Now that you’ve finished installing all the necessary software, it’s time to integrate Git into your workflow! As stated before, Git is a version control software designed to track changes in files. This feature will be extremely helpful as your research project evolves over time.</p>
@@ -604,7 +617,7 @@ Note
 </div>
 </div>
 </div>
-<p>Congrats! You’ve now completed a Git workflow where you created a repo on GitHub, cloned it to your local computer, created a local file, and pushed it back to GitHub! You can rinse and repeat these workflow steps during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to <strong>make your local edits</strong> –&gt; <strong>stage your local changes</strong> –&gt; <strong>commit them with descriptive commit messages</strong> –&gt; <strong>pull</strong> –&gt; <strong>push to your remote repo</strong>.</p>
+<p>Congrats! You’ve now completed a Git workflow where you created a repo on GitHub, cloned it to your local computer, created a local file, and pushed it back to GitHub! You can rinse and repeat these workflow steps during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to <strong>make your local edits</strong> –&gt; <strong>stage your local edits</strong> –&gt; <strong>commit them with descriptive commit messages</strong> –&gt; <strong>pull</strong> –&gt; <strong>push to your remote repo</strong>.</p>
 </section>
 </section>
 <section id="workflow-2-from-local-computer-to-github" class="level2">
@@ -620,6 +633,7 @@ Warning
 </div>
 <div class="callout-body-container callout-body">
 <p>Feel free to skip this alternative workflow unless you already have a project in mind that you would like to send to GitHub.</p>
+<p>If you would like to try out Workflow #2, it’s highly recommended to go through <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-1-from-github-to-local-computer">Workflow #1</a> first.</p>
 </div>
 </div>
 <p>Instead of cloning a GitHub repo to our local computer, what if we want to initialize a local Git repo first? There is a good possibility that you might already have a local project folder that has some content you’ve been working on, and you would like to initialize it as a Git repo and put it up on GitHub. For reference, below are the steps to do so.</p>
@@ -627,7 +641,7 @@ Warning
 <h3 class="anchored" data-anchor-id="initializing-a-local-repo">Initializing a local repo</h3>
 <p>Let’s say we already have a folder for our project on our computer called <code>my_practice_repo</code>. For demonstrative purposes, we’re reusing the same “my_practice_repo” name from the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#workflow-1-from-github-to-local-computer">Workflow #1</a> section. This folder has “repo” in its name, but it’s not technically a repo just yet.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">VS Code</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false" href="">VS Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-3" role="tab" aria-controls="tabset-3-3" aria-selected="false" href="">GitHub Desktop</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
 <p>This project folder already has a script, <code>practice_script.R</code> inside.</p>
@@ -651,7 +665,7 @@ Warning
 <p><a href="images/vs_rev_workflow0.png" class="lightbox" data-gallery="quarto-lightbox-gallery-83"><img src="images/vs_rev_workflow0.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>The first step is to open VS Code and go to “<strong>File</strong>” then “<strong>Open Folder…</strong>”.</p>
 <p><a href="images/vs_rev_workflow1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-84"><img src="images/vs_rev_workflow1.png" class="img-fluid" style="width:100.0%"></a></p>
-<p>Browse for your project folder and select it.</p>
+<p>Browse for your project folder and select it. Click “<strong>Open</strong>”.</p>
 <p><a href="images/vs_rev_workflow2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-85"><img src="images/vs_rev_workflow2.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Our project will open for us and set our current working directory to the project directory.</p>
 <p><a href="images/vs_rev_workflow3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-86"><img src="images/vs_rev_workflow3.png" class="img-fluid" style="width:100.0%"></a></p>
@@ -666,27 +680,59 @@ Warning
 <p>You will be led to these panels where we can do our Git workflow and keep track of the status of our files. For this exercise, though, we will be utilizing the “<strong>Terminal</strong>” to enter our Git commands instead.</p>
 <p><a href="images/vs_rev_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-91"><img src="images/vs_rev_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
+<div id="tabset-3-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-3-tab">
+<p>This project folder already has a script, <code>practice_script.py</code> inside.</p>
+<p><a href="images/gd_rev_workflow1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-92"><img src="images/gd_rev_workflow1.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>The first step is to open GitHub Desktop and go to “<strong>File</strong>” then “<strong>Add Local Repository…</strong>” Or you can also click the big “<strong>Add an Existing Repository from your Local Drive…</strong>” button on the landing page.</p>
+<p><a href="images/gd_rev_workflow2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-93"><img src="images/gd_rev_workflow2.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Browse for your project folder and select it. Click “<strong>Add Repository</strong>”.</p>
+<p><a href="images/gd_rev_workflow3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-94"><img src="images/gd_rev_workflow3.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>You will get an alert asking if you would like to create a repository here instead. Click on the highlighted “<strong>create a repository</strong>” link.</p>
+<p><a href="images/gd_rev_workflow4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-95"><img src="images/gd_rev_workflow4.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>A new window will pop up, where you can customize your repo description and settings. You can add a gitignore or a license if needed.</p>
+<p>Click “<strong>Create Repository</strong>” whenever you’re ready.</p>
+<p><a href="images/gd_rev_workflow5a.png" class="lightbox" data-gallery="quarto-lightbox-gallery-96"><img src="images/gd_rev_workflow5a.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Our project folder has been initialized as a Git repo!</p>
+<p><a href="images/gd_rev_workflow5b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-97"><img src="images/gd_rev_workflow5b.png" class="img-fluid" style="width:100.0%"></a></p>
+</div>
 </div>
 </div>
 </section>
 <section id="creating-a-repo-on-github-1" class="level3">
 <h3 class="anchored" data-anchor-id="creating-a-repo-on-github-1">Creating a repo on GitHub</h3>
-<p>Our local repo has been set up, but we still need to create the remote repo. Go to GitHub and create a new repo there, but <strong>do not initialize the GitHub repo with a README, license, or gitignore files</strong>. This is to avoid any merge conflicts or errors. Click “<strong>Create repository</strong>” when you’re satisfied.</p>
-<p><a href="images/rs_rev_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-92"><img src="images/rs_rev_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Our local repo has been set up, but we still need to create the remote repo.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">VS Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-3" role="tab" aria-controls="tabset-4-3" aria-selected="false" href="">GitHub Desktop</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Go to GitHub and create a new repo there, but <strong>do not initialize the GitHub repo with a README, license, or gitignore files</strong>. This is to avoid any merge conflicts or errors. Click “<strong>Create repository</strong>” when you’re satisfied.</p>
+<p><a href="images/rs_rev_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-98"><img src="images/rs_rev_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Copy the link near the HTTPS option.</p>
-<p><a href="images/rs_rev_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-93"><img src="images/rs_rev_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_rev_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-99"><img src="images/rs_rev_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>Go to GitHub and create a new repo there, but <strong>do not initialize the GitHub repo with a README, license, or gitignore files</strong>. This is to avoid any merge conflicts or errors. Click “<strong>Create repository</strong>” when you’re satisfied.</p>
+<p><a href="images/rs_rev_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-100"><img src="images/rs_rev_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Copy the link near the HTTPS option.</p>
+<p><a href="images/rs_rev_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-101"><img src="images/rs_rev_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
+</div>
+<div id="tabset-4-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-3-tab">
+<p>GitHub Desktop makes it easy to create the remote repo from the GitHub Desktop app. We do not need to go to the GitHub website for this. Skip this step and proceed to the next step!</p>
+</div>
+</div>
+</div>
 </section>
 <section id="pushing-a-local-edit-to-github-1" class="level3">
 <h3 class="anchored" data-anchor-id="pushing-a-local-edit-to-github-1">Pushing a local edit to GitHub</h3>
-<p>Now let’s link our two repos and start sending our local files to GitHub.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false" href="">VS Code</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-5-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-1" role="tab" aria-controls="tabset-5-1" aria-selected="true" href="">RStudio</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-2" role="tab" aria-controls="tabset-5-2" aria-selected="false" href="">VS Code</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-5-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-5-3" role="tab" aria-controls="tabset-5-3" aria-selected="false" href="">GitHub Desktop</a></li></ul>
 <div class="tab-content">
-<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<div id="tabset-5-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-5-1-tab">
+<p>Now let’s link our two repos and start sending our local files to GitHub.</p>
 <p>Go back to the RStudio “<strong>Terminal</strong>” panel. Type the Git command <code>git remote add origin</code> then paste the URL. Enter the command once you’re done typing. This command connects your local Git repo with a remote repo hosted on platforms like GitHub.</p>
-<p><a href="images/rs_rev_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-94"><img src="images/rs_rev_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_rev_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-102"><img src="images/rs_rev_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You can check to see that the connection looks okay by entering the command <code>git remote -v</code>.</p>
-<p><a href="images/rs_rev_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-95"><img src="images/rs_rev_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_rev_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-103"><img src="images/rs_rev_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -708,40 +754,66 @@ Note
 <p>You may want to stage several files in a single commit by typing and entering the <code>git add [file]</code> command multiple times. Otherwise you can also type and enter the Git command <code>git add .</code> if you would like to stage every file in your repo thus far.</p>
 <p>Then type and enter the Git command <code>git commit -m "Initial commit"</code> to make your commit whenever you’re ready. The commit message <code>"Initial commit"</code> is just to specify that this is the first commit in the repo, but you can customize it however you like.</p>
 <p>If you have multiple commits to make before you want to push, you can keep reusing the <code>git commit -m "[your commit message]"</code> command, replacing <code>[your commit message]</code> with your actual message.</p>
-<p><a href="images/rs_rev_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-96"><img src="images/rs_rev_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_rev_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-104"><img src="images/rs_rev_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Then type and enter the Git command <code>git push -u origin main</code> to push our local commits to our remote repo on GitHub. The <code>-u</code> part creates a permanent connection between our local branch and the remote branch. This permanent connection will allow us to type and enter the <code>git pull</code> and <code>git push</code> commands in the future without specifying the destination.</p>
 <p>Note that since this is our first commit, there aren’t any other edits we need to pull from GitHub, so we do not need to pull before pushing this time. Otherwise, it is best practice to always pull before pushing!</p>
 <p>Our commit(s) should now be up on GitHub!</p>
-<p><a href="images/rs_rev_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-97"><img src="images/rs_rev_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_rev_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-105"><img src="images/rs_rev_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You can check by navigating back to your GitHub repo.</p>
-<p><a href="images/rs_rev_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-98"><img src="images/rs_rev_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_rev_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-106"><img src="images/rs_rev_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>If you would like to work with RStudio’s GUI instead of typing out Git commands, you may exit and reopen RStudio. RStudio will detect that this is a Git repo and bring back the “<strong>Git</strong>” tab. Then you can click on RStudio’s buttons to do your Git workflow. See the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#pushing-a-local-edit-to-github">relevant section from Workflow #1</a> for a reminder on how to use RStudio’s GUI to implement the Git workflow.</p>
-<p><a href="images/rs_rev_workflow15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-99"><img src="images/rs_rev_workflow15.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/rs_rev_workflow15.png" class="lightbox" data-gallery="quarto-lightbox-gallery-107"><img src="images/rs_rev_workflow15.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
-<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<div id="tabset-5-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-2-tab">
+<p>Now let’s link our two repos and start sending our local files to GitHub.</p>
 <p>Go back to the VS Code “<strong>Terminal</strong>” panel. Type the Git command <code>git remote add origin</code> then paste the URL. Enter the command once you’re done typing. This command connects your local Git repo with a remote repo hosted on platforms like GitHub.</p>
-<p><a href="images/vs_rev_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-100"><img src="images/vs_rev_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_rev_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-108"><img src="images/vs_rev_workflow9.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You can check to see that the connection looks okay by entering the command <code>git remote -v</code>.</p>
-<p><a href="images/vs_rev_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-101"><img src="images/vs_rev_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_rev_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-109"><img src="images/vs_rev_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>At this point, we can focus on staging and making our commits.</p>
 <p>You can name specific files to stage by typing and entering <code>git add [file]</code>, replacing <code>[file]</code> with your actual file name. For instance, we can type and enter <code>git add practice_script.R</code> to stage that script.</p>
 <p>You may want to stage several files in a single commit by typing and entering the <code>git add [file]</code> command multiple times. Otherwise you can also type and enter the Git command <code>git add .</code> if you would like to stage every file in your repo thus far.</p>
 <p>You’ll notice that an “A” icon will appear next to <code>practice_script.py</code> in the “<strong>Source Control</strong>” panel.</p>
-<p><a href="images/vs_rev_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-102"><img src="images/vs_rev_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_rev_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-110"><img src="images/vs_rev_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Then type and enter the Git command <code>git commit -m "Initial commit"</code> to make your commit whenever you’re ready. The commit message <code>"Initial commit"</code> is just to specify that this is the first commit in the repo, but you can customize it however you like.</p>
 <p>If you have multiple commits to make before you want to push, you can keep reusing the <code>git commit -m "[your commit message]"</code> command, replacing <code>[your commit message]</code> with your actual message.</p>
-<p><a href="images/vs_rev_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-103"><img src="images/vs_rev_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_rev_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-111"><img src="images/vs_rev_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>Then type and enter the Git command <code>git push -u origin main</code> to push our local commits to our remote repo on GitHub. The <code>-u</code> part creates a permanent connection between our local branch and the remote branch. This permanent connection will allow us to type and enter the <code>git pull</code> and <code>git push</code> commands in the future without specifying the destination.</p>
 <p>Note that since this is our first commit, there aren’t any other edits we need to pull from GitHub, so we do not need to pull before pushing this time. Otherwise, it is best practice to always pull before pushing!</p>
 <p>Our commit(s) should now be up on GitHub!</p>
-<p><a href="images/vs_rev_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-104"><img src="images/vs_rev_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_rev_workflow13.png" class="lightbox" data-gallery="quarto-lightbox-gallery-112"><img src="images/vs_rev_workflow13.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>You can check by navigating back to your GitHub repo.</p>
-<p><a href="images/vs_rev_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-105"><img src="images/vs_rev_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><a href="images/vs_rev_workflow14.png" class="lightbox" data-gallery="quarto-lightbox-gallery-113"><img src="images/vs_rev_workflow14.png" class="img-fluid" style="width:100.0%"></a></p>
 <p>If you would like to work with VS Code’s GUI instead of typing out Git commands, you may use the “<strong>Source Control</strong>” tab. Then you can click on VS Code’s buttons to do your Git workflow. See the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#pushing-a-local-edit-to-github">relevant section from Workflow #1</a> for a reminder on how to use VS Code’s GUI to implement the Git workflow.</p>
 </div>
+<div id="tabset-5-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-5-3-tab">
+<p>Go back to GitHub Desktop. At this point, we can focus on staging and making our commits.</p>
+<p>You might have noticed an alert on the bottom left corner that says, “Committed just now”, followed by “Initial commit”. This means that we already have a local commit that the remote repo on GitHub does not have yet.</p>
+<p>Click on “<strong>History</strong>” to inspect our first commit that GitHub Desktop automatically made for us.</p>
+<p><a href="images/gd_rev_workflow6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-114"><img src="images/gd_rev_workflow6.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Our first commit includes two files, one of them being <code>practice_script.py</code>.</p>
+<p><a href="images/gd_rev_workflow7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-115"><img src="images/gd_rev_workflow7.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>What if we’re not quite ready and want to change some files before staging and committing them? You can right-click on the commit and select “<strong>Undo Commit…</strong>”.</p>
+<p><a href="images/gd_rev_workflow8.png" class="lightbox" data-gallery="quarto-lightbox-gallery-116"><img src="images/gd_rev_workflow8.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Then you can unstage any files you don’t want to include in your commit by unchecking the checkbox. Or you may want to stage several files in a single commit by checking the checkboxes again.</p>
+<p>It’s entirely up to you!</p>
+<p>Once you’re satisfied, write a commit message (the first commit is usually kept as “Initial commit” by default), and click the “<strong>Commit _ files to main</strong>” button. If you have multiple commits to make before you want to push, you can keep reusing that button.</p>
+<p>See the <a href="https://malone-disturbance-ecology-lab.github.io/Onboarding/workflow.html#pushing-a-local-edit-to-github">relevant section from Workflow #1</a> for a reminder on how to use GitHub Desktop’s GUI to implement the Git workflow.</p>
+<p><a href="images/gd_rev_workflow9.png" class="lightbox" data-gallery="quarto-lightbox-gallery-117"><img src="images/gd_rev_workflow9.png" class="img-fluid" style="width:80.0%"></a></p>
+<p>When you’re done, click “<strong>Publish repository</strong>” to create the remote repo on GitHub and push our local commits there.</p>
+<p>Note that since this is our first commit, so we do not need to pull before pushing this time. Otherwise, it is best practice to always pull before pushing!</p>
+<p><a href="images/gd_rev_workflow10.png" class="lightbox" data-gallery="quarto-lightbox-gallery-118"><img src="images/gd_rev_workflow10.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Review your repo settings in the new window and select “<strong>Publish Repository</strong>”.</p>
+<p><a href="images/gd_rev_workflow11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-119"><img src="images/gd_rev_workflow11.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Our commit(s) should now be up on GitHub! Check it out on GitHub.</p>
+<p><a href="images/gd_rev_workflow12.png" class="lightbox" data-gallery="quarto-lightbox-gallery-120"><img src="images/gd_rev_workflow12.png" class="img-fluid" style="width:100.0%"></a></p>
 </div>
 </div>
-<p>Congrats! You’ve now completed a Git workflow where you initialized a local Git repo, created a remote repo on GitHub, connected them, and pushed your local files to GitHub. You can rinse and repeat these workflow steps during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to <strong>make your local edits</strong> –&gt; <strong>stage your local changes</strong> –&gt; <strong>commit them with descriptive commit messages</strong> –&gt; <strong>pull</strong> –&gt; <strong>push to your remote repo</strong>.</p>
+</div>
+<p>Congrats!</p>
+<p>RStudio/VS Code users: You’ve now completed a Git workflow where you initialized a local Git repo, created a remote repo on GitHub, connected them, and pushed your local files to GitHub.</p>
+<p>GitHub Desktop users: You’ve now completed a Git workflow where you initialized a local Git repo, made your local commits, and created a remote repo on GitHub and pushed to it all in one go.</p>
+<p>You can rinse and repeat these workflow steps during the course of your projects. Remember, <u>after you have your remote and local repos set up</u>, the correct order is to <strong>make your local edits</strong> –&gt; <strong>stage your local edits</strong> –&gt; <strong>commit them with descriptive commit messages</strong> –&gt; <strong>pull</strong> –&gt; <strong>push to your remote repo</strong>.</p>
 </section>
 </section>
 <section id="references" class="level2">
