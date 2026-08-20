@@ -54,7 +54,7 @@ format:
     theme: 
        - sandstone
        - custom_theme.scss
-    mainfont: "Roboto"
+    mainfont: "Arial"
     fontsize: "1rem"
     toc: true
     link-external-newwindow: true
