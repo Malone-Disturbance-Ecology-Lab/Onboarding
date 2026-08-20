@@ -54,8 +54,8 @@ format:
     theme: 
        - sandstone
        - custom_theme.scss
-    mainfont: "Gill Sans"
-    fontsize: "1.2rem"
+    mainfont: "Roboto"
+    fontsize: "1rem"
     toc: true
     link-external-newwindow: true
     link-external-icon: false

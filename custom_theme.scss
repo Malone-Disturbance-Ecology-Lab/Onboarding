@@ -23,7 +23,7 @@ pre code:not(.sourceCode) { background-color: $gray-0; }
 
 // Word spacing
 p {
-  word-spacing: 1.3px;
+  word-spacing: 1px;
 }
 
 // Navbar text size
@@ -33,7 +33,7 @@ p {
 
 // Navbar dropdown menu text size
 .dropdown-menu .dropdown-item {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 
 // Tabset main content background
@@ -52,5 +52,5 @@ p {
 .panel-tabset .nav-item .nav-link {
   background-color: $gray-1; 
   color: $gray-3;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
