@@ -149,7 +149,19 @@ First, make sure you have the `usethis` and `gitcreds` R packages installed.
 install.packages(c("usethis", "gitcreds"))
 ```
 
-Then, update your Git profile on your computer. Replace `"Your GitHub Username"` with your actual GitHub username and replace `"Your GitHub Email"` with your actual email you use for GitHub. Once you filled those out, run the command.
+:::{.callout-note}
+# For Windows users
+If you've just freshly installed R/RStudio on a Windows computer, you may get a warning in the **Console** saying that RTools is required to build R packages. RTools is a software that is needed to build R packages from source code on Windows. Not all R packages need it; just the ones that use C/C++/Fortran. 
+
+If you do get the warning, you can go ahead and follow the instructions in the **Console** to download RTools so you don't have to worry about it later.
+:::
+
+:::{.callout-note}
+# Trouble with installation
+If you're having trouble installing R packages, you can change your CRAN mirror by selecting **Tools** --> **Global Options...** --> **Packages** --> **Change...** then select a different mirror. You can always change it back to the default global mirror (https://cran.rstudio.com/) later.
+:::
+
+Then, update your Git profile on your computer. Replace `Your GitHub Username` with your actual GitHub username and replace `Your GitHub Email` with your actual email you use for GitHub (yes, include the quotation marks!). Once you filled those out, run the command.
 
 ```{r}
 #| eval: false
@@ -192,12 +204,12 @@ There you go! You should now be ready to do your workflow. Head to [Git Workflow
 
 There are several ways you can connect your VS Code session and Git/GitHub through VS Code's handy interface! This guide will simply go over one possible method. For more options, feel free to read [VS Code's documentation](https://code.visualstudio.com/docs/sourcecontrol/github).
 
-First, update your Git profile on your computer. You can do this by selecting **Terminal** --> **New Terminal**. Then, in the Terminal, run this command, but replace "`Your GitHub Username`" with your actual GitHub username. 
+First, update your Git profile on your computer. You can do this by selecting **Terminal** --> **New Terminal**. Then, in the Terminal, run this command, but replace `Your GitHub Username` with your actual GitHub username (yes, include the quotation marks!). 
 
 ```bash
 git config --global user.name "Your GitHub Username"
 ```
-Next, run this command, but replace "`Your GitHub Email`" with your actual email you use for GitHub.
+Next, run this command, but replace `Your GitHub Email` with your actual email you use for GitHub (yes, include the quotation marks!).
 
 ```bash
 git config --global user.email "Your GitHub Email"
