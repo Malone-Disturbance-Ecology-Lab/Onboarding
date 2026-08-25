@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Welcome! – Malone Disturbance Ecology Lab: Onboarding</title>
+<title>Publishing to EDI – Malone Disturbance Ecology Lab: Onboarding</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -46,6 +46,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-4d5c410e8f71c2be79656ab45ad37552.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -95,7 +98,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -182,8 +185,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#lab-policies" id="toc-lab-policies" class="nav-link active" data-scroll-target="#lab-policies">Lab Policies 📄</a></li>
-  <li><a href="#directory" id="toc-directory" class="nav-link" data-scroll-target="#directory">Directory 🗂️</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#data-life-cycle" id="toc-data-life-cycle" class="nav-link" data-scroll-target="#data-life-cycle">Data Life Cycle</a></li>
+  <li><a href="#metadata" id="toc-metadata" class="nav-link" data-scroll-target="#metadata">Metadata</a></li>
+  <li><a href="#edi-guide" id="toc-edi-guide" class="nav-link" data-scroll-target="#edi-guide">EDI Guide</a>
+  <ul class="collapse">
+  <li><a href="#starting-your-submission" id="toc-starting-your-submission" class="nav-link" data-scroll-target="#starting-your-submission">Starting your submission</a></li>
+  <li><a href="#filling-out-metadata" id="toc-filling-out-metadata" class="nav-link" data-scroll-target="#filling-out-metadata">Filling out metadata</a></li>
+  <li><a href="#collaborating-on-a-submission" id="toc-collaborating-on-a-submission" class="nav-link" data-scroll-target="#collaborating-on-a-submission">Collaborating on a submission</a></li>
+  <li><a href="#submitting-your-data-package" id="toc-submitting-your-data-package" class="nav-link" data-scroll-target="#submitting-your-data-package">Submitting your data package</a></li>
+  <li><a href="#after-publication" id="toc-after-publication" class="nav-link" data-scroll-target="#after-publication">After publication</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/Malone-Disturbance-Ecology-Lab/Onboarding/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -192,7 +204,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Welcome!</h1>
+<h1 class="title">Publishing to EDI</h1>
 </div>
 
 
@@ -209,23 +221,103 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Welcome to the Malone Disturbance Ecology Lab (MDEL)! Here you’ll find various resources designed to help you in setting up your projects and integrating with the lab. There is a lot of content, but you will probably want to check out this landing page, <strong>Setup</strong>, and <strong>Best Practices</strong> at the very least.</p>
-<p>Please don’t hesitate to reach out if you have any questions or feedback on this website.</p>
-<section id="lab-policies" class="level2">
-<h2 class="anchored" data-anchor-id="lab-policies">Lab Policies 📄</h2>
-<p>Please take a moment to read, review, and sign the lab policies below. You can also open a separate tab to read and sign <a href="https://docs.google.com/forms/d/e/1FAIpQLSd01roP78dKHoqqmjMVa_FR4_n0-AZvGgn5JmA_U2ZVrpJnZg/viewform?usp=header">here</a>. Thank you!</p>
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd01roP78dKHoqqmjMVa_FR4_n0-AZvGgn5JmA_U2ZVrpJnZg/viewform?usp=header" height="550" width="800"></iframe>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>A research project can involve multiple moving parts that could get lost if there isn’t a plan in place to manage how your research will be preserved and reused. This page will get you familiarized with the best practices of data management/publication, and serves as a guide to the <a href="https://edirepository.org/">Environmental Data Initiative (EDI)</a> data repository.</p>
+<p>Some content on this page have been adapted from NCEAS’ <a href="https://learning.nceas.ucsb.edu/2024-06-delta/">coreR for Delta Science Program</a>.</p>
 </section>
-<section id="directory" class="level2">
-<h2 class="anchored" data-anchor-id="directory">Directory 🗂️</h2>
-<p>Main lab website: <a href="https://www.malonelab.org/">https://www.malonelab.org/</a></p>
-<p>MDEL GitHub organization: <a href="https://github.com/Malone-Disturbance-Ecology-Lab">https://github.com/Malone-Disturbance-Ecology-Lab</a></p>
-<p>MDEL DataONE portal: <a href="https://search.dataone.org/portals/3107251/About">https://search.dataone.org/portals/3107251/About</a></p>
-<p>For help in setting up your new project properly, visit the tabs under <strong>Setup</strong>.</p>
-<p>For ideas on how to best format your workflow for maximum reproducibility, visit the tabs under <strong>Best Practices</strong>.</p>
-<p>Lastly, check out the tabs under <strong>Resources</strong> for a list of technical resources, such as tutorials on coding, data publication, synthesis science, website creation, HPC clusters, and more!</p>
+<section id="data-life-cycle" class="level2">
+<h2 class="anchored" data-anchor-id="data-life-cycle">Data Life Cycle</h2>
+<p><a href="images/Data-Lifecycle.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/Data-Lifecycle.png" class="img-fluid" style="width:100.0%"></a></p>
+<p><left><em>Source: Faundeen et al 2013, USGS</em></left></p>
+<p>As you begin a research project, your data may go through lots of stages in its life cycle. Like the diagram from <a href="https://pubs.usgs.gov/of/2013/1265/pdf/of2013-1265.pdf">Faundeen et al 2013</a> shows, the first stage starts with <strong>planning</strong> out goals you want to accomplish or research questions you want to answer. Consider the resources (data, funding, personnel) you will need.</p>
+<p>With a plan in mind, the second stage of the data life cycle involves identifying and evaluating new or existing data sources to be collected/generated/re-used. You might <strong>acquire</strong> datasets at one of the many data repositories out there. At the next stage, these data inputs will be <strong>processed</strong> through data cleaning and wrangling.</p>
+<p>Once the data is processed, it will be ready for <strong>analysis</strong>, where new insights are generated. Be sure to document the processes that were involved, for example, recording the methods and organizing files to ensure that your workflow is reproducible.</p>
+<p>As the research project nears its end, consider how you will <strong>preserve</strong> your data products for the long-term, especially if it’s required by your funding. If you are planning to submit your data/code for archival at a data repository, plan what metadata and documentation you will need to ensure your results will be accessible and reusable for the future. Each repository will have slightly different requirements, but check out the next few sections to learn more about what data publication at <a href="https://edirepository.org/">EDI</a> entails.</p>
+<p>Last but not least, once your data is <strong>published</strong> with a DOI (digital object identifier), other researchers will be able to use and cite your work in the future, which in turn, will expose your research to an even wider audience.</p>
+<p>You may have also noticed three arrows cutting across the diagram. These steps should always be kept in mind when you’re progressing your research in order to manage your data effectively.</p>
+<p>As you’re working, <em>describe</em> your data products by documenting its metadata. Metadata, or data about data, is a critical component of data reusability. More on metadata below. Additionally, have some <em>quality control</em> techniques in place so that the values of your output are expected. This helps to ensure that your workflow will run as intended. Finally, it never hurts to <em>backup</em> your data regularly to protect it from unexpected data losses due to software failures or natural disasters.</p>
+</section>
+<section id="metadata" class="level2">
+<h2 class="anchored" data-anchor-id="metadata">Metadata</h2>
+<p>As mentioned, metadata plays an important role in the data life cycle, yet it’s often overlooked. Metadata is crucial to understanding, interpreting, and reusing datasets. It contains information on what was measured, who made the measurements, when and where were measurements made, and why was the data collected. The point is to have enough metadata so that anyone (even you) can reuse the data far into the future.</p>
+<p>If you are submitting your dataset/code to a data repository, you will need to create metadata that documents all the details about the data itself. One popular, standard format for metadata files in the field of environmental sciences is <a href="https://eml.ecoinformatics.org/">EML</a>, Ecological Metadata Language. This format arranges the metadata into an organized, machine-readable set of elements.</p>
+<p>There are many ways to create this EML file, such as programmatically through R or by filling out a web form offered by a data repository. EDI is one data repository that has the web form option for researchers to generate their metadata file.</p>
+</section>
+<section id="edi-guide" class="level2">
+<h2 class="anchored" data-anchor-id="edi-guide">EDI Guide</h2>
+<section id="starting-your-submission" class="level3">
+<h3 class="anchored" data-anchor-id="starting-your-submission">Starting your submission</h3>
+<p><a href="https://edirepository.org/">EDI</a>, or the Environmental Data Initiative, is a <a href="https://www.dataone.org/">DataONE</a> data repository that hosts ecological and environmental data for the long-term. They have staff to support curation efforts and work closely with the <a href="https://lternet.edu/">LTER Network</a> to promote best practices for <a href="https://www.go-fair.org/fair-principles/">FAIR</a> (Findable, Accessible, Interoperable, and Reusable) data.</p>
+<p>To get started with your data package submission, navigate to the <a href="https://edirepository.org/data/publish-data"><strong>Publish Data</strong></a> page in EDI. Like their webpage states, if you want to learn more about the whole data submission process from preparation to publication, feel free to check out their <a href="https://edirepository.org/resources/resources-for-data-authors"><strong>resources for data authors</strong></a> page.</p>
+<p>Click <strong>Login</strong> under “For Authors” to login to their ezEML metadata editor. ezEML is EDI’s easy-to-use web-based tool for creating metadata.</p>
+<p><a href="images/edi1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2"><img src="images/edi1.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Choose one of the many options to login to ezEML. <strong>You will want to stay consistent with the account that you’re using to login because your submissions will only be associated to the account you used to login</strong>.</p>
+<p><a href="images/edi2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="images/edi2.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Once you’ve logged in, click on <strong>EML Documents</strong> then <strong>New…</strong> to start a new EML document.</p>
+<p><a href="images/edi3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/edi3.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>You will be prompted to enter a name for your metadata document. Enter a unique, memorable name that will let you remember what this submission is for.</p>
+<p><a href="images/edi4.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/edi4.png" class="img-fluid" style="width:100.0%"></a></p>
+</section>
+<section id="filling-out-metadata" class="level3">
+<h3 class="anchored" data-anchor-id="filling-out-metadata">Filling out metadata</h3>
+<p>Then you will be presented with a form to fill out all the information about your data, such as the Title, Data Tables, Creators, Contacts, etc. Be as descriptive as you can. Don’t worry about filling it all out in one sitting. You can save the information you enter on each page by clicking <strong>Save and Continue</strong>. If you want to reset your edits to the last saved state, click <strong>Reset Changes</strong>.</p>
+<p>If you close the browser tab, you can always return to your metadata document to continue where you left off by logging in and selecting <strong>EML Documents</strong> –&gt; <strong>Open…</strong> and then clicking on the document you were working on.</p>
+<p><a href="images/edi5.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6"><img src="images/edi5.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>If you’re not sure how to fill out a section, click on the question mark to get helpful tips. These tips will guide you on how to best describe the contents for each section.</p>
+<p><a href="images/edi6.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7"><img src="images/edi6.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>In the screenshot below, a pop-up appeared on how to best come up with a Title for your data package. If you are unfamiliar with preparing a dataset for archival, it’s highly recommended to read the tips.</p>
+<p><a href="images/edi7.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8"><img src="images/edi7.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>If you have tabular data in CSV files, you can upload them in <strong>Data Tables</strong> by selecting <strong>Load Data Table from CSV File</strong> and EDI will automatically infer many attributes about your data, like column names, so you can save some time on manually filling out information.</p>
+<p><a href="images/edi8a.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9"><img src="images/edi8a.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Here is how the page looks like when you click <strong>Load Data Table from CSV File</strong>.</p>
+<p><a href="images/edi8b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10"><img src="images/edi8b.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>After you upload your CSV file, be sure to double-check the metadata so everything looks correct. Then you can start filling out the rest of the metadata, like the <strong>Description</strong> of the file.</p>
+<p><a href="images/edi8c.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11"><img src="images/edi8c.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>You may also notice a button to <strong>Edit Column Properties</strong>. Clicking on it will lead to a page where you can edit the properties of each column. Select <strong>Edit Properties</strong> to edit the column name, definition, unit, and missing value code. Select <strong>Change Type</strong> to edit the column type.</p>
+<p><a href="images/edi8d.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12"><img src="images/edi8d.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>For all other types of data or files (.tif, .txt, .pdf, for example), you can upload them in <strong>Other Entities</strong> by selecting <strong>Load Other Entity from File</strong> and fill out the metadata as appropriate.</p>
+<p><a href="images/edi9a_1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13"><img src="images/edi9a_1.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Again, remember to fill out the <strong>Description</strong> of the file.</p>
+<p><a href="images/edi9a_2.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14"><img src="images/edi9a_2.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>To check on your overall progress, go to <strong>Check Metadata</strong> and see what metadata fields you’re still missing.</p>
+<p><a href="images/edi9a_3.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15"><img src="images/edi9a_3.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>For extra help, check out the <a href="https://ezeml.edirepository.org/eml/user_guide">ezEML User Guide</a> or <a href="https://edirepository.org/support/contact-us">email EDI for support</a>. You can also watch their YouTube tutorial below.</p>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/T2lhEBWzIPQ?si=ljlsFHtQvZ7bqAIb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="">
+</iframe>
+</section>
+<section id="collaborating-on-a-submission" class="level3">
+<h3 class="anchored" data-anchor-id="collaborating-on-a-submission">Collaborating on a submission</h3>
+<p>EDI allows you to collaborate with others on the same data package submission. Be aware that only one person can edit the metadata at a time, though.</p>
+<p>To get started you can either click on <strong>Submit/Share Package</strong> –&gt; <strong>Collaborate with Colleagues</strong>, or click on <strong>Collaborate</strong> in the top right corner next to <strong>Logout</strong>.</p>
+<p><a href="images/edi9b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16"><img src="images/edi9b.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Then you’ll get directed to a page where you can click <strong>Invite a Collaborator</strong> and fill out the details to send them an email invitation.</p>
+<p><a href="images/edi9c.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17"><img src="images/edi9c.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Your collaborator needs to check their email and follow the directions to gain access to the submission. After they finish their edits, they must click <strong>EML Documents</strong> –&gt; <strong>Close</strong> to close their session, thereby allowing you to open the document back up again. This step is necessary because EDI only allows one person to edit at a time. Whenever one of you is done editing, remember to close the document so that the other person/people can regain access!</p>
+</section>
+<section id="submitting-your-data-package" class="level3">
+<h3 class="anchored" data-anchor-id="submitting-your-data-package">Submitting your data package</h3>
+<p>Once you’re done filling out the sections to the best of your ability, you can go to <strong>Import/Export</strong> –&gt; <strong>Preview Your Metadata in the EDI Data Portal…</strong> to generate a full preview of what your data package page will look like. Make sure that everything looks correct before submitting.</p>
+<p><a href="images/edi10a.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18"><img src="images/edi10a.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>Whenever you’re ready, click on <strong>Submit/Share Package</strong> –&gt; <strong>Submit Package to EDI</strong> to submit your data package for the EDI team to review.</p>
+<p><a href="images/edi10b.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="images/edi10b.png" class="img-fluid" style="width:100.0%"></a></p>
+<section id="embargos" class="level4">
+<h4 class="anchored" data-anchor-id="embargos">Embargos</h4>
+<p>When you’re submitting for review, there’s an option to add a message to your submission.</p>
+<p><a href="images/edi10c.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="images/edi10c.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>If you wish for your data to be embargoed until the manuscript associated with it is published, you should mention it there. The EDI team will handle the embargo for you and make the data files inaccessible to the public, but still issue your data package a DOI. So you can put the data package DOI in your manuscript or give it to the journal, wait until your paper is published, and then email the EDI staff to lift the embargo. In your subsequent email, be sure to mention that your paper is now published, so that the EDI team can add the journal citation to your data package landing page. Then your data and paper can be connected!</p>
+<p>There’s also an option to embargo your data files but allow anonymous reviewer access. This means that the general public cannot access your data, but you and the journal reviewers can. If this interests you, mention it in the notes during submission so that the EDI curators can issue you a special link that can access the whole data package (metadata and data files included). You would need to then pass that special link to the journal editors so that they can give reviewers access. Of course, the curators will also issue your data package a DOI during this process.</p>
+<p>In general, after your submission, the EDI team will respond back to you via email with any additional suggestions/edits or the greenlight to publish your data package with a DOI if everything looks good. Be sure to check your inbox to ensure that you can respond back to them in a timely manner!</p>
+</section>
+</section>
+<section id="after-publication" class="level3">
+<h3 class="anchored" data-anchor-id="after-publication">After publication</h3>
+<p>When your data is published with a DOI, the landing page for your data package may look something like <a href="https://doi.org/10.6073/pasta/ae3ef7402b347a7b9ec92bbf8b314685">this</a>:</p>
+<p><a href="images/edi11.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="images/edi11.png" class="img-fluid" style="width:100.0%"></a></p>
+<p>The full metadata will be available under <strong>View Full Metadata</strong>. With this, your data will be available for reuse!</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -648,6 +740,38 @@ ul.task-list li input[type="checkbox"] {
     </div>
   </div>
 </footer>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
