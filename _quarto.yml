@@ -32,13 +32,15 @@ website:
           - href: file_paths.qmd
             text: "File Paths"
           - href: readme.qmd
-            text: "README help"
+            text: "README Help"
           - href: other_tips.qmd
             text: "Other Tips"
       - text: "Resources"
         menu: 
           - href: masterlist.qmd
             text: "Masterlist"
+          - href: EDI.qmd
+            text: "Publishing to EDI"
           - href: fluxnet_policies.qmd
             text: "FLUXNET Policies"
             
