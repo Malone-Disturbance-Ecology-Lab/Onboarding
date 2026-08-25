@@ -80,7 +80,7 @@ If you have tabular data in CSV files, you can upload them in **Data Tables** by
 
 ![](images/edi8a.png){width=100%}
 
-Here is how the page looks like when you click **Load Data Table from CSV File**. 
+Here is how the page looks like when you click **Load Data Table from CSV File**. Choose which CSV file to upload.
 
 ![](images/edi8b.png){width=100%}
 
@@ -92,17 +92,21 @@ You may also notice a button to **Edit Column Properties**. Clicking on it will 
 
 ![](images/edi8d.png){width=100%}
 
-For all other types of data or files (.tif, .txt, .pdf, for example), you can upload them in **Other Entities** by selecting **Load Other Entity from File** and fill out the metadata as appropriate. 
+For all other types of data or files (.tif, .txt, .pdf, for example), you can upload them in **Other Entities** by selecting **Load Other Entity from File**. 
 
 ![](images/edi9a_1.png){width=100%}
 
-Again, remember to fill out the **Description** of the file.
+Upload the file of your choice.
 
 ![](images/edi9a_2.png){width=100%}
 
-To check on your overall progress, go to **Check Metadata** and see what metadata fields you're still missing.
+After it has been uploaded, remember to fill out the **Description** of the file.
 
 ![](images/edi9a_3.png){width=100%}
+
+To check on your overall progress, go to **Check Metadata** and see what metadata fields you're still missing. 
+
+![](images/edi9a_4.png){width=100%}
 
 For extra help, check out the [ezEML User Guide](https://ezeml.edirepository.org/eml/user_guide) or [email EDI for support](https://edirepository.org/support/contact-us). You can also watch their YouTube tutorial below. 
 
