@@ -28,13 +28,16 @@ You might need to log in with your Yale email, NetID password, and do your two-f
 
 #### 3️⃣ Connect to server
 
-Once you're connected to the VPN, click "**Go**" at the top of your Mac screen. Then click "**Connect to Server...**".
+Ensure you're either connected to the Yale network or using the VPN. Click "**Go**" at the top of your Mac screen. Then click "**Connect to Server...**".
 
 ![](images/mac_server3.png){width=80%}
 
 Type in "smb://corellia.environment.yale.edu/malonelab" in the address bar and click "**Connect**".
 
 ![](images/mac_server4.png){width=80%}
+
+The screen should be prompting you to enter your credentials. Please enter your username as
+`yale\netid`, replacing `netid` with your actual NetID. Then enter your NetID password as usual.
 
 And you should now be connected to the server! Research projects typically live under the "Research" folder.
 
@@ -96,14 +99,16 @@ You might need to log in with your Yale email, NetID password, and do your two-f
 
 #### 3️⃣ Connect to server
 
-Once you're connected to the VPN, search for "**Run**" at Windows search bar and click to open the program.
+Ensure you're either connected to the Yale network or using the VPN. Search for "**Run**" at Windows search bar and click to open the program.
 
 ![](images/windows_server3.png){width=80%}
-
 
 Type in "\\\\corellia.environment.yale.edu\\malonelab" in the address bar and click "**Connect**".
 
 ![](images/windows_server4.png){width=80%}
+
+The screen should be prompting you to enter your credentials. Please enter your username as
+`yale\netid`, replacing `netid` with your actual NetID. Then enter your NetID password as usual.
 
 And you should now be connected to the server! Research projects typically live under the "Research" folder.
 
