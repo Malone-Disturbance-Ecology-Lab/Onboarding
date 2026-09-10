@@ -37,7 +37,7 @@ Type in "smb://corellia.environment.yale.edu/malonelab" in the address bar and c
 ![](images/mac_server4.png){width=80%}
 
 The screen should be prompting you to enter your credentials. Please enter your username as
-`yale\netid`, replacing `netid` with your actual NetID. Then enter your NetID password as usual.
+`yale\NetID`, replacing `NetID` with your actual NetID. Then enter your NetID password as usual.
 
 And you should now be connected to the server! Research projects typically live under the "Research" folder.
 
@@ -103,12 +103,12 @@ Ensure you're either connected to the Yale network or using the VPN. Search for 
 
 ![](images/windows_server3.png){width=80%}
 
-Type in "\\\\corellia.environment.yale.edu\\malonelab" in the address bar and click "**Connect**".
+Type in "\\\\corellia.environment.yale.edu\\malonelab" in the address bar and click "**OK**".
 
 ![](images/windows_server4.png){width=80%}
 
 The screen should be prompting you to enter your credentials. Please enter your username as
-`yale\netid`, replacing `netid` with your actual NetID. Then enter your NetID password as usual.
+`yale\NetID`, replacing `NetID` with your actual NetID. Then enter your NetID password as usual.
 
 And you should now be connected to the server! Research projects typically live under the "Research" folder.
 
