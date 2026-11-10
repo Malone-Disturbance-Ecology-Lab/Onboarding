@@ -1,0 +1,9 @@
+---
+title: "AI Use Disclosure Builder"
+---
+
+When working with AI tools, remember to be transparent on what you did versus what the AI did. By crediting the AI tools' contributions, you can take responsibility for the final outputs of your project. Use the web app below if you need help creating an AI use disclosure statement, or you can open a separate tab [here](https://malone-disturbance-ecology-lab.github.io/AI_Use_Disclosure/).
+
+ ```{=html}
+<iframe src="https://malone-disturbance-ecology-lab.github.io/AI_Use_Disclosure/" height="600" width="900"></iframe>
+```

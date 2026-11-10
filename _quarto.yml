@@ -41,6 +41,8 @@ website:
             text: "Masterlist"
           - href: EDI.qmd
             text: "Publishing to EDI"
+          - href: ai_disclosure_builder.qmd
+            text: "AI Disclosure Builder"
           - href: fluxnet_policies.qmd
             text: "FLUXNET Policies"
             
